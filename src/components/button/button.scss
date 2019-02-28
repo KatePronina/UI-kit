@@ -1,0 +1,44 @@
+.main-btn {
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 3px;
+    border: 1px solid;
+    font-family: 'Lato';
+    font-weight: 900;
+    letter-spacing: .4px;
+    overflow: hidden;
+    position: relative;
+
+    &--standart {
+        font-size: .625rem;
+        padding: .28rem .98rem;
+    }
+
+    &--big {
+        font-size: .75rem;
+        padding: .55rem 1.98rem;
+    }
+
+    &--green {
+        @include btn-color($green, $darkgreen);
+    }
+
+    &--orange {
+        @include btn-color($orange, $darkorange);
+    }
+
+    .ripple {
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .7);
+        position: absolute;
+        transform: scale(0);
+        animation: ripple .6s linear;
+    }
+
+    @keyframes ripple {
+        to {
+            transform: scale(2.5);
+            opacity: 0;
+        }
+    }
+}

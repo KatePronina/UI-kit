@@ -1,0 +1,10 @@
+include ../base.pug
+include ../../components/button/button.pug
+
++base('Index')
+body
+    .container-btn
+        +button('button', 'green', 'standart')
+        +button('button', 'orange', 'standart')
+        +button('button', 'orange', 'big')
+        +button('button', 'green', 'big')

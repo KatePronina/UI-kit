@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Regular.woff2') format('woff2'),
+         url('./fonts/Lato-Regular.woff') format('woff'),
+         url('./fonts/Lato-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Black.woff2') format('woff2'),
+         url('./fonts/Lato-Black.woff') format('woff'),
+         url('./fonts/Lato-Black.ttf') format('ttf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Bold.woff2') format('woff2'),
+         url('./fonts/Lato-Bold.woff') format('woff'),
+         url('./fonts/Lato-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lato';
+    src: url('./fonts/Lato-Light.woff2') format('woff2'),
+         url('./fonts/Lato-Light.woff') format('woff'),
+         url('./fonts/Lato-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('./fonts/sourcesanspro.woff2') format('woff2'),
+         url('./fonts/sourcesanspro.woff') format('woff'),
+         url('./fonts/sourcesanspro.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

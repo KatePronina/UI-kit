@@ -1,0 +1,10 @@
+@import '../../components/button/button.scss';
+
+.container-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

@@ -1,0 +1,10 @@
+// fonts
+@import 'style-config/fonts.scss';
+
+// basic styles for body, wrappers, mixins
+@import 'style-config/variables.scss';
+@import 'style-config/main.scss';
+
+// pages
+@import 'pages/index/index.scss';
+@import 'pages/blog/blog.scss';
