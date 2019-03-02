@@ -5,7 +5,8 @@
         "window" : true,
         "document" : true,
         "console" : true,
-        "alert" : true
+        "alert" : true,
+        "$": true
     },
     "rules": {
         "no-console": "off"

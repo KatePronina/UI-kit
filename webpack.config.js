@@ -1,6 +1,7 @@
-/* global require __dirname module */
+/* global require __dirname module*/
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const path = require('path');
 
 let conf = {
@@ -73,6 +74,10 @@ let conf = {
             filename: 'blog.html',
             chunks: ['blog'],
             template: './src/pages/blog/blog.pug'
+        }),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
         })
     ]
 };
