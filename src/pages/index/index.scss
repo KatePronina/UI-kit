@@ -1,12 +1,13 @@
 @import '../../components/button/button.scss';
 @import '../../components/arrow-button/arrow-button.scss';
 @import '../../components/percent/percent.scss';
+@import '../../components/diagram/diagram.scss';
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
