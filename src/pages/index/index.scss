@@ -1,7 +1,8 @@
 @import '../../components/button/button.scss';
 @import '../../components/arrow-button/arrow-button.scss';
+@import '../../components/percent/percent.scss';
 
-.container-btn {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;

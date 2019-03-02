@@ -1,16 +1,22 @@
 include ../base.pug
 include ../../components/button/button.pug
 include ../../components/arrow-button/arrow-button.pug
+include ../../components/percent/percent.pug
 
 +base('Index')
 body
-    .container-btn
+    .container
         +button('button', 'green', 'standart', true)
         +button('button', 'orange', 'standart', true)
         +button('button', 'orange', 'big')
         +button('button', 'green', 'big')
-    .container-btn
+    .container
         +arrowBtn(true, 'next')
         +arrowBtn(true, 'prev')
         +arrowBtn(false, 'prev')
         +arrowBtn(false, 'next')
+    .container
+        +percent(0)
+        +percent(38, 'div')
+        +percent(62)
+        +percent(89)
