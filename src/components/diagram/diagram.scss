@@ -1,0 +1,10 @@
+.diagram {
+    width: 95px;
+    height: 95px;
+}
+.diagram__circle {
+    stroke-width: 17px;
+    fill: none;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
