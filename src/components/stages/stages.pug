@@ -1,0 +1,8 @@
+mixin stages(stages, all)
+    ul.stages
+        // пока не нашла лучшего способа сделать линию "резиновой" :(
+        - for(let i = 1; i <= all; i++) {
+            li.stages__item(class= i <= stages ? "stages__item--active" : "")= i
+            if i !== all 
+                div.stages__line(class= i < stages ? "stages__line--active" : "")
+        - }
