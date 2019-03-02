@@ -21,10 +21,24 @@
 
     &--green {
         @include btn-color($green, $darkgreen);
+
+        &.main-btn--whitehover:hover {
+            color: $green;
+        }
     }
 
     &--orange {
         @include btn-color($orange, $darkorange);
+
+        &.main-btn--whitehover:hover {
+            color: $orange;
+        }
+    }
+
+    &--whitehover {
+        &:hover {
+            background-color: #ffffff;
+        }  
     }
 
     .ripple {
