@@ -6,6 +6,7 @@ include ../../components/diagram/diagram.pug
 include ../../components/stages/stages.pug
 include ../../components/slider-range/slider-range.pug
 include ../../components/form/form.pug
+include ../../components/tick-box/tick-box.pug
 
 +base('Index')
 body
@@ -32,3 +33,6 @@ body
         +sliderRange('steps', 25, 75)
     .container
         +form
+    .container
+        +tickBox('tick')
+    .container
