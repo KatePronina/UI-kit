@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('.main-btn--ripple');
+const buttons = document.querySelectorAll('.main-btn');
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', createRipple);
