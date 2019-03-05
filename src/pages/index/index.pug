@@ -5,12 +5,13 @@ include ../../components/percent/percent.pug
 include ../../components/diagram/diagram.pug
 include ../../components/stages/stages.pug
 include ../../components/slider-range/slider-range.pug
+include ../../components/form/form.pug
 
 +base('Index')
 body
     .container
-        +button('button', 'green', 'standart', true)
-        +button('button', 'orange', 'standart', true)
+        +button('button', 'green', 'standart')
+        +button('button', 'orange', 'standart')
         +button('button', 'orange', 'big')
         +button('button', 'green', 'big')
     .container
@@ -29,3 +30,5 @@ body
     .container
         +sliderRange('flowing', 1, 40)
         +sliderRange('steps', 25, 75)
+    .container
+        +form

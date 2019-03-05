@@ -1,0 +1,10 @@
+mixin form
+    form.form(action="#")
+        .form__wrapper
+            input.form__input(type="text", placeholder='Your Name',require)
+            .form__warning
+        .form__wrapper
+            input.form__input(type="email", placeholder='Your Email', require)
+            .form__warning
+        textarea.form__message(placeholder='Your Message', require)
+        +button('Submit', 'green', 'big')
