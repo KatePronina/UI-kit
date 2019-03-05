@@ -4,7 +4,7 @@ include ../../components/arrow-button/arrow-button.pug
 include ../../components/percent/percent.pug
 include ../../components/diagram/diagram.pug
 include ../../components/stages/stages.pug
-include ../../components/slider/slider.pug
+include ../../components/slider-range/slider-range.pug
 
 +base('Index')
 body
@@ -27,4 +27,5 @@ body
     .container
         +stages(3, 5)
     .container
-        +slider(40, 'slider')
+        +sliderRange('flowing', 1, 40)
+        +sliderRange('steps', 25, 75)

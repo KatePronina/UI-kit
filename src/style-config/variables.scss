@@ -5,10 +5,3 @@ $darkorange: #bf3e1f;
 $lightgrey: #e5e5e5;
 $darkgrey: #4f4f4f;
 $grey: #a9a9a9;
-
-@mixin btn-color($color, $dark) {
-        background-color: $color;
-        border-color: $color;
-        border-bottom: none;
-        box-shadow: 0px .2em 0px 0px $dark;
-}
