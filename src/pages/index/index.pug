@@ -8,6 +8,7 @@ include ../../components/slider-range/slider-range.pug
 include ../../components/form/form.pug
 include ../../components/tick-box/tick-box.pug
 include ../../components/user/user.pug
+include ../../components/toggle/toggle.pug
 
 +base('Index')
 body
@@ -39,4 +40,6 @@ body
     .container
         +user('user1.jpg', 'John Smith', 'UX  DESIGNER')
         +user('user2.jpg', 'Sarah Brown', 'DEVELOPER', 'green')
+    .container
+        +toggle('toggle')
     .container
