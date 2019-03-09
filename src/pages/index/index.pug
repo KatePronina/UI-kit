@@ -9,6 +9,7 @@ include ../../components/form/form.pug
 include ../../components/tick-box/tick-box.pug
 include ../../components/user/user.pug
 include ../../components/toggle/toggle.pug
+include ../../components/search/search.pug
 
 +base('Index')
 body
@@ -42,4 +43,6 @@ body
         +user('user2.jpg', 'Sarah Brown', 'DEVELOPER', 'green')
     .container
         +toggle('toggle')
+    .container
+        +search('Search')
     .container

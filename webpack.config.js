@@ -12,7 +12,7 @@ let conf = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js'
-        // publicPath: 'dist/'
+        // publicPath: 'dist/src/'
     },
     devServer: {
         overlay: true
@@ -30,7 +30,7 @@ let conf = {
                     fallback: 'style-loader',
                     use: [
                       {
-                        loader: 'css-loader', 
+                        loader: 'css-loader',
                         options: { sourceMap: true }
                       },
                       { 
