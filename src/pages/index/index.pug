@@ -10,6 +10,7 @@ include ../../components/tick-box/tick-box.pug
 include ../../components/user/user.pug
 include ../../components/toggle/toggle.pug
 include ../../components/search/search.pug
+include ../../components/dropdown/dropdown.pug
 
 +base('Index')
 body
@@ -45,4 +46,7 @@ body
         +toggle('toggle')
     .container
         +search('Search')
+    .container
+        +dropdown('Choose An Option', 'select', 'This is option 1', 'This is option 2', 'This is option 3', 'This is option 4')
+    .container
     .container

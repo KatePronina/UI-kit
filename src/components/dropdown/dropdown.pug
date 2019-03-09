@@ -1,0 +1,6 @@
+mixin dropdown(placeholder, name, ...options)
+    .select__wrapper
+        select.dropdown(name= name, id= name)
+            option.dropdown__option(disabled, selected, hidden)= placeholder
+            each item in options
+                option.dropdown__option= item
