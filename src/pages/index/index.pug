@@ -11,6 +11,7 @@ include ../../components/user/user.pug
 include ../../components/toggle/toggle.pug
 include ../../components/search/search.pug
 include ../../components/dropdown/dropdown.pug
+include ../../components/news/news.pug
 
 +base('Index')
 body
@@ -49,4 +50,5 @@ body
     .container
         +dropdown('Choose An Option', 'select', 'This is option 1', 'This is option 2', 'This is option 3', 'This is option 4')
     .container
+        +news('It’s all going downhill', 'news1.jpg', '24  AUGUST  2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.')
     .container
