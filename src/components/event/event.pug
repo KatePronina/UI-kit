@@ -1,0 +1,11 @@
+mixin event(day, month, title, img, text)
+    article.event
+        .event__image
+            img.event__img(src=require('../../components/event/img/' + img))
+        .event__content
+            span.event__date
+                span.event__day= day
+                = ' ' + month
+            span.event__title= title
+            p.event__description= text
+            +button('ADD  TO  CALENDAR', 'green', 'standart')
