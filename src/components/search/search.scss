@@ -1,7 +1,16 @@
 .search {
     max-width: 18rem;
     width: 100%;
-    display: flex;  
+    display: flex;
+
+    &--error {
+        .search__input {
+            background-color: $orange;
+            &::placeholder {
+                color: #ffffff;
+            }
+        }
+    }
 }
 .search__input {
     width: 88.4%;
