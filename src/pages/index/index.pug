@@ -13,6 +13,7 @@ include ../../components/search/search.pug
 include ../../components/dropdown/dropdown.pug
 include ../../components/news/news.pug
 include ../../components/event/event.pug
+include ../../components/map/map.pug
 
 +base('Index')
 body
@@ -53,4 +54,6 @@ body
     .container
         +news('It’s all going downhill', 'news1.jpg', '24  AUGUST  2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.')
         +event('24', 'Aug', 'THIS IS THE TITLE', 'event1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+    .container
+        +map
     .container

@@ -1,0 +1,10 @@
+mixin map
+    .map
+        .map__container#map
+        .map__footer
+            span.map__greeting Meet us!
+            address.map__address 1259  CALIFORNIA ST San Francisco, CA
+            .map__icons
+                span.map__icon.map__icon--target
+                span.map__icon.map__icon--pin
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_M2Pwf2qVeiWWUP0MuXOwOGPjTaVguAI&callback=initMap", defer)
