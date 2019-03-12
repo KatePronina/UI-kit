@@ -15,6 +15,7 @@ include ../../components/news/news.pug
 include ../../components/event/event.pug
 include ../../components/map/map.pug
 include ../../components/calendar/calendar.pug
+include ../../components/messaging/messaging.pug
 
 +base('Index')
 body
@@ -59,4 +60,7 @@ body
         +map
     .container
         +calendar
+        +messaging('Sarah Brown', 'user2.jpg', 'Hey! So are we cool to meet at the art gallery? Say 8pm')
+    .container
+        +messaging('Sarah Brown', 'user2.jpg', 'Hey! So are we cool to meet at the art gallery? Say 8pm', 'large')
     .container
