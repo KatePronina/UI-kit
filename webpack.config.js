@@ -60,7 +60,14 @@ let conf = {
                 options: {
                     name: 'fonts/[name].[ext]'
                 }
-            }
+            },
+            {
+                test: /\.mp4$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'video/[name].[ext]'
+                }
+            },
         ]
     },
     plugins: [
