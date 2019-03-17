@@ -1,6 +1,10 @@
 .news {
     display: flex;
     max-width: 18rem; 
+
+    @media (max-width: 360px) {
+        max-width: 100%;
+    }
 }
 .news__image {
     min-width: 6rem;

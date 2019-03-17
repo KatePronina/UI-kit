@@ -10,6 +10,10 @@
         box-shadow: 0px 0.3em 0px 0px #379285;
         letter-spacing: .8px;
     }
+
+    @media (max-width: 360px) {
+        max-width: 100%;
+    }
 }
 .event__image {
     min-width: 6rem;

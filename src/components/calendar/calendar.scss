@@ -1,5 +1,9 @@
 .calendar {
     width: 17.5rem;
+
+    @media (max-width: 360px) {
+        width: 100%;
+    }
 }
 .calendar__day {
     text-align: center;

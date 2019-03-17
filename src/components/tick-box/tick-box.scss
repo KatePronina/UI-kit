@@ -23,6 +23,11 @@
         border-right: none;
         border-top: none;
         transform: rotate(-45deg);
+
+        @media (max-width: 768px) {
+            top: .45rem;
+            left: .35rem;
+        }
     }
 }
 .tick-box:checked + .tick-box__label::before {
