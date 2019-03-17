@@ -4,12 +4,15 @@ const progress= document.querySelector('.player__progress');
 const progressFill = document.querySelector('.player__filled');
 const playBtn = document.querySelector('.player__button');
 const fullBtn = document.querySelector('.player__full');
+const info = document.querySelector('.player__info');
 
 function togglePlay () {
 	if (video.paused) {
 		video.play();
+		info.style.opacity = 0;
 	} else {
 		video.pause();
+		info.style.opacity = 1;
 	}
 }
 
