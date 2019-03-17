@@ -1,0 +1,59 @@
+@import '../../components/navigation/navigation.scss';
+
+.main-title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    letter-spacing: .4px;
+    font-size: 3rem;
+}
+.main-description {
+    margin: 0;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.about__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.about__features {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.about__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 9.625rem;
+    text-align: center;
+}
+.about__percent {
+    margin-bottom: .4rem;
+}
+.show-us,
+.contact-us,
+.main-news {
+    @extend .about;
+}
+.show-us__title,
+.contact__title,
+.main-news__title {
+    @extend .about__title;
+}
+.main-news__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}

@@ -1,0 +1,44 @@
+include ../base.pug
+include ../../components/navigation/navigation.pug
+include ../../components/percent/percent.pug
+include ../../components/video/video.pug
+include ../../components/messaging/messaging.pug
+include ../../components/button/button.pug
+include ../../components/news/news.pug
+include ../../components/event/event.pug
+
++base('Главная')
+body
+    .wrapper
+        +navigation
+        h1.main-title Школа танцев "MOVEMENT"
+        p.main-description Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!
+        section.about
+            h2.about__title Что такое "MOVEMENT" в процентах?
+            ul.about__features
+                li.about__feature
+                    +percent(98, 'about')
+                    span.about__feature-name довольных учеников
+                li.about__feature
+                    +percent(34, 'about')
+                    span.about__feature-name преподавателей из стран Латинской Америки
+                li.about__feature
+                    +percent(100, 'about')
+                    span.about__feature-name полностью оборудованные залы
+                li.about__feature
+                    +percent(83, 'about')
+                    span.about__feature-name учеников остаются с нами после первого занятия
+        section.show-us
+            h2.show-us__title Посмотрите, в каком прекрасном городе мы работаем
+            +video('winter.mp4', 'Санкт-Петербург', 'by Time Lab')
+        section.contact-us
+            h2.contact__title Возможно, Вы в одном клике от мечты...
+            +messaging('Sarah Brown', 'user2.jpg', 'Не знаете, с чего начать знакомство с танцами? Танцевальная База и Техника Танца позволят вам лучше почувствовать свое тело и подготовиться к занятиям более сложных направлений', 'large')
+        section.main-news
+            h2.main-news__title Последние новости нашей школы
+            .main-news__container
+                +news('Скидка 20%', 'news1.jpg', '18  March  2019', 'При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе')
+                +event('24', 'Feb', 'Танцевальный марафон', 'event1.jpg', 'Впервые⠀ЦЕЛЫЙ ДЕНЬ полного танцевального погружения!')
+                +news('Новый педагог', 'news1.jpg', '18  March  2019', 'РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свое тело, пластику и музыкальность')
+
+

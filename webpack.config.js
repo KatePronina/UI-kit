@@ -7,7 +7,7 @@ const path = require('path');
 let conf = {
     entry: {
         'index': './src/pages/index/index.js',
-        'blog': './src/pages/blog/blog.js'
+        'main': './src/pages/main/main.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -78,9 +78,9 @@ let conf = {
             template: './src/pages/index/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'blog.html',
-            chunks: ['blog'],
-            template: './src/pages/blog/blog.pug'
+            filename: 'main.html',
+            chunks: ['main'],
+            template: './src/pages/main/main.pug'
         }),
         new webpack.ProvidePlugin({
             $: 'jquery',
