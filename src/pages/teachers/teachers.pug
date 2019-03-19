@@ -1,0 +1,47 @@
+include ../base.pug
+include ../../components/search/search.pug
+include ../../components/header/header.pug
+include ../../components/section/section.pug
+include ../../components/user/user.pug
+include ../../components/diagram/diagram.pug
+
++base('Контакты')
+body
+    .wrapper
+        +header
+        +section('teachers', 'Наши преподаватели')
+            p.teachers__info Уроки танцев в нашей студии ведут опытные хореографы - молодые, творчески активные и креативные люди. Наши преподаватели - настоящие таланты, которые не только имеют специальное образование и мастерски танцуют, но и умеют научить своему искусству других. Постоянно шлифуя свое мастерство на мастер-классах и чемпионатах разного уровня, преподаватели "Dance City" в курсе всех танцевальных тенденций, поэтому программа тренировок постоянно обновляется. В нашей студии освоить любой танцевальный стиль - это ЛЕГКО! 
+            h2.teachers__skills Skills
+            .teacher__skills-list
+                span.teacher__skill.teacher__skill--lightgrey Растяжка
+                span.teacher__skill.teacher__skill--darkgrey Body control
+                span.teacher__skill.teacher__skill--orange Speed control
+                span.teacher__skill.teacher__skill--green Импровизация
+            .teachers__list
+                .teachers__item
+                    +user('user1.jpg', 'Александр Иванов', 'Break Dance')
+                    +diagram('teachers' , 11, 26, 30)
+                .teachers__item
+                    +user('user2.jpg', 'Катя Казанцева', 'современная хореография', 'green')
+                    +diagram('teachers' , 15, 55, 20)
+                .teachers__item
+                    +user('user2.jpg', 'Нина Вербицкая', 'восточные танцы')
+                    +diagram('teachers' , 30, 50, 10)
+                .teachers__item
+                    +user('user1.jpg', 'Паша Дягилев', 'jazz funk', 'green')
+                    +diagram('teachers' , 40, 20, 15)
+                .teachers__item
+                    +user('user1.jpg', 'Александр Иванов', 'Break Dance')
+                    +diagram('teachers' , 34, 28, 8)
+                .teachers__item
+                    +user('user2.jpg', 'Катя Казанцева', 'современная хореография', 'green')
+                    +diagram('teachers' , 55, 23, 12)
+                .teachers__item
+                    +user('user2.jpg', 'Нина Вербицкая', 'восточные танцы')
+                    +diagram('teachers' , 11, 26, 30)
+                .teachers__item
+                    +user('user1.jpg', 'Паша Дягилев', 'jazz funk', 'green')
+                    +diagram('teachers' , 45, 6, 38)
+                .teachers__item
+                    +user('user1.jpg', 'Александр Иванов', 'Break Dance')
+                    +diagram('teachers' , 36, 25, 7)

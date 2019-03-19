@@ -64,6 +64,7 @@
 .user__name {
     font-size: 1.125rem;
     color: $orange;
+    max-width: 6.375rem;
 }
 .user__profession {
     color: $darkgrey;
@@ -71,6 +72,7 @@
     font-size: .6875rem;
     letter-spacing: .7px;
     text-transform: uppercase;
+    max-width: 6.375rem;
 }
 .user__social-icons {
     margin-top: .71rem;
