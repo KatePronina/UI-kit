@@ -5,6 +5,12 @@
 @import 'style-config/variables.scss';
 @import 'style-config/fundamental.scss';
 
+//components
+@import 'components/header/header.scss';
+@import 'components/section/section.scss';
+
 // pages
 @import 'pages/index/index.scss';
 @import 'pages/main/main.scss';
+@import 'pages/registration/registration.scss';
+@import 'pages/contacts/contacts.scss';

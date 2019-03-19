@@ -1,9 +1,11 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 function initMap() {
-    var uluru = {lat: 37.796189, lng: -122.415034};
+    var mapElement = document.getElementById('map');
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var uluru = {lat: +mapElement.dataset.lat, lng: +mapElement.dataset.lng};
+
+    var map = new google.maps.Map(mapElement, {
         zoom: 14,
         center: uluru,
         disableDefaultUI: true
@@ -13,7 +15,7 @@ function initMap() {
         position: uluru,
         map: map,
         icon: require('./img/pin.png')
-      });
+    });
 }
 
 window.initMap = initMap;

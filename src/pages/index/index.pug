@@ -44,12 +44,12 @@ body
     .container
         +form
     .container
-        +tickBox('tick')
+        +tickBox('tick', 'Tick', 'tick')
     .container
         +user('user1.jpg', 'John Smith', 'UX  DESIGNER')
         +user('user2.jpg', 'Sarah Brown', 'DEVELOPER', 'green')
     .container
-        +toggle('toggle')
+        +toggle('toggle', 'Toggle', 'toggle')
     .container
         +search('Search')
     .container
@@ -58,7 +58,7 @@ body
         +news('It’s all going downhill', 'news1.jpg', '24  AUGUST  2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.')
         +event('24', 'Aug', 'THIS IS THE TITLE', 'event1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
     .container
-        +map
+        +map(37.796189, -122.415034, '1259  CALIFORNIA ST San Francisco, CA')
     .container
         +calendar
         +messaging('Sarah Brown', 'user2.jpg', 'Hey! So are we cool to meet at the art gallery? Say 8pm')

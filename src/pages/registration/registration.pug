@@ -1,0 +1,26 @@
+include ../base.pug
+include ../../components/search/search.pug
+include ../../components/header/header.pug
+include ../../components/section/section.pug
+include ../../components/form/form.pug
+include ../../components/button/button.pug
+include ../../components/dropdown/dropdown.pug
+include ../../components/tick-box/tick-box.pug
+include ../../components/toggle/toggle.pug
+include ../../components/slider-range/slider-range.pug
+include ../../components/calendar/calendar.pug
+
++base('Запись')
+body
+    .wrapper
+        +header
+        +section('registration','Запись на пробное занятие')
+            .registration__content
+                +calendar
+                +form
+                    +dropdown('Выберите направление', 'type', 'Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance')
+                    +tickBox('male', 'Я мужчина', 'sex')
+                    +tickBox('female', 'Я женщина', 'sex')
+                    +toggle('mail', 'Подписаться на рассылку', 'mail')
+                    label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
+                    +sliderRange('flowing', 1, 90) 

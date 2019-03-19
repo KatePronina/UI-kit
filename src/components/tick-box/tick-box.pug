@@ -1,3 +1,4 @@
-mixin tickBox(id)
-    input.tick-box.visually-hidden(type='checkbox', id= id)
-    label.tick-box__label(for= id)
+mixin tickBox(id, text, name)
+    label.tick-box__label(for= id)= text
+        input.tick-box.visually-hidden(type='radio', id= id, name= name, value= text)
+        .tick-box__element(tabindex="0")

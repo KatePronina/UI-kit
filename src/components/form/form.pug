@@ -7,4 +7,5 @@ mixin form
             input.form__input(type="email", placeholder='Your Email', require)
             .form__warning
         textarea.form__message(placeholder='Your Message', require)
+        block
         +button('Submit', 'green', 'big')

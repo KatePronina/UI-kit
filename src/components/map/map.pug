@@ -1,9 +1,9 @@
-mixin map
+mixin map(lat, lng, address)
     .map
-        .map__container#map
+        .map__container#map(data-lat= lat, data-lng= lng)
         .map__footer
             span.map__greeting Meet us!
-            address.map__address 1259  CALIFORNIA ST San Francisco, CA
+            address.map__address= address
             .map__icons
                 span.map__icon.map__icon--target
                 span.map__icon.map__icon--pin

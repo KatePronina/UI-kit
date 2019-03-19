@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#select').selectmenu({
+    $('.dropdown').selectmenu({
         appendTo: '.select__wrapper'
     });
 })

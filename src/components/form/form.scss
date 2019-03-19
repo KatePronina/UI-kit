@@ -7,6 +7,10 @@
         width: 7.4rem;
         align-self: flex-end;
     } 
+
+    @media (max-width: 360px) {
+        width: 100%;
+    }
 }
 .form__wrapper {
     position: relative;

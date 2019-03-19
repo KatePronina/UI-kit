@@ -1,15 +1,16 @@
-.toggle__label {
+.toggle__elem {
     position: relative;
     height: 1.5rem;
     width: 3.68rem;
     background-color: $lightgrey;
     border-radius: .7rem;
     transition: .2s;
+    margin-left: .4rem;
 
     &::before {
         position: absolute;
         content: '';
-        top: .15rem;
+        top: .18rem;
         left: .15rem;
         width: 1.125rem;
         height: 1.125rem;
@@ -24,7 +25,7 @@
     &::after {
         position: absolute;
         content: 'Off';
-        top: .28rem;
+        top: .3rem;
         left: 1.6rem;
         color: #ffffff;
         font-size: .75rem;
@@ -40,13 +41,17 @@
         height: 1.4rem;
     }
 }
-.toggle:checked + .toggle__label {
+.toggle:checked + .toggle__elem {
     background-color: $green;
 }
-.toggle:checked + .toggle__label::before {
+.toggle:checked + .toggle__elem::before {
     left: 2.35rem;
 }
-.toggle:checked + .toggle__label::after {
+.toggle:checked + .toggle__elem::after {
     content: 'On';
     left: .7rem;
+}
+.toggle__label {
+    display: flex;
+    align-items: center;
 }

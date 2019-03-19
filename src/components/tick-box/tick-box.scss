@@ -1,7 +1,8 @@
-.tick-box__label {
+.tick-box__element {
     position: relative; 
     width: 1.43rem;
     height: 1.43rem;
+    margin-left: .4rem;
 
     &::before {
         position: absolute;
@@ -30,10 +31,14 @@
         }
     }
 }
-.tick-box:checked + .tick-box__label::before {
+.tick-box:checked + .tick-box__element::before {
     background-color: $green;
 }
-.tick-box:checked + .tick-box__label::after {
+.tick-box:checked + .tick-box__element::after {
     border-color: #ffffff;
+}
+.tick-box__label {
+    display: flex;
+    align-items: center;
 }
 
