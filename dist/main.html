@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+  <link href="style.css" rel="stylesheet"></head>
+</html>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search here...">
+        <button class="search__button"></button>
+      </div>
+    </div>
+    <h1 class="main-title">Школа танцев "MOVEMENT"</h1>
+    <p class="main-description">Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!</p>
+    <section class="about section">
+      <h2 class="about__title section__title">Что такое &quot;MOVEMENT&quot; в процентах?</h2>
+      <ul class="about__features">
+        <li class="about__feature">
+          <svg class="percent about__percent" aria-label="98%" viewBox="0 0 95 95">
+            <circle class="percent__circle" r="45" cx="50%" cy="50%" stroke-dasharray="276.94800000000004 282.6"></circle>
+            <text class="percent__text" x="50%" y="50%">98</text>
+          </svg><span class="about__feature-name">довольных учеников</span>
+        </li>
+        <li class="about__feature">
+          <svg class="percent about__percent" aria-label="34%" viewBox="0 0 95 95">
+            <circle class="percent__circle" r="45" cx="50%" cy="50%" stroke-dasharray="96.08400000000002 282.6"></circle>
+            <text class="percent__text" x="50%" y="50%">34</text>
+          </svg><span class="about__feature-name">преподавателей из стран Латинской Америки</span>
+        </li>
+        <li class="about__feature">
+          <svg class="percent about__percent" aria-label="100%" viewBox="0 0 95 95">
+            <circle class="percent__circle" r="45" cx="50%" cy="50%" stroke-dasharray="282.6 282.6"></circle>
+            <text class="percent__text" x="50%" y="50%">100</text>
+          </svg><span class="about__feature-name">полностью оборудованные залы</span>
+        </li>
+        <li class="about__feature">
+          <svg class="percent about__percent" aria-label="83%" viewBox="0 0 95 95">
+            <circle class="percent__circle" r="45" cx="50%" cy="50%" stroke-dasharray="234.55800000000002 282.6"></circle>
+            <text class="percent__text" x="50%" y="50%">83</text>
+          </svg><span class="about__feature-name">учеников остаются с нами после первого занятия</span>
+        </li>
+      </ul>
+    </section>
+    <section class="show-us section">
+      <h2 class="show-us__title section__title">Посмотрите, в каком прекрасном городе мы работаем</h2>
+      <div class="player">
+        <div class="player__info"><span class="player__title">Санкт-Петербург</span><span class="player__author">by Time Lab</span></div>
+        <video class="player__video" src="video/winter.mp4"></video>
+        <div class="player__controls">
+          <button class="player__button"></button>
+          <div class="player__progress">
+            <div class="player__filled"></div>
+          </div>
+          <button class="player__full"></button>
+        </div>
+      </div>
+    </section>
+    <section class="contact-us section">
+      <h2 class="contact-us__title section__title">Возможно, Вы в одном клике от мечты...</h2>
+      <div class="messaging messaging--large">
+        <div class="messaging__title">Sarah Brown</div>
+        <div class="messaging__user">
+          <button class="messaging__btn messaging__btn--message"></button>
+          <div class="messaging__img"><img class="messaging__image" src="images/user2.jpg" alt="Sarah Brown"></div>
+          <button class="messaging__btn messaging__btn--camera"></button>
+        </div>
+        <p class="messaging__message">Не знаете, с чего начать знакомство с танцами? Танцевальная База и Техника Танца позволят вам лучше почувствовать свое тело и подготовиться к занятиям более сложных направлений</p>
+        <form class="messaging__reply" action="#">
+          <textarea class="messaging__text" name="message"></textarea>
+          <button class="main-btn main-btn--green main-btn--big">reply</button>
+        </form>
+      </div>
+    </section>
+    <section class="main-news section">
+      <h2 class="main-news__title section__title">Последние новости нашей школы</h2>
+      <div class="main-news__container">
+        <article class="news">
+          <div class="news__image"><img class="news__img" src="images/news1.jpg"></div>
+          <div class="news__content"><span class="news__title">Скидка 20%</span>
+            <time class="news__date">18  March  2019</time>
+            <p class="news__description">При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе</p>
+          </div>
+        </article>
+        <article class="event">
+          <div class="event__image"><img class="event__img" src="images/event1.jpg"></div>
+          <div class="event__content"><span class="event__date"><span class="event__day">24</span> Feb</span><span class="event__title">Танцевальный марафон</span>
+            <p class="event__description">Впервые⠀ЦЕЛЫЙ ДЕНЬ полного танцевального погружения!</p>
+            <button class="main-btn main-btn--green main-btn--standart">ADD  TO  CALENDAR</button>
+          </div>
+        </article>
+        <article class="news">
+          <div class="news__image"><img class="news__img" src="images/news1.jpg"></div>
+          <div class="news__content"><span class="news__title">Новый педагог</span>
+            <time class="news__date">18  March  2019</time>
+            <p class="news__description">РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свою музыкальность</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+<script type="text/javascript" src="main.js"></script></body>

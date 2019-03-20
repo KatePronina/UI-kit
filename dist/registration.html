@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись</title>
+  <link href="style.css" rel="stylesheet"></head>
+</html>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search here...">
+        <button class="search__button"></button>
+      </div>
+    </div>
+    <section class="registration section">
+      <h2 class="registration__title section__title">Запись на пробное занятие</h2>
+      <div class="registration__content">
+        <div class="calendar">
+          <input class="calendar__day" disabled>
+          <div class="calendar__pick"></div>
+          <button class="calendar__btn">Today</button>
+        </div>
+        <form class="form" action="#">
+          <div class="form__wrapper">
+            <input class="form__input" type="text" placeholder="Your Name" require>
+            <div class="form__warning"></div>
+          </div>
+          <div class="form__wrapper">
+            <input class="form__input" type="email" placeholder="Your Email" require>
+            <div class="form__warning"></div>
+          </div>
+          <textarea class="form__message" placeholder="Your Message" require></textarea>
+          <div class="select__wrapper">
+            <select class="dropdown" name="type" id="type">
+              <option class="dropdown__option" disabled selected hidden>Выберите направление</option>
+              <option class="dropdown__option">Современные танцы</option>
+              <option class="dropdown__option">Латиноамериканские танцы</option>
+              <option class="dropdown__option">Аргентинское танго</option>
+              <option class="dropdown__option">Классическая хореография</option>
+              <option class="dropdown__option">Pole Dance</option>
+            </select>
+          </div>
+          <label class="tick-box__label" for="male">Я мужчина
+            <input class="tick-box visually-hidden" type="radio" id="male" name="sex" value="Я мужчина">
+            <div class="tick-box__element" tabindex="0"></div>
+          </label>
+          <label class="tick-box__label" for="female">Я женщина
+            <input class="tick-box visually-hidden" type="radio" id="female" name="sex" value="Я женщина">
+            <div class="tick-box__element" tabindex="0"></div>
+          </label>
+          <label class="toggle__label" for="mail">Подписаться на рассылку
+            <input class="toggle visually-hidden" type="checkbox" id="mail" name="mail" value="Подписаться на рассылку">
+            <div class="toggle__elem" tabindex="0"></div>
+          </label>
+          <label class="registration__slider-label">Оцените качество, полноту и доступность информации на нашем сайте:</label>
+          <div class="slider-range slider--flowing" data-value="90" data-step="1"> <span class="slider-range__value" data-value="90"></span>
+          </div>
+          <button class="main-btn main-btn--green main-btn--big">Submit</button>
+        </form>
+      </div>
+    </section>
+  </div>
+<script type="text/javascript" src="registration.js"></script></body>

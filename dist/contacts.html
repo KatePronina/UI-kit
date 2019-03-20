@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+  <link href="style.css" rel="stylesheet"></head>
+</html>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search here...">
+        <button class="search__button"></button>
+      </div>
+    </div>
+    <section class="contacts section">
+      <h2 class="contacts__title section__title">Контакты</h2>
+      <div class="map">
+        <div class="map__container" id="map" data-lat="59.9405947" data-lng="30.3254693"></div>
+        <div class="map__footer"><span class="map__greeting">Meet us!</span>
+          <address class="map__address">Санкт-Петербург, Конюшенная площадь, дом 2</address>
+          <div class="map__icons"><span class="map__icon map__icon--target"></span><span class="map__icon map__icon--pin"></span></div>
+        </div>
+      </div>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_M2Pwf2qVeiWWUP0MuXOwOGPjTaVguAI&amp;callback=initMap" defer></script>
+    </section>
+    <div class="info">
+      <div class="info__text">
+        <p class="info__address">Россия, Санкт-Петербург, Конюшенная площадь, дом 2 (помещение 40)</p>
+        <p class="info__address">Рядом с клубами "Циркус" и "Духлесс", метро "Канал Грибоедова", внутренний двор, либо вход под арку с канала Грибоедова д. 5</p>
+        <p class="info__time">Понедельник - пятница 17:00 - 22:00, суббота - воскресенье 15:00 - 20:00</p>
+      </div>
+      <div class="messaging">
+        <div class="messaging__title">Maria Ivanova</div>
+        <div class="messaging__user">
+          <button class="messaging__btn messaging__btn--message"></button>
+          <div class="messaging__img"><img class="messaging__image" src="images/user2.jpg" alt="Maria Ivanova"></div>
+          <button class="messaging__btn messaging__btn--camera"></button>
+        </div>
+        <p class="messaging__message">Напишите нам, мы ответим в ближайшее время</p>
+        <form class="messaging__reply" action="#">
+          <textarea class="messaging__text" name="message"></textarea>
+          <button class="main-btn main-btn--green main-btn--big">reply</button>
+        </form>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="contacts.js"></script></body>
