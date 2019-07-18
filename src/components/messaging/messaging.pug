@@ -4,7 +4,7 @@ mixin messaging(name, img, text, large)
         .messaging__user
             button.messaging__btn.messaging__btn--message
             .messaging__img
-                img.messaging__image(src=require('../../components/messaging/img/' + img), alt=name)
+                img.messaging__image(src=require(`../../components/messaging/img/${img}`), alt=name)
             button.messaging__btn.messaging__btn--camera
         p.messaging__message= text
         form.messaging__reply(action="#")

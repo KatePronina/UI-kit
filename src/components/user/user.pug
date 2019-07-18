@@ -2,7 +2,7 @@ mixin user(img, name, profession, style)
     .user(class= style === 'green' ? 'user--green' : '')
         include img/sprite.svg
         .user__pic
-            img.user__img(src=require('../../components/user/img/' + img), alt= name)
+            img.user__img(src=require(`../../components/user/img/${img}`), alt= name)
         .user__info
             span.user__name= name
             span.user__profession= profession

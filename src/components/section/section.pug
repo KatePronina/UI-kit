@@ -1,4 +1,4 @@
 mixin section(name, title)
-    section(class= name + ' section')
-        h2(class= name + '__title' + ' section__title')= title
+    section(class= `${name} section`)
+        h2(class= `${name}__title section__title`)= title
         block
