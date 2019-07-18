@@ -15,7 +15,6 @@ let conf = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].js'
-        // publicPath: 'dist/src/'
     },
     devServer: {
         overlay: true
