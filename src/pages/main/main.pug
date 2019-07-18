@@ -11,32 +11,32 @@ include ../../components/section/section.pug
 
 +base('Главная')
 body
-    .wrapper
-        +header
-        h1.main-title Школа танцев "MOVEMENT"
-        p.main-description Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!
-        +section('about', 'Что такое "MOVEMENT" в процентах?')
-            ul.about__features
-                li.about__feature
-                    +percent(98, 'about')
-                    span.about__feature-name довольных учеников
-                li.about__feature
-                    +percent(34, 'about')
-                    span.about__feature-name преподавателей из стран Латинской Америки
-                li.about__feature
-                    +percent(100, 'about')
-                    span.about__feature-name полностью оборудованные залы
-                li.about__feature
-                    +percent(83, 'about')
-                    span.about__feature-name учеников остаются с нами после первого занятия
-        +section('show-us', 'Посмотрите, в каком прекрасном городе мы работаем')
-            +video('winter.mp4', 'Санкт-Петербург', 'by Time Lab')
-        +section('contact-us', 'Возможно, Вы в одном клике от мечты...')
-            +messaging('Sarah Brown', 'user2.jpg', 'Не знаете, с чего начать знакомство с танцами? Танцевальная База и Техника Танца позволят вам лучше почувствовать свое тело и подготовиться к занятиям более сложных направлений', 'large')
-        +section('main-news', 'Последние новости нашей школы')
-            .main-news__container
-                +news('Скидка 20%', 'news1.jpg', '18  March  2019', 'При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе')
-                +event('24', 'Feb', 'Танцевальный марафон', 'event1.jpg', 'Впервые⠀ЦЕЛЫЙ ДЕНЬ полного танцевального погружения!')
-                +news('Новый педагог', 'news1.jpg', '18  March  2019', 'РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свою музыкальность')
+  .wrapper
+    +header
+    h1.main-title Школа танцев "MOVEMENT"
+    p.main-description Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!
+    +section({ name: 'about', title: 'Что такое "MOVEMENT" в процентах?' })
+      ul.about__features
+        li.about__feature
+          +percent({value: 98, parent: 'about' })
+            span.about__feature-name довольных учеников
+        li.about__feature
+          +percent({value: 34, parent: 'about' })
+            span.about__feature-name преподавателей из стран Латинской Америки
+        li.about__feature
+          +percent({ value: 100, parent: 'about' })
+            span.about__feature-name полностью оборудованные залы
+        li.about__feature
+          +percent({ value: 83, parent: 'about' })
+            span.about__feature-name учеников остаются с нами после первого занятия
+      +section({ name: 'show-us', title: 'Посмотрите, в каком прекрасном городе мы работаем' })
+        +video({ url: 'winter.mp4', title: 'Санкт-Петербург', author: 'by Time Lab' })
+      +section({ name: 'contact-us', title: 'Возможно, Вы в одном клике от мечты...' })
+        +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Не знаете, с чего начать знакомство с танцами? Танцевальная База и Техника Танца позволят вам лучше почувствовать свое тело и подготовиться к занятиям более сложных направлений', large: true })
+      +section({ name: 'main-news', title: 'Последние новости нашей школы' })
+        .main-news__container
+          +news({ title: 'Скидка 20%', img: 'news1.jpg', date: '18  March  2019', text: 'При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе' })
+          +event({ day: '24', month: 'Feb', title: 'Танцевальный марафон', img: 'event1.jpg', text: 'Впервые⠀ЦЕЛЫЙ ДЕНЬ полного танцевального погружения!' })
+          +news({ title: 'Новый педагог', img: 'news1.jpg', date: '18  March  2019', text: 'РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свою музыкальность' })
 
 

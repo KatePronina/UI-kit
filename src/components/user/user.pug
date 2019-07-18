@@ -1,19 +1,19 @@
-mixin user(img, name, profession, style)
-    .user(class= style === 'green' ? 'user--green' : '')
-        include img/sprite.svg
-        .user__pic
-            img.user__img(src=require(`../../components/user/img/${img}`), alt= name)
-        .user__info
-            span.user__name= name
-            span.user__profession= profession
-            .user__social-icons.social-icons
-                a.social-icons__link(href="#")
-                    svg.social-icons__icon
-                        use(xlink:href="#facebook-letter-logo")
-                a.social-icons__link(href="#")
-                    svg.social-icons__icon.social-icons__icon--tw
-                        use(xlink:href="#twitter-logo-silhouette")
-                a.social-icons__link(href="#")
-                    svg.social-icons__icon
-                        use(xlink:href="#dribbble-logo")
+mixin user({ img, name, profession, style })
+  .user(class= style === 'green' ? 'user--green' : '')
+    include img/sprite.svg
+    .user__pic
+      img.user__img(src=require(`../../components/user/img/${img}`), alt= name)
+    .user__info
+      span.user__name= name
+      span.user__profession= profession
+        .user__social-icons.social-icons
+          a.social-icons__link(href="#")
+            svg.social-icons__icon
+              use(xlink:href="#facebook-letter-logo")
+          a.social-icons__link(href="#")
+            svg.social-icons__icon.social-icons__icon--tw
+              use(xlink:href="#twitter-logo-silhouette")
+          a.social-icons__link(href="#")
+            svg.social-icons__icon
+              use(xlink:href="#dribbble-logo")
                 

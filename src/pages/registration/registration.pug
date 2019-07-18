@@ -12,15 +12,15 @@ include ../../components/calendar/calendar.pug
 
 +base('Запись')
 body
-    .wrapper
-        +header
-        +section('registration','Запись на пробное занятие')
-            .registration__content
-                +calendar
-                +form
-                    +dropdown('Выберите направление', 'type', 'Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance')
-                    +tickBox('male', 'Я мужчина', 'sex')
-                    +tickBox('female', 'Я женщина', 'sex')
-                    +toggle('mail', 'Подписаться на рассылку', 'mail')
-                    label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
-                    +sliderRange('flowing', 1, 90) 
+  .wrapper
+    +header
+    +section({ name: 'registration', title: 'Запись на пробное занятие' })
+      .registration__content
+        +calendar
+        +form
+          +dropdown({ placeholder: 'Выберите направление', name: 'type', options: ['Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance'] })
+          +tickBox({ text: 'Я мужчина', name: 'sex' })
+          +tickBox({ text: 'Я женщина', name: 'sex' })
+          +toggle({ text: 'Подписаться на рассылку', name: 'mail' })
+          label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
+          +sliderRange({ name: 'flowing', step: 1, value: 90 }) 

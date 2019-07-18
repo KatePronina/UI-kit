@@ -1,4 +1,4 @@
-mixin news(title, img, date, text)
+mixin news({ title, img, date, text })
     article.news
         .news__image
             img.news__img(src=require(`../../components/news/img/${img}`))

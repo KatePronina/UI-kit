@@ -20,50 +20,50 @@ include ../../components/video/video.pug
 
 +base('Index')
 body
-    .container
-        +button('button', 'green', 'standart')
-        +button('button', 'orange', 'standart')
-        +button('button', 'orange', 'big')
-        +button('button', 'green', 'big')
-    .container
-        +arrowBtn(true, 'next')
-        +arrowBtn(true, 'prev')
-        +arrowBtn(false, 'prev')
-        +arrowBtn(false, 'next')
-    .container
-        +percent(0)
-        +percent(38)
-        +percent(62)
-        +percent(89)
-        +diagram(null , 11, 26, 30)
-    .container
-        +stages(3, 5)
-    .container
-        +sliderRange('flowing', 1, 40)
-        +sliderRange('steps', 25, 75)
-    .container
-        +form
-    .container
-        +tickBox('tick', 'Tick', 'tick')
-    .container
-        +user('user1.jpg', 'John Smith', 'UX  DESIGNER')
-        +user('user2.jpg', 'Sarah Brown', 'DEVELOPER', 'green')
-    .container
-        +toggle('toggle', 'Toggle', 'toggle')
-    .container
-        +search('Search')
-    .container
-        +dropdown('Choose An Option', 'select', 'This is option 1', 'This is option 2', 'This is option 3', 'This is option 4')
-    .container
-        +news('It’s all going downhill', 'news1.jpg', '24  AUGUST  2013', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.')
-        +event('24', 'Aug', 'THIS IS THE TITLE', 'event1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
-    .container
-        +map(37.796189, -122.415034, '1259  CALIFORNIA ST San Francisco, CA')
-    .container
-        +calendar
-        +messaging('Sarah Brown', 'user2.jpg', 'Hey! So are we cool to meet at the art gallery? Say 8pm')
-    .container
-        +messaging('Sarah Brown', 'user2.jpg', 'Hey! So are we cool to meet at the art gallery? Say 8pm', 'large')
-    .container
-        +video('winter.mp4', 'New Zealand Landscapes Timelapse', 'from Bevan Percival')
-    .container
+  .container
+    +button({ text: 'button', color: 'green', size: 'standart' })
+    +button({ text: 'button', color: 'orange', size: 'standart' })
+    +button({ text: 'button', color: 'orange', size: 'big' })
+    +button({ text: 'button', color: 'green', size: 'big' })
+  .container
+    +arrowBtn({active: true, direction: 'next'})
+    +arrowBtn({active: true, direction: 'prev'})
+    +arrowBtn({active: false, direction: 'prev'})
+    +arrowBtn({active: false, direction: 'next'})
+  .container
+    +percent({ value: 0 })
+    +percent({ value: 38 })
+    +percent({ value: 62 })
+    +percent({ value: 89 })
+    +diagram({ parent: null , values: [11, 26, 30] })
+  .container
+    +stages({ currentStage: 3, stages: 5 })
+  .container
+    +sliderRange({ name: 'flowing', step: 1, value: 40 })
+    +sliderRange({ name: 'steps', step: 25, value: 75 })
+  .container
+    +form
+  .container
+    +tickBox({ text: 'Tick', name: 'tick' })
+  .container
+    +user({ img: 'user1.jpg', name: 'John Smith', profession: 'UX  DESIGNER' })
+    +user({ img: 'user2.jpg', name: 'Sarah Brown', profession: 'DEVELOPER', style: 'green' })
+  .container
+    +toggle({ text: 'Toggle', name: 'toggle' })
+  .container
+    +search({ placeholder: 'Search' })
+  .container
+    +dropdown({ placeholder: 'Choose An Option', name: 'select', options: ['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4'] })
+  .container
+    +news({ title: 'It’s all going downhill', img: 'news1.jpg', date: '24  AUGUST  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.' })
+    +event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', img: 'event1.jpg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' })
+  .container
+    +map({ lat: 37.796189, lng: -122.415034, address: '1259  CALIFORNIA ST San Francisco, CA' })
+  .container
+    +calendar
+    +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm', large: false })
+  .container
+    +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm', large: true })
+  .container
+    +video({ url: 'winter.mp4', title: 'New Zealand Landscapes Timelapse', author: 'from Bevan Percival' })
+  .container

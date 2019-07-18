@@ -1,4 +1,4 @@
-mixin arrowBtn(active, direction)
+mixin arrowBtn({ active, direction })
     button.arrow-btn(class= active ? "" : "arrow-btn--disabled",
                     class= direction === "prev" ? "arrow-btn--prev" : "",
                     disabled= active!==true,

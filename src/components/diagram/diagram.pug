@@ -1,4 +1,4 @@
-mixin diagram(parent, ...values)
+mixin diagram({ parent, values })
     -const colors = ['#4f4f4f', '#e75735', '#28a290'];
     svg(class="diagram",
         class= parent ? `${parent}__diagram` : "",

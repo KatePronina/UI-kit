@@ -1,4 +1,4 @@
-mixin toggle(id, text, name)
-    label.toggle__label(for= id)= text
-        input.toggle.visually-hidden(type='checkbox', id= id, name= name, value= text)
-        .toggle__elem(tabindex="0")
+mixin toggle({ text, name })
+  label.toggle__label= text
+    input.toggle.visually-hidden(type='checkbox', name= name, value= text)
+    .toggle__elem(tabindex="0")

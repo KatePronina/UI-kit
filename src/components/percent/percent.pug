@@ -1,4 +1,4 @@
-mixin percent(value, parent)
+mixin percent({ value, parent })
     -let currentPercent = (282.6 * +value) / 100
     svg(class="percent",
         class= parent ? `${parent}__percent` : "",
