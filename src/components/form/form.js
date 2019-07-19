@@ -1,17 +1,33 @@
-const inputs = document.querySelectorAll('.form__input');
+$(document).ready(function() {
+  const $forms = $('.form');
 
-const inputHandler = (e) => {
-    if (e.target.value) {
-        e.target.nextElementSibling.style.display = 'block';
-        e.target.nextElementSibling.textContent = 'Thanks!';
-        e.target.nextElementSibling.classList.remove('form__warning_error');
+  $forms.each((index, item) => {
+    new Form($(item));
+  });
+})
+
+class Form {
+  constructor(formElement) {
+    this.$formElement = formElement;
+    this.$inputs = formElement.find('.form__input');
+    this.init();
+  }
+
+  init() {
+    this.$inputs.each((index, item) => {
+      $(item).on('input', this.onInput);
+    })
+  }
+
+  onInput = (event) => {
+    if (event.target.value) {
+      event.target.nextElementSibling.style.display = 'block';
+      event.target.nextElementSibling.textContent = 'Thanks!';
+      event.target.nextElementSibling.classList.remove('form__warning_error');
     } else {
-        e.target.nextElementSibling.style.display = 'block';
-        e.target.nextElementSibling.textContent = 'Error';
-        e.target.nextElementSibling.classList.add('form__warning_error');
+      event.target.nextElementSibling.style.display = 'block';
+      event.target.nextElementSibling.textContent = 'Error';
+      event.target.nextElementSibling.classList.add('form__warning_error');
     }
-}
-
-for (let i = 0; i < inputs.length; i++) {
-    inputs[i].addEventListener('input', inputHandler);
+  }
 }

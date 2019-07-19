@@ -1,6 +1,8 @@
 mixin news({ title, img, date, text })
   article.news
-    .news__image(style=`background-image: url('./images/${img}')`)
+    -
+      const image = require(`../../components/news/img/${img}`)
+    .news__image(style=`background-image: url(${image})`)
     .news__content
       span.news__title= title
       time.news__date= date

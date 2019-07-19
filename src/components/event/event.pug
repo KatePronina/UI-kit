@@ -1,6 +1,8 @@
 mixin event({ day, month, title, img, text })
   article.event
-    .event__image(style=`background-image: url('./images/${img}')`)
+    -
+      const image = require(`../../components/event/img/${img}`)
+    .event__image(style=`background-image: url(${image})`)
     .event__content
       span.event__date
         span.event__day= day

@@ -1,21 +1,40 @@
 $(document).ready(function() {
-    $('.calendar__pick').datepicker({
-        firstDay: 0,
-        dayNamesMin: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "San" ],
-        altField: '.calendar__day',
-        altFormat: 'd',
-        showOtherMonths: true,
-        onSelect: function() {
-            const currentDate = $('.calendar__pick').datepicker('getDate');
-            $(".calendar__day").attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
-        }
+  const $calendars = $('.calendar');
+
+  $calendars.each((index, item) => {
+    new Calendar($(item));
+  });
+}); 
+
+class Calendar {
+  constructor(calendarElement) {
+    this.$calendarElement = calendarElement;
+    this.$calendarPick = calendarElement.find('.calendar__pick');
+    this.$calendarDay = calendarElement.find('.calendar__day');
+    this.$calendarBtn = calendarElement.find('.calendar__btn');
+
+    this.init();
+  }
+
+  init() {
+    this.$calendarPick.datepicker({
+      firstDay: 0,
+      dayNamesMin: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "San" ],
+      altField: this.$calendarDay,
+      altFormat: 'd',
+      showOtherMonths: true,
+      onSelect: () => {
+        const currentDate = this.$calendarPick.datepicker('getDate');
+        this.$calendarDay.attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
+      }
     })
 
-    const currentDate = $('.calendar__pick').datepicker('getDate');
-    $(".calendar__day").attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
+    const currentDate = this.$calendarPick.datepicker('getDate');
+    this.$calendarDay.attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
 
-    $('.calendar__btn').click(function() {
-        $('.calendar__day').val($.datepicker.formatDate("d", currentDate))
-                           .attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
+    this.$calendarBtn.click(() => {
+      this.$calendarDay.val($.datepicker.formatDate("d", currentDate))
+                       .attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
     })
-});
+  }
+}
