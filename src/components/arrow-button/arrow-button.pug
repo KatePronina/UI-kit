@@ -1,5 +1,9 @@
 mixin arrowBtn({ active, direction })
-  button.arrow-btn(class= active ? "" : "arrow-btn_disabled",
-                  class= direction === "prev" ? "arrow-btn_prev" : "",
-                  disabled= active!==true,
-                  aria-label= direction === "prev" ? "Предыдущий" : "Следующий")
+  -
+    let arrowClassName = "arrow-btn"
+    arrowClassName += active ? "" : " arrow-btn_disabled"
+    arrowClassName += direction === "prev" ? " arrow-btn_prev" : ""
+    let ariaLabel = direction === "prev" ? "Предыдущий" : "Следующий"
+  button(class = arrowClassName,
+         disabled = active!==true,
+         aria-label = ariaLabel)

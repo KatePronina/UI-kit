@@ -20,7 +20,7 @@
     margin-left: -.625rem;
   }
 }
-.slider--flowing {
+.slider_flowing {
   .slider-range__value {
     display: block;
     position: absolute;
@@ -49,7 +49,7 @@
     }
   }
 }
-.slider--steps {
+.slider_steps {
   .ui-slider-handle {
     background-color: $green;
   }

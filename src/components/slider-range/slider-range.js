@@ -3,13 +3,13 @@ import './jquery-ui-slider-pips';
 
 $(document).ready(function() {
     $('.slider-range').each(function() {
-        $('.slider--flowing')
+        $('.slider_flowing')
             .slider({
                 min: 0,
                 max: 100,
-                value: $('.slider--flowing').data('value'),
+                value: $('.slider_flowing').data('value'),
                 create: function(event, ui) {
-                    let val = $('.slider--flowing').slider('value');
+                    let val = $('.slider_flowing').slider('value');
                     $('.slider-range__value').html(val).css('left', `${val}%`);
                 },
                 slide: function(event, ui) {
@@ -17,12 +17,12 @@ $(document).ready(function() {
                 }          
             });
 
-        $('.slider--steps')
+        $('.slider_steps')
             .slider({           
                 min: 0,
                 max: 100,
-                value: $('.slider--steps').data('value'),
-                step: $('.slider--steps').data('step')
+                value: $('.slider_steps').data('value'),
+                step: $('.slider_steps').data('step')
             })
             .slider("pips", {
                 rest: "label"              

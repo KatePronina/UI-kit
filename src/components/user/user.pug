@@ -1,5 +1,5 @@
 mixin user({ img, name, profession, style })
-  .user(class= style === 'green' ? 'user_green' : '')
+  .user(class = style === "green" ? "user_green" : "")
     include img/sprite.svg
     .user__pic
       img.user__img(src=require(`../../components/user/img/${img}`), alt= name)

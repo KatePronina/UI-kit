@@ -1,5 +1,8 @@
 mixin button({ text, color, size })
-  button.main-btn(class= color === "orange" ? "main-btn_orange" : "",
-                  class= color === "green" ? "main-btn_green" : "",
-                  class= size === "big" ? "main-btn_big" : "",
-                  class= size === "standart" ? "main-btn_standart" : "")= text
+  -
+    let buttonClass = "main-btn"
+    buttonClass += color === "orange" ? " main-btn_orange" : ""
+    buttonClass += color === "green" ? " main-btn_green" : ""
+    buttonClass += size === "big" ? " main-btn_big" : ""
+    buttonClass += size === "standart" ? " main-btn_standart" : ""
+  button(class = buttonClass)= text
