@@ -17,10 +17,16 @@ body
     +section({ name: 'registration', title: 'Запись на пробное занятие' })
       .registration__content
         +calendar
-        +form
-          +dropdown({ placeholder: 'Выберите направление', name: 'type', options: ['Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance'] })
-          +tickBox({ text: 'Я мужчина', name: 'sex' })
-          +tickBox({ text: 'Я женщина', name: 'sex' })
-          +toggle({ text: 'Подписаться на рассылку', name: 'mail' })
-          label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
-          +sliderRange({ name: 'flowing', step: 1, value: 90 }) 
+        .registration__form
+          +form
+            .registration__form-item
+              +dropdown({ placeholder: 'Выберите направление', name: 'type', options: ['Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance'] })
+            .registration__form-item
+              +tickBox({ text: 'Я мужчина', name: 'sex' })
+            .registration__form-item
+              +tickBox({ text: 'Я женщина', name: 'sex' })
+            .registration__form-item
+              +toggle({ text: 'Подписаться на рассылку', name: 'mail' })
+            label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
+            .registration__form-item
+              +sliderRange({ name: 'flowing', step: 1, value: 90 }) 

@@ -7,15 +7,16 @@
     max-width: 25rem;
   }
 
-  .main-btn {
-    background-color: $green;
-    color: #ffffff;
-    margin-bottom: 1.625rem;
-    box-shadow: 0px 0.2em 0px 0px $darkgreen;
-  }
-
   @media (max-width: 360px) {
     max-width: 100%;
+  }
+}
+.messaging__reply-btn {
+  margin-bottom: 1.625rem;
+  display: flex;
+
+  .main-btn {
+    width: 100%;
   }
 }
 .messaging__title {

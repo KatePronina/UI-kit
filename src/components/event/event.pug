@@ -7,4 +7,5 @@ mixin event({ day, month, title, img, text })
         = ` ${month}`
       span.event__title= title
       p.event__description= text
-      +button({ text: 'ADD  TO  CALENDAR', color: 'green', size: 'standart' })
+      .event__button
+        +button({ text: 'ADD  TO  CALENDAR', color: 'green', size: 'standart' })

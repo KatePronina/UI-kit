@@ -9,4 +9,5 @@ mixin messaging({ name, img, text, large })
     p.messaging__message= text
     form.messaging__reply(action="#")
       textarea.messaging__text(name="message")
-      +button({ text: 'reply', color: 'green', size: 'big' })
+      .messaging__reply-btn
+        +button({ text: 'reply', color: 'green', size: 'big' })

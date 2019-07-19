@@ -1,4 +1,5 @@
 mixin tickBox({ text, name })
-  label.tick-box__label= text
-    input.tick-box.visually-hidden(type='radio', name= name, value= text)
-    .tick-box__element(tabindex="0")
+  .tick-box
+    label.tick-box__label= text
+      input.tick-box__input.visually-hidden(type='radio', name= name, value= text)
+      .tick-box__element(tabindex="0")

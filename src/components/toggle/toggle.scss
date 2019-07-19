@@ -41,13 +41,13 @@
     height: 1.4rem;
   }
 }
-.toggle:checked + .toggle__elem {
+.toggle__input:checked + .toggle__elem {
   background-color: $green;
 }
-.toggle:checked + .toggle__elem::before {
+.toggle__input:checked + .toggle__elem::before {
   left: 2.35rem;
 }
-.toggle:checked + .toggle__elem::after {
+.toggle__input:checked + .toggle__elem::after {
   content: 'On';
   left: .7rem;
 }

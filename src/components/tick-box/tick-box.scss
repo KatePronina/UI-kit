@@ -31,10 +31,10 @@
     }
   }
 }
-.tick-box:checked + .tick-box__element::before {
+.tick-box__input:checked + .tick-box__element::before {
   background-color: $green;
 }
-.tick-box:checked + .tick-box__element::after {
+.tick-box__input:checked + .tick-box__element::after {
   border-color: #ffffff;
 }
 .tick-box__label {

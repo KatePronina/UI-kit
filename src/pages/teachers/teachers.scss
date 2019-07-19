@@ -29,19 +29,19 @@
 .teacher__skill {
   text-decoration: underline;
 
-  &--lightgrey {
+  &_lightgrey {
     color: $lightgrey;
   }
 
-  &--darkgrey {
+  &_darkgrey {
     color: $darkgrey;
   }
 
-  &--orange {
+  &_orange {
     color: $orange;
   }
 
-  &--green {
+  &_green {
     color: $green;
   }
 }

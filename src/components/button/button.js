@@ -5,12 +5,12 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 function createRipple (e) {
-    if (this.getElementsByClassName('ripple').length > 0) {
+    if (this.getElementsByClassName('main-btn_ripple').length > 0) {
       this.removeChild(this.childNodes[1]);
     }
 
     const circle = document.createElement('div');
-    circle.classList.add('ripple');
+    circle.classList.add('main-btn_ripple');
     this.appendChild(circle);
 
     const d = Math.max(this.clientWidth, this.clientHeight);

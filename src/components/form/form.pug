@@ -8,4 +8,5 @@ mixin form
       .form__warning
     textarea.form__message(placeholder='Your Message', require)
     block
-    +button({ text: 'Submit', color: 'green', size: 'big' })
+    .form__button
+      +button({ text: 'Submit', color: 'green', size: 'big' })

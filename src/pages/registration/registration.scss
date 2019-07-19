@@ -1,24 +1,16 @@
-.registration {
-  .select__wrapper,
-  .tick-box__label,
-  .toggle__label {
-    margin-bottom: 1rem;
-  }
+.registration__form {
+  margin-left: 4.5rem;
 
-  .form {
-    margin-left: 4.5rem;
-
-    @media (max-width: 650px) {
-      margin-top: 2rem;
-      margin-left: 0;
-    }
+  @media (max-width: 650px) {
+    margin-top: 2rem;
+    margin-left: 0;
   }
+}
+.registration__form-item {
+  margin-bottom: 1.3rem;
 }
 .registration__slider-label {
   margin-bottom: 3rem;
-}
-.slider-range {
-  margin-bottom: 1.3rem;
 }
 .registration__content {
   display: flex;

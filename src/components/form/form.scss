@@ -3,14 +3,13 @@
   flex-direction: column;
   width: 18rem;
 
-  .main-btn {
-    width: 7.4rem;
-    align-self: flex-end;
-  } 
-
   @media (max-width: 360px) {
     width: 100%;
   }
+}
+.form__button {
+  width: 7.4rem;
+  align-self: flex-end;
 }
 .form__wrapper {
   position: relative;
@@ -36,6 +35,7 @@
 .form__message {
   box-sizing: border-box;
   padding: .5rem .81rem;
+  resize: none;
   color: $darkgrey;
   font-family: 'SourceSansPro', sans-serif;
   font-size: .875rem;
