@@ -1,57 +1,57 @@
 .arrow-btn {
-    width: 3.125rem;
-    height: 3.125rem;
-    background-color: #ffffff;
-    border: .18rem solid $green;
-    box-sizing: border-box;
-    border-radius: 50%;
-    padding: .6rem .7rem;
-    position: relative;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: #ffffff;
+  border: .18rem solid $green;
+  box-sizing: border-box;
+  border-radius: 50%;
+  padding: .6rem .7rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: .875rem;
+    right: 1rem;
+    width: .8125rem;
+    height: .8125rem;       
+    border-top: 4px solid $green;
+    border-right: 4px solid $green;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background-color: $green;
 
     &::before {
-        content: "";
-        position: absolute;
-        top: .875rem;
-        right: 1rem;
-        width: .8125rem;
-        height: .8125rem;       
-        border-top: 4px solid $green;
-        border-right: 4px solid $green;
-        transform: rotate(45deg);
+      border-top-color: #ffffff;
+      border-right-color: #ffffff;
+    }
+  }
+
+  &_prev {
+    &::before {
+      transform: rotate(-135deg);
+      right: 0;
+      left: 1rem;
+    }
+  }
+
+  &_disabled {
+    background-color: $lightgrey;
+    border-color: $lightgrey;
+
+    &::before {
+      border-color: #ffffff;
     }
 
     &:hover {
-        background-color: $green;
+      background-color: $lightgrey;
+      border-color: $lightgrey;
 
-        &::before {
-            border-top-color: #ffffff;
-            border-right-color: #ffffff;
-        }
+      &::before {
+        border-color: #ffffff;
+      }
     }
-
-    &--prev {
-        &::before {
-            transform: rotate(-135deg);
-            right: 0;
-            left: 1rem;
-        }
-    }
-
-    &--disabled {
-        background-color: $lightgrey;
-        border-color: $lightgrey;
-
-        &::before {
-            border-color: #ffffff;
-        }
-
-        &:hover {
-            background-color: $lightgrey;
-            border-color: $lightgrey;
-
-            &::before {
-                border-color: #ffffff;
-            }
-        }
-    }
+  }
 }

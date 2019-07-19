@@ -1,57 +1,57 @@
 .event {
-    display: flex;
-    max-width: 18rem;
+  display: flex;
+  max-width: 18rem;
 
-    .main-btn {
-        width: 8.15rem;
-        margin-left: .55rem;
-        padding: .4rem 0;
-        padding-bottom: .25rem;
-        box-shadow: 0px 0.3em 0px 0px #379285;
-        letter-spacing: .8px;
-    }
+  .main-btn {
+    width: 8.15rem;
+    margin-left: .55rem;
+    padding: .4rem 0;
+    padding-bottom: .25rem;
+    box-shadow: 0px 0.3em 0px 0px #379285;
+    letter-spacing: .8px;
+  }
 
-    @media (max-width: 360px) {
-        max-width: 100%;
-    }
+  @media (max-width: 360px) {
+    max-width: 100%;
+  }
 }
 .event__image {
-    min-width: 6rem;
-    max-height: 13.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    overflow: hidden; 
-    border-radius: 3px 0 0 3px;
+  min-width: 6rem;
+  max-height: 13.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden; 
+  border-radius: 3px 0 0 3px;
 }
 .event__content {
-    display: flex;
-    flex-direction: column;
-    background-color: $green;
-    border-radius: 0 3px 3px 0;
-    color: #ffffff;
-    padding-left: 1.375rem;
-    padding-top: 1.5rem;
-    padding-right: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: $green;
+  border-radius: 0 3px 3px 0;
+  color: #ffffff;
+  padding-left: 1.375rem;
+  padding-top: 1.5rem;
+  padding-right: 1.3rem;
 }
 .event__date {
-    font-weight: 300;
-    font-size: 1.875rem;
-    line-height: .85;
-    margin-bottom: .95rem;
+  font-weight: 300;
+  font-size: 1.875rem;
+  line-height: .85;
+  margin-bottom: .95rem;
 }
 .event__day {
-    font-size: 4.5625rem;
+  font-size: 4.5625rem;
 }
 .event__title {
-    font-weight: 900;
-    font-size: .78125rem;
-    margin-bottom: .2rem;
-    letter-spacing: .3px;
+  font-weight: 900;
+  font-size: .78125rem;
+  margin-bottom: .2rem;
+  letter-spacing: .3px;
 }
 .event__description {
-    margin: 0;
-    margin-bottom: 1.05rem;
-    font-size: .6875rem;
-    letter-spacing: .5px;
+  margin: 0;
+  margin-bottom: 1.05rem;
+  font-size: .6875rem;
+  letter-spacing: .5px;
 }

@@ -1,44 +1,43 @@
 .tick-box__element {
-    position: relative; 
+  position: relative; 
+  width: 1.43rem;
+  height: 1.43rem;
+  margin-left: .4rem;
+
+  &::before {
+    position: absolute;
+    content: '';
     width: 1.43rem;
-    height: 1.43rem;
-    margin-left: .4rem;
+    height: 1.43rem;   
+    background-color: $lightgrey;
+    border-radius: 50%;
+  }
 
-    &::before {
-        position: absolute;
-        content: '';
-        width: 1.43rem;
-        height: 1.43rem;   
-        background-color: $lightgrey;
-        border-radius: 50%;
+  &::after {
+    position: absolute;
+    content: '';
+    width: .5625rem;
+    height: .25rem;
+    top: .4rem;
+    left: .4rem;
+    border: 2px solid $grey;
+    border-right: none;
+    border-top: none;
+    transform: rotate(-45deg);
+
+    @media (max-width: 768px) {
+      top: .45rem;
+      left: .35rem;
     }
-
-    &::after {
-        position: absolute;
-        content: '';
-        width: .5625rem;
-        height: .25rem;
-        top: .4rem;
-        left: .4rem;
-        border: 2px solid $grey;
-        border-right: none;
-        border-top: none;
-        transform: rotate(-45deg);
-
-        @media (max-width: 768px) {
-            top: .45rem;
-            left: .35rem;
-        }
-    }
+  }
 }
 .tick-box:checked + .tick-box__element::before {
-    background-color: $green;
+  background-color: $green;
 }
 .tick-box:checked + .tick-box__element::after {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
 .tick-box__label {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
-

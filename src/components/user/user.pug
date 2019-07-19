@@ -1,5 +1,5 @@
 mixin user({ img, name, profession, style })
-  .user(class= style === 'green' ? 'user--green' : '')
+  .user(class= style === 'green' ? 'user_green' : '')
     include img/sprite.svg
     .user__pic
       img.user__img(src=require(`../../components/user/img/${img}`), alt= name)
@@ -11,7 +11,7 @@ mixin user({ img, name, profession, style })
             svg.social-icons__icon
               use(xlink:href="#facebook-letter-logo")
           a.social-icons__link(href="#")
-            svg.social-icons__icon.social-icons__icon--tw
+            svg.social-icons__icon.social-icons__icon_tw
               use(xlink:href="#twitter-logo-silhouette")
           a.social-icons__link(href="#")
             svg.social-icons__icon

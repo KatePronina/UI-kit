@@ -1,8 +1,8 @@
 mixin news({ title, img, date, text })
-    article.news
-        .news__image
-            img.news__img(src=require(`../../components/news/img/${img}`))
-        .news__content
-            span.news__title= title
-            time.news__date= date
-            p.news__description= text
+  article.news
+    .news__image
+      img.news__img(src=require(`../../components/news/img/${img}`))
+    .news__content
+      span.news__title= title
+      time.news__date= date
+      p.news__description= text

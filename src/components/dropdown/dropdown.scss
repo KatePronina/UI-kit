@@ -1,82 +1,82 @@
 .ui-selectmenu-menu { 
-    padding: 0; 
-    margin: 0; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    display: none; 
-    z-index: 1;
+  padding: 0; 
+  margin: 0; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  display: none; 
+  z-index: 1;
 } 
 .ui-selectmenu-open { 
-    display: block; 
+  display: block; 
 } 
 .ui-selectmenu-button { 
-    display: inline-block; 
-    overflow: hidden; 
-    position: relative; 
-    text-decoration: none; 
-    cursor: pointer; 
+  display: inline-block; 
+  overflow: hidden; 
+  position: relative; 
+  text-decoration: none; 
+  cursor: pointer; 
 } 
 
 
 .ui-selectmenu-button {
-    display: flex;
-    max-width: 18rem;
-    width: 100%;
+  display: flex;
+  max-width: 18rem;
+  width: 100%;
 }
 .ui-selectmenu-text {
-    width: 88.4%;
-    box-sizing: border-box;
-    background-color: $lightgrey;
-    border-radius: 3px 0 0 3px;
-    padding-top: .3rem;
-    padding-bottom: .3rem;
-    padding-left: .81rem;
-    color: #888888;
-    font-size: .875rem;
-    font-family: 'SourceSansPro', sans-serif;
-    letter-spacing: .2px;
+  width: 88.4%;
+  box-sizing: border-box;
+  background-color: $lightgrey;
+  border-radius: 3px 0 0 3px;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  padding-left: .81rem;
+  color: #888888;
+  font-size: .875rem;
+  font-family: 'SourceSansPro', sans-serif;
+  letter-spacing: .2px;
 }
 .ui-selectmenu-icon {
-    order: 1;
-    flex-grow: 1;
-    background-color: $green;
-    border-radius: 0 3px 3px 0;
-    position: relative;
+  order: 1;
+  flex-grow: 1;
+  background-color: $green;
+  border-radius: 0 3px 3px 0;
+  position: relative;
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: .5rem;
-        height: .5rem;
-        border: 2px solid #ffffff;
-        border-top: none;
-        border-left: none;
-        top: .4rem;
-        left: .7rem;
-        transform: rotate(45deg);
-    }
+  &::before {
+    content: '';
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    border: 2px solid #ffffff;
+    border-top: none;
+    border-left: none;
+    top: .4rem;
+    left: .7rem;
+    transform: rotate(45deg);
+  }
 }
 .select__wrapper {
-    width: 100%;
+  width: 100%;
 }
 .ui-menu {
-    margin: 0;
-    padding: 0;
-    padding-left: .81rem;
-    padding-top: .8rem;
-    list-style: none;
-    background-color: $green;
-    border-radius: 3px;
-    color: #ffffff;
+  margin: 0;
+  padding: 0;
+  padding-left: .81rem;
+  padding-top: .8rem;
+  list-style: none;
+  background-color: $green;
+  border-radius: 3px;
+  color: #ffffff;
 }
 .ui-menu-item {
-    padding-bottom: .8rem;
-    font-size: .875rem;
-    font-family: 'SourceSansPro', sans-serif;
-    cursor: pointer;
+  padding-bottom: .8rem;
+  font-size: .875rem;
+  font-family: 'SourceSansPro', sans-serif;
+  cursor: pointer;
 
-    &:first-child {
-        display: none;
-    }
+  &:first-child {
+    display: none;
+  }
 }

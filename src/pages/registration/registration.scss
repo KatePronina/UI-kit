@@ -1,32 +1,32 @@
 .registration {
-    .select__wrapper,
-    .tick-box__label,
-    .toggle__label {
-        margin-bottom: 1rem;
-    }
+  .select__wrapper,
+  .tick-box__label,
+  .toggle__label {
+    margin-bottom: 1rem;
+  }
 
-    .form {
-        margin-left: 4.5rem;
-
-        @media (max-width: 650px) {
-            margin-top: 2rem;
-            margin-left: 0;
-        }
-    }
-}
-.registration__slider-label {
-    margin-bottom: 3rem;
-}
-.slider-range {
-    margin-bottom: 1.3rem;
-}
-.registration__content {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  .form {
+    margin-left: 4.5rem;
 
     @media (max-width: 650px) {
-        flex-direction: column;
-        align-items: center;
+      margin-top: 2rem;
+      margin-left: 0;
     }
+  }
+}
+.registration__slider-label {
+  margin-bottom: 3rem;
+}
+.slider-range {
+  margin-bottom: 1.3rem;
+}
+.registration__content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }

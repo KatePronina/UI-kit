@@ -1,131 +1,131 @@
 .calendar {
-    width: 17.5rem;
+  width: 17.5rem;
 
-    @media (max-width: 360px) {
-        width: 100%;
-    }
+  @media (max-width: 360px) {
+    width: 100%;
+  }
 }
 .calendar__day {
-    text-align: center;
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
-    height: 6.8125rem;
-    background-color: $orange;
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    font-size: 5rem;
-    font-weight: 300;
-    padding-top: 1rem;
-    padding-bottom: 0;
-    border-radius: 3px 3px 0 0;
+  text-align: center;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  height: 6.8125rem;
+  background-color: $orange;
+  color: #ffffff;
+  font-family: 'Lato', sans-serif;
+  font-size: 5rem;
+  font-weight: 300;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  border-radius: 3px 3px 0 0;
 }
 .ui-datepicker-header {
-    position: relative;
-    background-color: #d54c2c;
-    color: #ffffff;
-    text-align: center;
+  position: relative;
+  background-color: #d54c2c;
+  color: #ffffff;
+  text-align: center;
 }
 .ui-datepicker-title {
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding-top: .5rem;
-    padding-bottom: .4rem;
-    letter-spacing: -.8px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding-top: .5rem;
+  padding-bottom: .4rem;
+  letter-spacing: -.8px;
 }
 .ui-datepicker-prev {
-    position: absolute;
-    font-size: 0;
-    width: .625rem;
-    height: .625rem;
-    border: 2px solid #ffffff;
-    border-bottom: none;
-    border-right: none;
-    transform: rotate(-45deg);
-    top: 1.05rem;
-    left: 1.05rem;
-    cursor: pointer;
+  position: absolute;
+  font-size: 0;
+  width: .625rem;
+  height: .625rem;
+  border: 2px solid #ffffff;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(-45deg);
+  top: 1.05rem;
+  left: 1.05rem;
+  cursor: pointer;
 }
 .ui-datepicker-next {
-    @extend .ui-datepicker-prev;
-    right: 1.25rem;
-    left: auto;
-    transform: rotate(135deg);
+  @extend .ui-datepicker-prev;
+  right: 1.25rem;
+  left: auto;
+  transform: rotate(135deg);
 }
 .ui-datepicker-year {
-    display: none;
+  display: none;
 }
 .ui-datepicker-calendar {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
 
-    thead {
-        background-color: $orange;
-        color: #ffffff;
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: .5625rem;
+  thead {
+    background-color: $orange;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .5625rem;
 
-        tr {
-            height: 1.6875rem;
+    tr {
+      height: 1.6875rem;
 
-            th {
-                padding-top: .4rem;
-                letter-spacing: 1px;
-            }
-        }
+      th {
+        padding-top: .4rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  tbody {
+    background-color: #f2f2f2;
+  }
+
+  td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    width: 2.4775rem;
+    height: 2.4775rem;
+    box-sizing: border-box;
+
+    &:last-child {
+      border-right: none;
     }
 
-    tbody {
-        background-color: #f2f2f2;
+    &:first-child {
+      border-left: none;
     }
+  }
 
-    td {
-        border: 1px solid #ffffff;
-        text-align: center;
-        width: 2.4775rem;
-        height: 2.4775rem;
-        box-sizing: border-box;
-
-        &:last-child {
-            border-right: none;
-        }
-
-        &:first-child {
-            border-left: none;
-        }
-    }
+  .ui-state-default {
+    color: #868686;
+    text-decoration: none;
+    font-family: 'SourceSansPro', sans-serif;
+    font-size: 1.25rem;
+  }
+  .ui-datepicker-other-month .ui-state-default {
+    color: #ffffff;
+  }
+  .ui-datepicker-current-day {
+    background-color: $orange;
 
     .ui-state-default {
-        color: #868686;
-        text-decoration: none;
-        font-family: 'SourceSansPro', sans-serif;
-        font-size: 1.25rem;
+      color: #ffffff;
     }
-    .ui-datepicker-other-month .ui-state-default {
-        color: #ffffff;
-    }
-    .ui-datepicker-current-day {
-        background-color: $orange;
-
-        .ui-state-default {
-            color: #ffffff;
-        }
-    }
+  }
 }
 .calendar__btn {
-    width: 100%;
-    box-sizing: border-box;
-    padding-left: 1.25rem;
-    padding-top: 1rem;
-    padding-bottom: .95rem;
-    background-color: $lightgrey;
-    border: none;
-    font-weight: 900;
-    font-size: .8125rem;
-    color: #868686;
-    text-transform: uppercase;
-    text-align: left;
-    border-radius: 0 0 3px 3px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 1.25rem;
+  padding-top: 1rem;
+  padding-bottom: .95rem;
+  background-color: $lightgrey;
+  border: none;
+  font-weight: 900;
+  font-size: .8125rem;
+  color: #868686;
+  text-transform: uppercase;
+  text-align: left;
+  border-radius: 0 0 3px 3px;
 }

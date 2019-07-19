@@ -1,47 +1,47 @@
 .teachers__info {
-    text-align: center;
+  text-align: center;
 }
 .teachers__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 .teachers__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 .teachers__diagram {
-    margin-left: .5rem;
+  margin-left: .5rem;
 }
 .teacher__skills-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 70%;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-bottom: 2rem;
 
-    @media (max-width: 768px) {
-        width: 100%;
-    } 
+  @media (max-width: 768px) {
+    width: 100%;
+  } 
 }
 .teacher__skill {
-    text-decoration: underline;
+  text-decoration: underline;
 
-    &--lightgrey {
-        color: $lightgrey;
-    }
+  &--lightgrey {
+    color: $lightgrey;
+  }
 
-    &--darkgrey {
-        color: $darkgrey;
-    }
+  &--darkgrey {
+    color: $darkgrey;
+  }
 
-    &--orange {
-        color: $orange;
-    }
+  &--orange {
+    color: $orange;
+  }
 
-    &--green {
-        color: $green;
-    }
+  &--green {
+    color: $green;
+  }
 }

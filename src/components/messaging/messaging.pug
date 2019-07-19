@@ -1,11 +1,11 @@
 mixin messaging({ name, img, text, large })
-  .messaging(class = large ? "messaging--large" : "")
+  .messaging(class = large ? "messaging_large" : "")
     .messaging__title= name
     .messaging__user
-      button.messaging__btn.messaging__btn--message
+      button.messaging__btn.messaging__btn-message
       .messaging__img
         img.messaging__image(src=require(`../../components/messaging/img/${img}`), alt=name)
-      button.messaging__btn.messaging__btn--camera
+      button.messaging__btn.messaging__btn-camera
     p.messaging__message= text
     form.messaging__reply(action="#")
       textarea.messaging__text(name="message")

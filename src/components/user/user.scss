@@ -1,101 +1,101 @@
 .user {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 
-    &--green {
-        .user__info {
-            background-color: $green;
+  &_green {
+    .user__info {
+      background-color: $green;
 
-            &::before {
-                border-top-color: $green;
-            }
-        }
-        .user__name {
-            color: #ffffff;
-        }
-
-        .user__profession {
-            color: #ffffff;
-        }
-
-        .social-icons__icon {
-            fill: #ffffff;
-        }
+      &::before {
+        border-top-color: $green;
+      }
+    }
+    .user__name {
+      color: #ffffff;
     }
 
-    @media (max-width: 480px) {
-        align-items: center;
+    .user__profession {
+      color: #ffffff;
     }
+
+    .social-icons__icon {
+      fill: #ffffff;
+    }
+  }
+
+  @media (max-width: 480px) {
+    align-items: center;
+  }
 }
 .user__img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: .25rem solid $lightgrey;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: .25rem solid $lightgrey;
 }
 .user__pic {
-    margin-right: .75rem;
+  margin-right: .75rem;
 }
 .user__info {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    background-color: $lightgrey;
-    border-radius: .375rem;
-    padding-top: .63rem;
-    padding-bottom: .43rem;
-    padding-left: 2rem;
-    padding-right: 1.9375rem;
-    text-align: center;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: $lightgrey;
+  border-radius: .375rem;
+  padding-top: .63rem;
+  padding-bottom: .43rem;
+  padding-left: 2rem;
+  padding-right: 1.9375rem;
+  text-align: center;
 
-    &::before {
-        position: absolute;
-        content: '';
-        left: -.8rem;
-        top: 2.5rem;
-        width: 1px;
-        height: 1px;
-        background-color: transparent;
-        border: 6px solid transparent;
-        border-top: 6px solid $lightgrey;
-        transform: rotate(90deg);
-    }
+  &::before {
+    position: absolute;
+    content: '';
+    left: -.8rem;
+    top: 2.5rem;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border: 6px solid transparent;
+    border-top: 6px solid $lightgrey;
+    transform: rotate(90deg);
+  }
 }
 .user__name {
-    font-size: 1.125rem;
-    color: $orange;
-    max-width: 6.375rem;
+  font-size: 1.125rem;
+  color: $orange;
+  max-width: 6.375rem;
 }
 .user__profession {
-    color: $darkgrey;
-    font-weight: 900;
-    font-size: .6875rem;
-    letter-spacing: .7px;
-    text-transform: uppercase;
-    max-width: 6.375rem;
+  color: $darkgrey;
+  font-weight: 900;
+  font-size: .6875rem;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+  max-width: 6.375rem;
 }
 .user__social-icons {
-    margin-top: .71rem;
+  margin-top: .71rem;
 }
 .social-icons {
-    min-width: 6.3rem;
-    display: flex;
-    justify-content: space-between;
+  min-width: 6.3rem;
+  display: flex;
+  justify-content: space-between;
 }
 .social-icons__icon {
-    width: 1.3125rem;
-    height: 1.3125rem;
-    fill: $darkgrey;
+  width: 1.3125rem;
+  height: 1.3125rem;
+  fill: $darkgrey;
 
-    &--tw {
-        width: 1.5625rem;
-        height: 1.5625rem;
-    }
+  &_tw {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
 
-    &:hover {
-        fill: $orange;
-    }
+  &:hover {
+    fill: $orange;
+  }
 }
 .social-icons__link {
-    text-decoration: none;
+  text-decoration: none;
 }

@@ -1,57 +1,57 @@
 .toggle__elem {
-    position: relative;
-    height: 1.5rem;
-    width: 3.68rem;
-    background-color: $lightgrey;
-    border-radius: .7rem;
-    transition: .2s;
-    margin-left: .4rem;
+  position: relative;
+  height: 1.5rem;
+  width: 3.68rem;
+  background-color: $lightgrey;
+  border-radius: .7rem;
+  transition: .2s;
+  margin-left: .4rem;
 
-    &::before {
-        position: absolute;
-        content: '';
-        top: .18rem;
-        left: .15rem;
-        width: 1.125rem;
-        height: 1.125rem;
-        background-color: #ffffff;
-        border-radius: 50%;
-
-        @media (max-width: 768px) {
-            top: .13rem;
-        }
-    }
-
-    &::after {
-        position: absolute;
-        content: 'Off';
-        top: .3rem;
-        left: 1.6rem;
-        color: #ffffff;
-        font-size: .75rem;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-
-    &:checked {
-        background-color: $green;
-    }
+  &::before {
+    position: absolute;
+    content: '';
+    top: .18rem;
+    left: .15rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    background-color: #ffffff;
+    border-radius: 50%;
 
     @media (max-width: 768px) {
-        height: 1.4rem;
+      top: .13rem;
     }
+  }
+
+  &::after {
+    position: absolute;
+    content: 'Off';
+    top: .3rem;
+    left: 1.6rem;
+    color: #ffffff;
+    font-size: .75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &:checked {
+    background-color: $green;
+  }
+
+  @media (max-width: 768px) {
+    height: 1.4rem;
+  }
 }
 .toggle:checked + .toggle__elem {
-    background-color: $green;
+  background-color: $green;
 }
 .toggle:checked + .toggle__elem::before {
-    left: 2.35rem;
+  left: 2.35rem;
 }
 .toggle:checked + .toggle__elem::after {
-    content: 'On';
-    left: .7rem;
+  content: 'On';
+  left: .7rem;
 }
 .toggle__label {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }

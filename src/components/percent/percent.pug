@@ -1,8 +1,8 @@
 mixin percent({ value, parent })
-    -let currentPercent = (282.6 * +value) / 100
-    svg(class="percent",
-        class= parent ? `${parent}__percent` : "",
-        aria-label= value + '%',
-        viewBox="0 0 95 95")
-        circle(r="45", cx="50%", cy="50%", class="percent__circle", stroke-dasharray=`${currentPercent} 282.6`)
-        text(x="50%", y="50%", class="percent__text")= value
+  -let currentPercent = (282.6 * +value) / 100
+  svg(class="percent",
+    class= parent ? `${parent}__percent` : "",
+    aria-label= value + '%',
+    viewBox="0 0 95 95")
+    circle(r="45", cx="50%", cy="50%", class="percent__circle", stroke-dasharray=`${currentPercent} 282.6`)
+    text(x="50%", y="50%", class="percent__text")= value

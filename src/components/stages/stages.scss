@@ -1,36 +1,36 @@
 .stages {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    max-width: 37.25rem;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  max-width: 37.25rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 .stages__item {
-    width: 1.8125rem;
-    height: 1.8125rem;
-    border-radius: 50%;
-    text-align: center;
-    background-color: $lightgrey;
-    padding-top: .5rem;
-    box-sizing: border-box;
-    font-size: .875rem;
-    font-weight: 900;
-    color: #888888;
-    
-    &--active {
-        background-color: $orange;
-        color: #ffffff;
-    }
+  width: 1.8125rem;
+  height: 1.8125rem;
+  border-radius: 50%;
+  text-align: center;
+  background-color: $lightgrey;
+  padding-top: .5rem;
+  box-sizing: border-box;
+  font-size: .875rem;
+  font-weight: 900;
+  color: #888888;
+  
+  &_active {
+    background-color: $orange;
+    color: #ffffff;
+  }
 } 
 .stages__line {
-    flex-grow: 1;
-    height: .3125rem;
-    background-color: $lightgrey;
+  flex-grow: 1;
+  height: .3125rem;
+  background-color: $lightgrey;
 
-    &--active {
-        background-color: $orange;
-    }
+  &_active {
+    background-color: $orange;
+  }
 }
