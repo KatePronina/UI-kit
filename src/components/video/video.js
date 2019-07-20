@@ -1,53 +1,69 @@
-const player = document.querySelector('.player');
-const video = document.querySelector('.player__video');
-const progress= document.querySelector('.player__progress');
-const progressFill = document.querySelector('.player__filled');
-const playBtn = document.querySelector('.player__button');
-const fullBtn = document.querySelector('.player__full');
-const info = document.querySelector('.player__info');
+$(document).ready(function() {
+	const $videos = $('.player');
 
-function togglePlay () {
-	if (video.paused) {
-		video.play();
-		info.style.opacity = 0;
-	} else {
-		video.pause();
-		info.style.opacity = 1;
+  $videos.each((index, item) => {
+    new Video($(item));
+  });
+});
+
+class Video {
+	constructor(playerElement) {
+		this.$playerElement = playerElement;
+		this.$video = playerElement.find('.player__video');
+		this.$progress = playerElement.find('.player__progress');
+		this.$progressFill = playerElement.find('.player__filled');
+		this.$playBtn = playerElement.find('.player__button');
+		this.$fullBtn = playerElement.find('.player__full');
+		this.$info = playerElement.find('.player__info');
+
+		this.init();
+	}
+
+	init() {
+		this.$video.on('click', this.togglePlay);
+		this.$playBtn.on('click', this.togglePlay);
+		this.$video.on('pause', this.changeButton);
+		this.$video.on('play', this.changeButton);
+		this.$video.on('timeupdate', this.videoUpdate);
+
+		this.$progress.on('click', this.handleProgress);
+		this.isMouseDown = false;
+		this.$progress.on('mousemove', event => this.isMouseDown && this.handleProgress(event));
+		this.$progress.on('mousedown', () => this.isMouseDown = true);
+		this.$progress.on('mouseup', () => this.isMouseDown = false);
+
+		this.$fullBtn.on('click', this.onFullscreen);
+	}
+
+	togglePlay = () => {
+		if (this.$video.prop('paused')) {
+			this.$video.trigger('play');
+			this.$info.css('opacity', 0);
+		} else {
+			this.$video.trigger('pause');
+			this.$info.css('opacity', 1);
+		}
+	}
+	
+	changeButton = () => {
+		if (this.$video.prop('paused')) {
+			this.$playBtn.css('backgroundImage', 'url(images/play.svg)');
+		} else {
+			this.$playBtn.css('backgroundImage', 'url(images/pause.svg)');
+		}
+	}
+	
+	videoUpdate = () => {
+		const currentTime = (this.$video.prop('currentTime') / this.$video.prop('duration')) * 100;
+		this.$progressFill.css('width', `${currentTime}%`);
+	}
+	
+	handleProgress = (event) => {
+		const time = (event.offsetX / this.$progress.outerWidth()) * this.$video.prop('duration');
+		this.$video.prop('currentTime', time);
+	}
+	
+	onFullscreen = () => {
+		(this.$playerElement)[0].webkitRequestFullScreen();
 	}
 }
-
-function changeButton () {
-	if (video.paused) {
-		playBtn.style.backgroundImage = 'url(images/play.svg)';
-	} else {
-		playBtn.style.backgroundImage = 'url(images/pause.svg)';
-	}
-}
-
-function videoUpdate () {
-	const currentTime = (video.currentTime / video.duration) * 100;
-	progressFill.style.width = `${currentTime}%`;
-}
-
-function handleProgress (e) {
-	const time = (e.offsetX / progress.offsetWidth) * video.duration;
-	video.currentTime = time;
-}
-
-function fullscreen () {
-	player.webkitRequestFullScreen();
-}
-
-video.addEventListener('click', togglePlay);
-playBtn.addEventListener('click', togglePlay);
-video.addEventListener('pause', changeButton);
-video.addEventListener('play', changeButton);
-video.addEventListener('timeupdate', videoUpdate);
-
-progress.addEventListener('click', handleProgress);
-let isMouseDown = false;
-progress.addEventListener('mousemove', e => isMouseDown && handleProgress(e));
-progress.addEventListener('mousedown', () => isMouseDown = true);
-progress.addEventListener('mouseup', () => isMouseDown = false);
-
-fullBtn.addEventListener('click', fullscreen);
