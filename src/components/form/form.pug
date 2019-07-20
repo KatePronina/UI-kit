@@ -1,12 +1,12 @@
 mixin form
   form.form(action="#")
     .form__wrapper
-      input.form__input(type="text", placeholder='Your Name',require)
+      input.form__input(type="text", placeholder="Your Name",require)
       .form__warning
     .form__wrapper
-      input.form__input(type="email", placeholder='Your Email', require)
+      input.form__input(type="email", placeholder="Your Email", require)
       .form__warning
-    textarea.form__message(placeholder='Your Message', require)
+    textarea.form__message(placeholder="Your Message", require)
     block
     .form__button
       +button({ text: 'Submit', color: 'green', size: 'big' })
