@@ -16,9 +16,7 @@
   position: relative; 
   text-decoration: none; 
   cursor: pointer; 
-} 
-
-
+}
 .ui-selectmenu-button {
   display: flex;
   max-width: 18rem;
@@ -69,14 +67,15 @@
   background-color: $green;
   border-radius: 3px;
   color: #ffffff;
-}
-.ui-menu-item {
-  padding-bottom: .8rem;
-  font-size: .875rem;
-  font-family: 'SourceSansPro', sans-serif;
-  cursor: pointer;
 
-  &:first-child {
-    display: none;
+  &-item {
+    padding-bottom: .8rem;
+    font-size: .875rem;
+    font-family: 'SourceSansPro', sans-serif;
+    cursor: pointer;
+
+    &:first-child {
+      display: none;
+    }
   }
 }

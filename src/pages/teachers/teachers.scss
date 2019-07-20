@@ -1,47 +1,54 @@
-.teachers__info {
-  text-align: center;
-}
-.teachers__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-}
-.teachers__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-.teachers__diagram {
-  margin-left: .5rem;
-}
-.teacher__skills-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 70%;
-  margin-bottom: 2rem;
+.teachers {
+  &__info {
+    text-align: center;
+  }
 
-  @media (max-width: 768px) {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
-  } 
-}
-.teacher__skill {
-  text-decoration: underline;
-
-  &_lightgrey {
-    color: $lightgrey;
   }
 
-  &_darkgrey {
-    color: $darkgrey;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
   }
 
-  &_orange {
-    color: $orange;
+  &__diagram {
+    margin-left: .5rem;
   }
 
-  &_green {
-    color: $green;
+  &__skills-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-bottom: 2rem;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    } 
+  }
+
+  &__skill {
+    text-decoration: underline;
+
+    &_lightgrey {
+      color: $lightgrey;
+    }
+
+    &_darkgrey {
+      color: $darkgrey;
+    }
+
+    &_orange {
+      color: $orange;
+    }
+
+    &_green {
+      color: $green;
+    }
   }
 }

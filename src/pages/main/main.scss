@@ -1,55 +1,66 @@
-.main-title {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  margin-bottom: 1.5rem;
-  letter-spacing: .4px;
-  font-size: 3rem;
-}
-.main-description {
-  margin: 0;
-  margin-bottom: 4rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-.about__features {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.main {
+  &-title {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    letter-spacing: .4px;
+    font-size: 3rem;
+  }
 
-  @media (max-width: 360px) {
-    flex-wrap: wrap;
+  &-description {
+    margin: 0;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &-news {
+    &__container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    &__item {
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 360px) {
+        margin-right: 0;
+      }
+    }
   }
 }
-.about__feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 9.625rem;
-  text-align: center;
+.about {
+  &__features {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-  @media (max-width: 360px) {
-    max-width: 50%;
-    width: 50%;
-    margin-bottom: 1rem;
+    @media (max-width: 360px) {
+      flex-wrap: wrap;
+    }
   }
-}
-.about__percent {
-  margin-bottom: .4rem;
-}
-.main-news__container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.main-news__item {
-  margin-right: 1rem;
-  margin-bottom: 1rem;
 
-  @media (max-width: 360px) {
-    margin-right: 0;
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 9.625rem;
+    text-align: center;
+
+    @media (max-width: 360px) {
+      max-width: 50%;
+      width: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__percent {
+    margin-bottom: .4rem;
   }
 }

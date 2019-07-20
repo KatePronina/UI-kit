@@ -5,57 +5,64 @@
   @media (max-width: 360px) {
     max-width: 100%;
   }
-}
-.event__button {
-  margin-left: .55rem;
 
-  .main-btn {
-    box-shadow: 0px 0.3em 0px 0px #379285;
-    letter-spacing: .8px;
-    padding: .4rem 0;
-    padding-bottom: .25rem;
-    width: 8.15rem;
+  &__button {
+    margin-left: .55rem;
+
+    .main-btn {
+      box-shadow: 0px 0.3em 0px 0px #379285;
+      letter-spacing: .8px;
+      padding: .4rem 0;
+      padding-bottom: .25rem;
+      width: 8.15rem;
+    }
   }
-}
-.event__image {
-  width: 38.5%;
-  min-height: 13.25rem;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  border-radius: 3px 0 0 3px;
-}
-.event__content {
-  width: 61.5%;
-  display: flex;
-  flex-direction: column;
-  background-color: $green;
-  border-radius: 0 3px 3px 0;
-  color: #ffffff;
-  padding-left: 1.375rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.2rem;
-  padding-right: 1.3rem;
-}
-.event__date {
-  font-weight: 300;
-  font-size: 1.875rem;
-  line-height: .85;
-  margin-bottom: .95rem;
-}
-.event__day {
-  font-size: 4.5625rem;
-}
-.event__title {
-  font-weight: 900;
-  font-size: .78125rem;
-  margin-bottom: .2rem;
-  letter-spacing: .3px;
-}
-.event__description {
-  margin: 0;
-  margin-bottom: 1.05rem;
-  font-size: .6875rem;
-  letter-spacing: .5px;
+
+  &__image {
+    width: 38.5%;
+    min-height: 13.25rem;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 3px 0 0 3px;
+  }
+
+  &__content {
+    width: 61.5%;
+    display: flex;
+    flex-direction: column;
+    background-color: $green;
+    border-radius: 0 3px 3px 0;
+    color: #ffffff;
+    padding-left: 1.375rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
+    padding-right: 1.3rem;
+  }
+
+  &__date {
+    font-weight: 300;
+    font-size: 1.875rem;
+    line-height: .85;
+    margin-bottom: .95rem;
+  }
+
+  &__day {
+    font-size: 4.5625rem;
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: .78125rem;
+    margin-bottom: .2rem;
+    letter-spacing: .3px;
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 1.05rem;
+    font-size: .6875rem;
+    letter-spacing: .5px;
+  }
 }
