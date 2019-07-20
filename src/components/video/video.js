@@ -1,5 +1,3 @@
-
-
 class Video {
   constructor(playerElement) {
     this.$playerElement = playerElement;
