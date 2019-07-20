@@ -12,7 +12,7 @@ class Slider {
   }
 
   initFlowing() {
-    this.hint = this.$sliderElement.find('.slider-range__value');
+    this.$hint = this.$sliderElement.find('.slider-range__value');
     this.$sliderElement
       .slider({
         min: 0,
@@ -20,10 +20,10 @@ class Slider {
         value: this.$sliderElement.data('value'),
         create: () => {
           const val = this.$sliderElement.slider('value');
-          this.hint.html(val).css('left', `${val}%`);
+          this.$hint.html(val).css('left', `${val}%`);
         },
         slide: (event, ui) => {
-          this.hint.html(ui.value).css('left', `${ui.value}%`).attr('data-value', `${ui.value}`);
+          this.$hint.html(ui.value).css('left', `${ui.value}%`).attr('data-value', `${ui.value}`);
         },
       });
   }
