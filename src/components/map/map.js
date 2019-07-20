@@ -1,12 +1,5 @@
 import GoogleMapsLoader from 'google-maps';
-
-$(document).ready(function() {
-  const $maps = $('.map');
-
-  $maps.each((index, item) => {
-    new Map($(item));
-  });
-})
+import './img/pin.png';
 
 class Map {
   constructor(mapElement) {
@@ -21,7 +14,7 @@ class Map {
     GoogleMapsLoader.KEY = 'AIzaSyC_M2Pwf2qVeiWWUP0MuXOwOGPjTaVguAI';
 
     GoogleMapsLoader.load((google) => {
-      const position = {lat: +this.lat, lng: +this.lng};
+      const position = { lat: +this.lat, lng: +this.lng };
 
       const options = {
         center: position,
@@ -34,6 +27,14 @@ class Map {
         map,
         icon: './images/pin.png',
       });
-    })
+    });
   }
 }
+
+$(document).ready(() => {
+  const $maps = $('.map');
+
+  $maps.each((index, item) => {
+    new Map($(item));
+  });
+});

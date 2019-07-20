@@ -1,14 +1,14 @@
 {
-    "extends": "eslint:recommended",
-    "parser": "babel-eslint",
-    "globals": {
-        "window" : true,
-        "document" : true,
-        "console" : true,
-        "alert" : true,
-        "$": true
-    },
-    "rules": {
-        "no-console": "off"
-    }
+  "extends": "eslint-config-airbnb",
+  "parser": "babel-eslint",
+  "globals": {
+    "window" : true,
+    "document" : true,
+    "console" : true,
+    "alert" : true,
+    "$": true
+  },
+  "rules": {
+    "no-new": 0,
+  }
 }

@@ -1,11 +1,3 @@
-$(document).ready(function() {
-  const $calendars = $('.calendar');
-
-  $calendars.each((index, item) => {
-    new Calendar($(item));
-  });
-}); 
-
 class Calendar {
   constructor(calendarElement) {
     this.$calendarElement = calendarElement;
@@ -19,22 +11,30 @@ class Calendar {
   init() {
     this.$calendarPick.datepicker({
       firstDay: 0,
-      dayNamesMin: [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "San" ],
+      dayNamesMin: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'San'],
       altField: this.$calendarDay,
       altFormat: 'd',
       showOtherMonths: true,
       onSelect: () => {
         const currentDate = this.$calendarPick.datepicker('getDate');
-        this.$calendarDay.attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
-      }
-    })
+        this.$calendarDay.attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
+      },
+    });
 
     const currentDate = this.$calendarPick.datepicker('getDate');
-    this.$calendarDay.attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
+    this.$calendarDay.attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
 
     this.$calendarBtn.click(() => {
-      this.$calendarDay.val($.datepicker.formatDate("d", currentDate))
-                       .attr('value', $.datepicker.formatDate("dd-mm-yy", currentDate));
-    })
+      this.$calendarDay.val($.datepicker.formatDate('d', currentDate))
+        .attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
+    });
   }
 }
+
+$(document).ready(() => {
+  const $calendars = $('.calendar');
+
+  $calendars.each((index, item) => {
+    new Calendar($(item));
+  });
+});

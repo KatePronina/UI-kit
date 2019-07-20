@@ -1,13 +1,5 @@
 import './jquery-ui-slider-pips';
 
-$(document).ready(function() {
-  const $sliders = $('.slider-range');
-
-  $sliders.each((index, item) => {
-    new Slider($(item));
-  });
-});
-
 class Slider {
   constructor(sliderElement) {
     this.$sliderElement = sliderElement;
@@ -27,25 +19,33 @@ class Slider {
         max: 100,
         value: this.$sliderElement.data('value'),
         create: () => {
-          let val = this.$sliderElement.slider('value');
+          const val = this.$sliderElement.slider('value');
           this.hint.html(val).css('left', `${val}%`);
         },
         slide: (event, ui) => {
           this.hint.html(ui.value).css('left', `${ui.value}%`).attr('data-value', `${ui.value}`);
-        }          
-      });   
+        },
+      });
   }
 
   initSteps() {
     this.$sliderElement
-      .slider({      
+      .slider({
         min: 0,
         max: 100,
         value: this.$sliderElement.data('value'),
-        step: this.$sliderElement.data('step')
+        step: this.$sliderElement.data('step'),
       })
-      .slider("pips", {
-        rest: "label"              
+      .slider('pips', {
+        rest: 'label',
       });
   }
 }
+
+$(document).ready(() => {
+  const $sliders = $('.slider-range');
+
+  $sliders.each((index, item) => {
+    new Slider($(item));
+  });
+});

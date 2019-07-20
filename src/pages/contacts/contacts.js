@@ -1,3 +1,3 @@
-import '../../base.scss'
+import '../../base.scss';
 
-import '../../components/map/map'
+import '../../components/map/map';

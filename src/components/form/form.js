@@ -1,11 +1,3 @@
-$(document).ready(function() {
-  const $forms = $('.form');
-
-  $forms.each((index, item) => {
-    new Form($(item));
-  });
-})
-
 class Form {
   constructor(formElement) {
     this.$formElement = formElement;
@@ -16,18 +8,27 @@ class Form {
   init() {
     this.$inputs.each((index, item) => {
       $(item).on('input', this.onInput);
-    })
+    });
   }
 
   onInput = (event) => {
+    const { target } = event;
     if (event.target.value) {
-      event.target.nextElementSibling.style.display = 'block';
-      event.target.nextElementSibling.textContent = 'Thanks!';
-      event.target.nextElementSibling.classList.remove('form__warning_error');
+      target.nextElementSibling.style.display = 'block';
+      target.nextElementSibling.textContent = 'Thanks!';
+      target.nextElementSibling.classList.remove('form__warning_error');
     } else {
-      event.target.nextElementSibling.style.display = 'block';
-      event.target.nextElementSibling.textContent = 'Error';
-      event.target.nextElementSibling.classList.add('form__warning_error');
+      target.nextElementSibling.style.display = 'block';
+      target.nextElementSibling.textContent = 'Error';
+      target.nextElementSibling.classList.add('form__warning_error');
     }
   }
 }
+
+$(document).ready(() => {
+  const $forms = $('.form');
+
+  $forms.each((index, item) => {
+    new Form($(item));
+  });
+});
