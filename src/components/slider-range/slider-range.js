@@ -1,31 +1,51 @@
-/* eslint-disable no-unused-vars */
 import './jquery-ui-slider-pips';
 
 $(document).ready(function() {
-    $('.slider-range').each(function() {
-        $('.slider_flowing')
-            .slider({
-                min: 0,
-                max: 100,
-                value: $('.slider_flowing').data('value'),
-                create: function(event, ui) {
-                    let val = $('.slider_flowing').slider('value');
-                    $('.slider-range__value').html(val).css('left', `${val}%`);
-                },
-                slide: function(event, ui) {
-                    $('.slider-range__value').html(ui.value).css('left', `${ui.value}%`).attr('data-value', `${ui.value}`);
-                }          
-            });
+  const $sliders = $('.slider-range');
 
-        $('.slider_steps')
-            .slider({           
-                min: 0,
-                max: 100,
-                value: $('.slider_steps').data('value'),
-                step: $('.slider_steps').data('step')
-            })
-            .slider("pips", {
-                rest: "label"              
-            });
-    })
+  $sliders.each((index, item) => {
+    new Slider($(item));
+  });
 });
+
+class Slider {
+  constructor(sliderElement) {
+    this.$sliderElement = sliderElement;
+    if (sliderElement.hasClass('slider_flowing')) {
+      this.initFlowing();
+    }
+    if (sliderElement.hasClass('slider_steps')) {
+      this.initSteps();
+    }
+  }
+
+  initFlowing() {
+    this.hint = this.$sliderElement.find('.slider-range__value');
+    this.$sliderElement
+      .slider({
+        min: 0,
+        max: 100,
+        value: this.$sliderElement.data('value'),
+        create: () => {
+          let val = this.$sliderElement.slider('value');
+          this.hint.html(val).css('left', `${val}%`);
+        },
+        slide: (event, ui) => {
+          this.hint.html(ui.value).css('left', `${ui.value}%`).attr('data-value', `${ui.value}`);
+        }          
+      });   
+  }
+
+  initSteps() {
+    this.$sliderElement
+      .slider({      
+        min: 0,
+        max: 100,
+        value: this.$sliderElement.data('value'),
+        step: this.$sliderElement.data('step')
+      })
+      .slider("pips", {
+        rest: "label"              
+      });
+  }
+}

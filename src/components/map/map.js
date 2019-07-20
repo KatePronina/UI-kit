@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+
 function initMap() {
     var mapElement = document.getElementById('map');
 
