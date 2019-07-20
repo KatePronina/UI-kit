@@ -75,10 +75,6 @@
   background-size: contain;
   color: #ffffff;
 
-  &::before {
-    background-image: url('components/video/img/pause.svg');
-  }
-
   @media (max-width: 480px) {
     margin-right: .3rem;
   }
