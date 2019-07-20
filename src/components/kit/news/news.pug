@@ -1,0 +1,9 @@
+mixin news({ title, img, date, text })
+  article.news
+    -
+      const image = require(`../../components/kit/news/img/${img}`)
+    .news__image(style=`background-image: url(${image})`)
+    .news__content
+      span.news__title= title
+      time.news__date= date
+      p.news__description= text

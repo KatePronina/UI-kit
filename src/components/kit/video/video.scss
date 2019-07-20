@@ -1,0 +1,129 @@
+.player {
+  position: relative;
+  display: flex;
+  max-height: 21.05rem;
+  max-width: 37.125rem;
+  border-radius: .25rem;
+  overflow: hidden;
+
+  &:hover .player__info {
+    opacity: 0;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 2.3rem;
+    padding-right: 2rem;
+    color: #ffffff;
+    transition: .3s;
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: 2.25rem;
+    line-height: 2.3rem;
+    letter-spacing: -1.3px;
+    margin-bottom: .2rem;
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &__author {
+    text-transform: uppercase;
+    font-size: .78125rem;
+    font-weight: 900;
+    letter-spacing: .9px;
+
+    @media (max-width: 480px) {
+      font-size: .7rem;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .8);
+    padding-left: 1.3rem;
+    border-radius: 0 0 .25rem .25rem;
+
+    @media (max-width: 480px) {
+      padding-left: 1rem;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    border: none;
+    width: .625rem;
+    height: .875rem;
+    background-image: url('components/kit/video/img/play.svg');
+    background-repeat: no-repeat;
+    margin-right: 1.125rem;
+    background-size: contain;
+    color: #ffffff;
+
+    @media (max-width: 480px) {
+      margin-right: .3rem;
+    }
+  }
+
+  &__progress {
+    width: 82.3%;
+    background-color: $lightgrey;
+    height: .3125rem;
+    border-radius: .1875rem;
+
+    @media (max-width: 480px) {
+      width: 80%;
+    }
+  }
+
+  &__filled {
+    width: 0;
+    background-color: $orange;
+    height: 100%;
+    border-radius: .1875rem;
+  }
+
+  &__full {
+    width: 3rem;
+    height: 100%;
+    background-color: $orange;
+    border: none;
+    margin-left: auto;
+    background-image: url('components/kit/video/img/full.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 0 .25rem;
+
+    @media (max-width: 480px) {
+      width: 2.5rem;
+      background-size: 60%;
+    }
+  }
+
+  &:fullscreen {
+    .player__video {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+mixin event({ day, month, title, img, text })
+  article.event
+    -
+      const image = require(`../../components/kit/event/img/${img}`)
+    .event__image(style=`background-image: url(${image})`)
+    .event__content
+      span.event__date
+        span.event__day= day
+        = ` ${month}`
+      span.event__title= title
+      p.event__description= text
+      .event__button
+        +button({ text: 'ADD  TO  CALENDAR', color: 'green', size: 'standart' })

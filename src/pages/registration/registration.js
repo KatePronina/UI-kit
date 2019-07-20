@@ -4,7 +4,7 @@ import 'jquery-ui/ui/widgets/selectmenu';
 import 'jquery-ui/ui/widgets/datepicker';
 import 'jquery-ui/ui/widgets/slider';
 
-import '../../components/form/form';
-import '../../components/dropdown/dropdown';
-import '../../components/slider-range/slider-range';
-import '../../components/calendar/calendar';
+import '../../components/kit/form/form-init';
+import '../../components/kit/dropdown/dropdown-init';
+import '../../components/kit/slider-range/slider-range-init';
+import '../../components/kit/calendar/calendar-init';

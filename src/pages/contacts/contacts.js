@@ -1,3 +1,3 @@
 import '../../base.scss';
 
-import '../../components/map/map';
+import '../../components/kit/map/map-init';

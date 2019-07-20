@@ -1,0 +1,11 @@
+mixin video({ url, title, author })
+  .player
+    .player__info
+      span.player__title= title
+      span.player__author= author
+    video.player__video(src=require(`../../components/kit/video/vid/${url}`))
+    .player__controls
+      button.player__button
+      .player__progress
+        .player__filled
+      button.player__full

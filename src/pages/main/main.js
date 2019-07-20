@@ -1,3 +1,3 @@
 import '../../base.scss';
 
-import '../../components/video/video';
+import '../../components/kit/video/video-init';
