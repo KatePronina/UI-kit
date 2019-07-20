@@ -1,3 +1,6 @@
+import './img/pause.svg';
+import './img/play.svg';
+
 class Video {
   constructor(playerElement) {
     this.$playerElement = playerElement;
