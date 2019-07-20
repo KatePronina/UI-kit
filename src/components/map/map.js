@@ -1,22 +1,39 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
+import GoogleMapsLoader from 'google-maps';
 
-function initMap() {
-    var mapElement = document.getElementById('map');
+$(document).ready(function() {
+  const $maps = $('.map');
 
-    var uluru = {lat: +mapElement.dataset.lat, lng: +mapElement.dataset.lng};
+  $maps.each((index, item) => {
+    new Map($(item));
+  });
+})
 
-    var map = new google.maps.Map(mapElement, {
-        zoom: 14,
-        center: uluru,
-        disableDefaultUI: true
-    });
+class Map {
+  constructor(mapElement) {
+    this.$mapElement = mapElement.find('.map__container');
+    this.lat = this.$mapElement.data('lat');
+    this.lng = this.$mapElement.data('lng');
 
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map,
-        icon: require('./img/pin.png')
-    });
+    this.init();
+  }
+
+  init() {
+    GoogleMapsLoader.KEY = 'AIzaSyC_M2Pwf2qVeiWWUP0MuXOwOGPjTaVguAI';
+
+    GoogleMapsLoader.load((google) => {
+      const position = {lat: +this.lat, lng: +this.lng};
+
+      const options = {
+        center: position,
+        zoom: 15,
+      };
+
+      const map = new google.maps.Map((this.$mapElement)[0], options);
+      new google.maps.Marker({
+        position,
+        map,
+        icon: './images/pin.png',
+      });
+    })
+  }
 }
-
-window.initMap = initMap;
