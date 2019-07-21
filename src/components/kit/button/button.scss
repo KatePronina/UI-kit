@@ -33,6 +33,13 @@
       background-color: $green;
       box-shadow: 0px .2em 0px 0px $darkgreen;
     }
+
+    &_filled {
+      background-color: $green;
+      color: #ffffff;
+      border-bottom: .22em solid $darkgreen;
+      box-sizing: border-box;
+    }
   }
 
   &_orange {

@@ -3,6 +3,7 @@ mixin button({ text, color, size })
     let buttonClass = "main-btn"
     buttonClass += color === "orange" ? " main-btn_orange" : ""
     buttonClass += color === "green" ? " main-btn_green" : ""
+    buttonClass += color === "greenFill" ? " main-btn_green_filled" : ""
     buttonClass += size === "big" ? " main-btn_big" : ""
     buttonClass += size === "standart" ? " main-btn_standart" : ""
   button(class = buttonClass)= text
