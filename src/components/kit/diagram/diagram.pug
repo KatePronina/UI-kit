@@ -1,7 +1,6 @@
-mixin diagram({ parent, values })
+mixin diagram({ values })
   -const colors = ['#4f4f4f', '#e75735', '#28a290'];
   svg(class="diagram",
-    class= parent ? `${parent}__diagram` : "",
     viewBox="0 0 95 95")
     circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke="#e5e5e5")
     -let offset = 0;
