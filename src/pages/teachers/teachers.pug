@@ -18,39 +18,55 @@ body
         span.teachers__skill.teachers__skill_orange Speed control
         span.teachers__skill.teachers__skill_green Импровизация
       .teachers__list
-        .teachers__item
-          +user({ img: 'user1.jpg', name: 'Александр Иванов', profession: 'Break Dance' })
-          .teachers__diagram
-            +diagram({ values: [11, 26, 30] })
-        .teachers__item
-          +user({ img: 'user2.jpg', name: 'Катя Казанцева', profession: 'современная хореография', style: 'green' })
-          .teachers__diagram
-            +diagram({ values: [15, 55, 20] })
-        .teachers__item
-          +user({ img: 'user2.jpg', name: 'Нина Вербицкая', profession: 'восточные танцы' })
-          .teachers__diagram
-            +diagram({ values: [30, 50, 10] })
-        .teachers__item
-          +user({ img: 'user1.jpg', name: 'Паша Дягилев', profession: 'jazz funk', style: 'green' })
-          .teachers__diagram
-            +diagram({ values: [40, 20, 15] })
-        .teachers__item
-          +user({ img: 'user1.jpg', name: 'Александр Иванов', profession: 'Break Dance' })
-          .teachers__diagram
-            +diagram({ values: [34, 28, 8] })
-        .teachers__item
-          +user({ img: 'user2.jpg', name: 'Катя Казанцева', profession: 'современная хореография', style: 'green' })
-          .teachers__diagram
-            +diagram({ values: [55, 23, 12] })
-        .teachers__item
-          +user({ img: 'user2.jpg', name: 'Нина Вербицкая', profession: 'восточные танцы' })
-          .teachers__diagram
-            +diagram({ values: [11, 26, 30] })
-        .teachers__item
-          +user({ img: 'user1.jpg', name: 'Паша Дягилев', profession: 'jazz funk', style: 'green' })
-          .teachers__diagram
-            +diagram({ values: [45, 6, 38] })
-        .teachers__item
-          +user({ img: 'user1.jpg', name: 'Александр Иванов', profession: 'Break Dance' })
-          .teachers__diagram
-            +diagram({ values: [36, 25, 7] })
+        -
+          const teachersData = [
+            {
+              img: 'user1.jpg',
+              name: 'Александр Иванов',
+              profession: 'Break Dance',
+              values: [11, 26, 30],
+            },
+            {
+              img: 'user2.jpg',
+              name: 'Катя Казанцева',
+              profession: 'Современная хореография',
+              values: [5, 40, 50],
+              style: 'green',
+            },
+            {
+              img: 'user2.jpg',
+              name: 'Нина Вербицкая',
+              profession: 'Восточные танцы',
+              values: [30, 50, 10],
+            },
+            {
+              img: 'user1.jpg',
+              name: 'Паша Дягилев',
+              profession: 'Jazz funk',
+              values: [40, 20, 15],
+              style: 'green',
+            },
+            {
+              img: 'user1.jpg',
+              name: 'Александр Иванов',
+              profession: 'Break Dance',
+              values: [34, 28, 8],
+            },
+            {
+              img: 'user2.jpg',
+              name: 'Катя Казанцева',
+              profession: 'Современная хореография',
+              values: [55, 23, 12],
+              style: 'green',
+            },
+          ]
+        each teacher in teachersData
+          .teachers__item
+            +user({
+              img: teacher.img,
+              name: teacher.name,
+              profession: teacher.profession,
+              style: teacher.style,
+            })
+            .teachers__diagram
+              +diagram({ values: teacher.values })

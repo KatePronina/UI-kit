@@ -16,23 +16,31 @@ body
     h1.main-title Школа танцев "MOVEMENT"
     p.main-description Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!
     +section({ title: 'Что такое "MOVEMENT" в процентах?' })
+      -
+        const featuresData = [
+          {
+            label: 'довольных учеников',
+            percent: 98,
+          },
+          {
+            label: 'преподавателей из стран Латинской Америки',
+            percent: 34,
+          },
+          {
+            label: 'полностью оборудованные залы',
+            percent: 100,
+          },
+          {
+            label: 'учеников остаются с нами после первого занятия',
+            percent: 83,
+          },
+        ]
       ul.about__features
-        li.about__feature
-          .about__percent
-            +percent({value: 98 })
-          span.about__feature-name довольных учеников
-        li.about__feature
-          .about__percent
-            +percent({value: 34 })
-          span.about__feature-name преподавателей из стран Латинской Америки
-        li.about__feature
-          .about__percent
-            +percent({ value: 100 })
-          span.about__feature-name полностью оборудованные залы
-        li.about__feature
-          .about__percent
-            +percent({ value: 83 })
-          span.about__feature-name учеников остаются с нами после первого занятия
+        each feature in featuresData
+          li.about__feature
+            .about__percent
+              +percent({ value: feature.percent })
+            span.about__feature-name= feature.label
       +section({ name: 'show-us', title: 'Посмотрите, в каком прекрасном городе мы работаем' })
         +video({ url: 'winter.mp4', title: 'Санкт-Петербург', author: 'by Time Lab' })
       +section({ name: 'contact-us', title: 'Возможно, Вы в одном клике от мечты...' })
