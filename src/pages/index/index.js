@@ -1,4 +1,4 @@
-import '../../base.scss';
+import requireAll from '../requireAll';
 
 import 'jquery-ui/ui/widgets/slider';
 import 'jquery-ui/ui/widgets/selectmenu';
@@ -11,3 +11,5 @@ import '../../components/kit/dropdown/dropdown-init';
 import '../../components/kit/map/map-init';
 import '../../components/kit/calendar/calendar-init';
 import '../../components/kit/video/video-init';
+
+requireAll(require.context('../../', true, /\.scss$/));

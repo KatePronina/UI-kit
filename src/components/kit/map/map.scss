@@ -1,3 +1,5 @@
+@import '../../../style-config/variables.scss';
+
 .map {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
 
   &__container {
     height: 12.7rem;
-    background-image: url('components/kit/map/img/fallback.jpg');
+    background-image: url('./img/fallback.jpg');
     background-size: cover;
     border-radius: 3px 3px 0 0;
   }
@@ -67,13 +69,13 @@
     &-target {
       width: 1.4875rem;
       height: 1.525rem;
-      background-image: url('components/kit/map/img/target.svg');
+      background-image: url('./img/target.svg');
     }
 
     &-pin {
       width: 1.46rem;
       height: 1.575rem;
-      background-image: url('components/kit/map/img/map-pin.svg');
+      background-image: url('./img/map-pin.svg');
     }
   }
 }

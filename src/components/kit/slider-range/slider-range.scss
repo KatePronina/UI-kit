@@ -1,4 +1,5 @@
-@import 'components/kit/slider-range/jquery-ui-slider-pips.css';
+@import '../../../style-config/variables.scss';
+@import './jquery-ui-slider-pips.css';
 
 .slider-range {
   max-width: 16.25rem;

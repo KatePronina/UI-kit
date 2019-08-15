@@ -6,11 +6,11 @@ const path = require('path');
 
 const conf = {
   entry: {
-    'index': './src/pages/index/index.js',
-    'main': './src/pages/main/main.js',
-    'registration': './src/pages/registration/registration.js',
-    'contacts': './src/pages/contacts/contacts.js',
-    'teachers': './src/pages/teachers/teachers.js'
+    index: './src/pages/index/index.js',
+    main: './src/pages/main/main.js',
+    registration: './src/pages/registration/registration.js',
+    contacts: './src/pages/contacts/contacts.js',
+    teachers: './src/pages/teachers/teachers.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),

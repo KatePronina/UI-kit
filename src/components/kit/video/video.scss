@@ -1,3 +1,5 @@
+@import '../../../style-config/variables.scss';
+
 .player {
   position: relative;
   display: flex;
@@ -74,7 +76,7 @@
     border: none;
     width: .625rem;
     height: .875rem;
-    background-image: url('components/kit/video/img/play.svg');
+    background-image: url('./img/play.svg');
     background-repeat: no-repeat;
     margin-right: 1.125rem;
     background-size: contain;
@@ -109,7 +111,7 @@
     background-color: $orange;
     border: none;
     margin-left: auto;
-    background-image: url('components/kit/video/img/full.svg');
+    background-image: url('./img/full.svg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0 0 .25rem;
