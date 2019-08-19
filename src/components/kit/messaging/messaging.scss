@@ -3,7 +3,7 @@
 .messaging {
   max-width: 18rem;
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: $whitestone;
 
   &_large {
     max-width: 25rem;
@@ -31,7 +31,7 @@
     border-bottom: 2.125rem solid #46ab9d;
     padding-top: 1.05rem;
     padding-bottom: 1.5rem;
-    color: #ffffff;
+    color: $white;
     letter-spacing: -.9px;
     border-radius: 3px 3px 0 0;
   }
@@ -76,8 +76,8 @@
     position: relative;
     margin: 0 1.3875rem;
     margin-bottom: 1.0625rem;
-    background-color: #ffffff;
-    color: #868686;
+    background-color: $white;
+    color: $anthracite;
     font-weight: bold;
     font-size: .78125rem;
     padding-top: 1.1675rem;
@@ -94,7 +94,7 @@
       height: 1px;
       background-color: transparent;
       border: .375rem solid transparent;
-      border-bottom-color: #ffffff;
+      border-bottom-color: $white;
       left: calc(50% - 12px);
       top: -.8rem;
     }
@@ -108,7 +108,7 @@
 
   &__text {
     background-color: $lightgrey;
-    border: .1875rem solid #ffffff;
+    border: .1875rem solid $white;
     border-radius: .375rem;
     box-sizing: border-box;
     height: 5.5rem;
@@ -117,7 +117,7 @@
     padding-left: 1rem;
     padding-right: 1.5rem;
     margin-bottom: .99rem;
-    color: #868686;
+    color: $anthracite;
     font-weight: bold;
     font-size: .78125rem;
     letter-spacing: .5px;

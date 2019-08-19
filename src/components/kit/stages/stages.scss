@@ -20,11 +20,11 @@
     box-sizing: border-box;
     font-size: .875rem;
     font-weight: 900;
-    color: #888888;
+    color: $anthracite;
     
     &_active {
       background-color: $orange;
-      color: #ffffff;
+      color: $white;
     }
   }
 

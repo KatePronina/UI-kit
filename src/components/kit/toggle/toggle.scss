@@ -16,7 +16,7 @@
     left: .15rem;
     width: 1.125rem;
     height: 1.125rem;
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 50%;
 
     @media (max-width: 768px) {
@@ -29,7 +29,7 @@
     content: 'Off';
     top: .3rem;
     left: 1.6rem;
-    color: #ffffff;
+    color: $white;
     font-size: .75rem;
     font-weight: 900;
     text-transform: uppercase;

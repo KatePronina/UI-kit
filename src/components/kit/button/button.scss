@@ -9,11 +9,11 @@
   letter-spacing: .4px;
   overflow: hidden;
   position: relative;
-  background-color: #ffffff;
+  background-color: $white;
   border-bottom: none;
 
   &:hover {
-    color: #ffffff;
+    color: $white;
   }
 
   &_standart {
@@ -38,7 +38,7 @@
 
     &_filled {
       background-color: $green;
-      color: #ffffff;
+      color: $white;
       border-bottom: .22em solid $darkgreen;
       box-sizing: border-box;
     }

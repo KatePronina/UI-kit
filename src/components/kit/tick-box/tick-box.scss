@@ -37,7 +37,7 @@
   background-color: $green;
 }
 .tick-box__input:checked + .tick-box__element::after {
-  border-color: #ffffff;
+  border-color: $white;
 }
 .tick-box__label {
   display: flex;

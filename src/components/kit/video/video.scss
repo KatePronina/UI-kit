@@ -26,7 +26,7 @@
     padding-top: 2rem;
     padding-left: 2.3rem;
     padding-right: 2rem;
-    color: #ffffff;
+    color: $white;
     transition: .3s;
   }
 
@@ -80,7 +80,7 @@
     background-repeat: no-repeat;
     margin-right: 1.125rem;
     background-size: contain;
-    color: #ffffff;
+    color: $white;
 
     @media (max-width: 480px) {
       margin-right: .3rem;

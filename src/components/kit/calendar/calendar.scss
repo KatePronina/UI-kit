@@ -14,7 +14,7 @@
     box-sizing: border-box;
     height: 6.8125rem;
     background-color: $orange;
-    color: #ffffff;
+    color: $white;
     font-family: 'Lato', sans-serif;
     font-size: 5rem;
     font-weight: 300;
@@ -33,7 +33,7 @@
     border: none;
     font-weight: 900;
     font-size: .8125rem;
-    color: #868686;
+    color: $anthracite;
     text-transform: uppercase;
     text-align: left;
     border-radius: 0 0 3px 3px;
@@ -42,8 +42,8 @@
 
 .ui-datepicker-header {
   position: relative;
-  background-color: #d54c2c;
-  color: #ffffff;
+  background-color: $coral;
+  color: $white;
   text-align: center;
 }
 .ui-datepicker-title {
@@ -58,7 +58,7 @@
   font-size: 0;
   width: .625rem;
   height: .625rem;
-  border: 2px solid #ffffff;
+  border: 2px solid $white;
   border-bottom: none;
   border-right: none;
   transform: rotate(-45deg);
@@ -82,7 +82,7 @@
 
   thead {
     background-color: $orange;
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
     font-weight: 900;
     font-size: .5625rem;
@@ -98,11 +98,11 @@
   }
 
   tbody {
-    background-color: #f2f2f2;
+    background-color: $whitestone;
   }
 
   td {
-    border: 1px solid #ffffff;
+    border: 1px solid $white;
     text-align: center;
     width: 2.4775rem;
     height: 2.4775rem;
@@ -118,19 +118,19 @@
   }
 
   .ui-state-default {
-    color: #868686;
+    color: $anthracite;
     text-decoration: none;
     font-family: 'SourceSansPro', sans-serif;
     font-size: 1.25rem;
   }
   .ui-datepicker-other-month .ui-state-default {
-    color: #ffffff;
+    color: $white;
   }
   .ui-datepicker-current-day {
     background-color: $orange;
 
     .ui-state-default {
-      color: #ffffff;
+      color: $white;
     }
   }
 }

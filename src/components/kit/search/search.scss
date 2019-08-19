@@ -10,7 +10,7 @@
       background-color: $orange;
 
       &::placeholder {
-          color: #ffffff;
+          color: $white;
       }
     }
   }
@@ -26,7 +26,7 @@
     padding-left: .81rem;
 
     &::placeholder {
-      color: #888888;
+      color: $anthracite;
       font-size: .875rem;
       font-family: 'SourceSansPro', sans-serif;
       letter-spacing: .2px;

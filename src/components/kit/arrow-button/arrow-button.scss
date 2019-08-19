@@ -3,7 +3,7 @@
 .arrow-btn {
   width: 3.125rem;
   height: 3.125rem;
-  background-color: #ffffff;
+  background-color: $white;
   border: .18rem solid $green;
   box-sizing: border-box;
   border-radius: 50%;
@@ -26,8 +26,8 @@
     background-color: $green;
 
     &::before {
-      border-top-color: #ffffff;
-      border-right-color: #ffffff;
+      border-top-color: $white;
+      border-right-color: $white;
     }
   }
 
@@ -44,7 +44,7 @@
     border-color: $lightgrey;
 
     &::before {
-      border-color: #ffffff;
+      border-color: $white;
     }
 
     &:hover {
@@ -52,7 +52,7 @@
       border-color: $lightgrey;
 
       &::before {
-        border-color: #ffffff;
+        border-color: $white;
       }
     }
   }
