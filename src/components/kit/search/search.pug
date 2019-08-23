@@ -1,4 +1,4 @@
-mixin search({ placeholder })
-  .search
+mixin search({ placeholder, error })
+  .search(class = error ? 'search_error' : '')
     input.search__input(type="text", placeholder= placeholder)
     button.search__button

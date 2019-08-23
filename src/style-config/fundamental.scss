@@ -32,4 +32,10 @@ body {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 .625rem;
+
+  &_index {
+    max-width: 38.125rem;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

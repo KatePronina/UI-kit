@@ -31,6 +31,7 @@ class Slider {
   initSteps() {
     this.$sliderElement
       .slider({
+        range: "min",
         min: 0,
         max: 100,
         value: this.$sliderElement.data('value'),

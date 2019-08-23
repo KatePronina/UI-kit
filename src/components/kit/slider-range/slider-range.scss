@@ -1,5 +1,7 @@
 @import '../../../style-config/variables.scss';
+@import '../../../style-config/jquery-ui.css';
 @import './jquery-ui-slider-pips.css';
+
 
 .slider-range {
   max-width: 16.25rem;
@@ -19,6 +21,7 @@
     position: absolute;
     top: -.4rem;
     margin-left: -.625rem;
+    border: none;
   }
 }
 .slider_flowing {
@@ -34,7 +37,7 @@
     border-radius: .3125rem;
     text-align: center;
     box-sizing: border-box;
-    padding-top: .4rem;
+    padding-top: .3rem;
     font-weight: 900;
     font-size: .8125rem;
 
@@ -53,10 +56,14 @@
 .slider_steps {
   .ui-slider-handle {
     background-color: $green;
+    border: none;
   }
 }
 .ui-slider-line {
   display: none;
+}
+.ui-slider-range {
+  background-color: $green;
 }
 .ui-slider-pips [class*=ui-slider-pip-selected],
 .ui-slider-pips [class*=ui-slider-pip-initial],
@@ -74,4 +81,7 @@
 }
 .ui-slider-horizontal.ui-slider-pips {
   margin: 0;
+}
+.ui-widget.ui-widget-content {
+  border: none;
 }

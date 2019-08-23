@@ -1,5 +1,5 @@
-mixin tickBox({ text, name })
+mixin tickBox({ text, name, isChecked= false })
   .tick-box
     label.tick-box__label= text
-      input.tick-box__input.visually-hidden(type="radio", name= name, value= text)
+      input.tick-box__input.visually-hidden(type="radio", name= name, value= text, checked= isChecked)
       .tick-box__element(tabindex="0")

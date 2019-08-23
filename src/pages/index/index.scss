@@ -1,14 +1,217 @@
+.title {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: .075rem;
+  margin: 0;
+}
+.wrapper {
+  &__buttons {
+    margin-top: 5.125rem;
+    margin-bottom: 3.56rem;
+    padding: 0 4.5rem;
+  }
+
+  &__arrows {
+    padding-left: 5.85rem;
+    padding-right: 6rem;
+    margin-bottom: 2.9rem;
+  }
+
+  &__percentage {
+    margin-bottom: 2.25rem;
+  }
+
+  &__sliders {
+    margin-bottom: 3.85rem;
+  }
+
+  &__stage {
+    margin-bottom: 3.4rem;
+  }
+
+  &__form-elements {
+    margin-bottom: 4.2rem;
+  }
+
+  &__news-section {
+    margin-bottom: 3.1rem;
+  }
+
+  &__location {
+    margin-bottom: 3.25rem;
+  }
+
+  &__calendar {
+    padding-left: .45rem;
+  }
+
+  &__messages {
+    padding-right: .55rem;
+  }
+
+  &__container {
+    margin-bottom: 3.3rem;
+  }
+
+  &__video-section {
+    margin-bottom: 6.25rem;
+  }
+}
+.buttons {
+  &__title {
+    margin-bottom: 4.25rem;
+  }
+
+  &__wrapper-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1.20rem;
+  }
+}
+.arrows {
+  &__title {
+    margin-bottom: 2.1rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.percentage {
+  &__title {
+    margin-bottom: 1.49rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-right: .9rem;
+  }
+}
+.sliders {
+  &__title {
+    margin-bottom: 2.7rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: .4rem;
+    padding-right: .8rem;
+  }
+}
+.stage {
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__wrapper {
+    padding-left: .37rem;
+  }
+}
+.form-elements {
+  &__title {
+    margin-bottom: 2.95rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding-left: .45rem;
+
+    &-title {
+      margin: 0;
+      margin-bottom: 1.8rem;
+      line-height: 1.1;
+      margin-left: .55rem;
+    }
+
+    &-left {
+      margin-right: 5.7rem;
+    }
+  }
+
+  &__toggles {
+    display: flex;
+    min-width: 8.7rem;
+    justify-content: space-between;
+    margin-bottom: 2.6rem;
+  }
+
+  &__ticks {
+    display: flex;
+    justify-content: space-between;
+    width: 4.35rem;
+    margin-left: 1.9rem;
+  }
+}
+.section-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: .45rem;
+  padding-right: .6rem;
+  margin-bottom: 4.2rem;
+}
+.searches {
+  width: 18.53rem;
+  
+  &__title {
+    margin-bottom: 1.15rem;
+    padding-right: .4rem;
+  }
+
+  &__wrapper {
+    margin-bottom: 1rem;
+  }
+}
+.users {
+  &__title {
+    padding-right: 1rem;
+    margin-bottom: 1.7rem;
+  }
+
+  &__wrapper {
+    margin-bottom: 1.5rem;
+  }
+}
+.news-section {
+  &__title {
+    margin-bottom: 1.9rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: .45rem;
+    padding-right: .55rem;
+  }
+}
+.location {
+  &__title {
+    margin-bottom: 1.75rem;
+  }
+
+  &__wrapper {
+    padding-left: .45rem;
+  }
+}
 .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 
-  @media (max-width: 480px) {
-      min-height: 10rem;
+  &__title {
+    margin-bottom: 1.4rem;
+  }
+}
+.video-section {
+  &__title {
+    margin-bottom: 1.3rem;
+  }
+
+  &__wrapper {
+    padding-left: .45rem;
   }
 }

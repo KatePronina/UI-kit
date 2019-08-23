@@ -8,11 +8,12 @@
   border-radius: .7rem;
   transition: .2s;
   margin-left: .4rem;
+  line-height: 1.4;
 
   &::before {
     position: absolute;
     content: '';
-    top: .18rem;
+    top: .185rem;
     left: .15rem;
     width: 1.125rem;
     height: 1.125rem;

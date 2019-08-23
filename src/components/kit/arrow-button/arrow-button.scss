@@ -56,4 +56,13 @@
       }
     }
   }
+
+  &_fill {
+    background-color: $green;
+
+    &::before {
+      border-top-color: $white;
+      border-right-color: $white;
+    }
+  }
 }
