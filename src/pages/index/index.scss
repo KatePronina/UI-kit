@@ -11,12 +11,20 @@
     margin-top: 5.125rem;
     margin-bottom: 3.56rem;
     padding: 0 4.5rem;
+
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
 
   &__arrows {
     padding-left: 5.85rem;
     padding-right: 6rem;
     margin-bottom: 2.9rem;
+
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
 
   &__percentage {
@@ -45,10 +53,19 @@
 
   &__calendar {
     padding-left: .45rem;
+
+    @media (max-width: 650px) {
+      padding: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   &__messages {
     padding-right: .55rem;
+
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
 
   &__container {
@@ -69,6 +86,18 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 1.20rem;
+    flex-wrap: wrap;
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-btn {
+      @media (max-width: 650px) {
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
 .arrows {
@@ -79,6 +108,7 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .percentage {
@@ -89,7 +119,12 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-right: .9rem;
+
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
 }
 .sliders {
@@ -102,6 +137,20 @@
     justify-content: space-between;
     padding-left: .4rem;
     padding-right: .8rem;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    .slider-range {
+      @media (max-width: 650px) {
+        margin-bottom: 2rem;
+      }
+      
+    }
   }
 }
 .stage {
@@ -120,7 +169,14 @@
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     padding-left: .45rem;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
 
     &-title {
       margin: 0;
@@ -131,6 +187,11 @@
 
     &-left {
       margin-right: 5.7rem;
+
+      @media (max-width: 650px) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -154,6 +215,12 @@
   padding-left: .45rem;
   padding-right: .6rem;
   margin-bottom: 4.2rem;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
 }
 .searches {
   width: 18.53rem;
@@ -187,6 +254,18 @@
     justify-content: space-between;
     padding-left: .45rem;
     padding-right: .55rem;
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+
+    .news {
+      @media (max-width: 650px) {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }
 .location {
@@ -201,6 +280,11 @@
 .container {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__title {
     margin-bottom: 1.4rem;
