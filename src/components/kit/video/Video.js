@@ -35,21 +35,15 @@ class Video {
   }
 
   togglePlay = () => {
-    if (this.$video.prop('paused')) {
-      this.$video.trigger('play');
-      this.$info.css('opacity', 0);
-    } else {
-      this.$video.trigger('pause');
-      this.$info.css('opacity', 1);
-    }
+    const action = this.$video.prop('paused') ? 'play' : 'pause';
+    const opacity = this.$video.prop('paused') ? 0 : 1;
+    this.$video.trigger(`${action}`);
+    this.$info.css('opacity', `${opacity}`);
   }
 
   changeButton = () => {
-    if (this.$video.prop('paused')) {
-      this.$playBtn.css('backgroundImage', 'url(images/play.svg)');
-    } else {
-      this.$playBtn.css('backgroundImage', 'url(images/pause.svg)');
-    }
+    const image = this.$video.prop('paused') ? 'play' : 'pause';
+    this.$playBtn.css('backgroundImage', `url(images/${image}.svg)`);
   }
 
   videoUpdate = () => {
