@@ -1,3 +1,5 @@
+import 'jquery-ui/ui/widgets/datepicker';
+
 class Calendar {
   constructor(calendarElement) {
     this.$calendarElement = calendarElement;

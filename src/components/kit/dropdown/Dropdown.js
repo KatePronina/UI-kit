@@ -1,3 +1,5 @@
+import 'jquery-ui/ui/widgets/selectmenu';
+
 class Dropdown {
   constructor(dropdownWrapper) {
     this.$dropdownWrapper = dropdownWrapper;

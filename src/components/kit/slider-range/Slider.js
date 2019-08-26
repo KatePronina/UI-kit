@@ -1,3 +1,4 @@
+import 'jquery-ui/ui/widgets/slider';
 import './jquery-ui-slider-pips';
 
 class Slider {
@@ -31,7 +32,7 @@ class Slider {
   initSteps() {
     this.$sliderElement
       .slider({
-        range: "min",
+        range: 'min',
         min: 0,
         max: 100,
         value: this.$sliderElement.data('value'),
