@@ -4,8 +4,8 @@ mixin diagram({ values })
     viewBox="0 0 95 95")
     circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke="#e5e5e5")
     -let offset = 0;
-    - for(let i = 0; i < values.length; i++) {
-        -let length = (244.92 * values[i]) / 100;
+    - values.forEach((element, i) => {
+        -let length = (244.92 * element) / 100;
         circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke=`${colors[i]}`, stroke-dasharray=`${length} 244.92`, stroke-dashoffset=`${offset}`)
         -offset -= length; 
-    - }
+    - })

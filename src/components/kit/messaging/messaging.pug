@@ -1,5 +1,8 @@
-mixin messaging({ name, img, text, large })
-  .messaging(class = large ? "messaging_large" : "")
+mixin messaging({ name, img, text, large = "" })
+  -
+    const defaultClass = "messaging" 
+    const sizeClass = large && `${defaultClass}_large`
+  div(class= `${defaultClass} ${sizeClass}`)
     .messaging__title= name
     .messaging__user
       button.messaging__btn.messaging__btn-message
@@ -10,4 +13,4 @@ mixin messaging({ name, img, text, large })
     form.messaging__reply(action="#")
       textarea.messaging__text(name="message")
       .messaging__reply-btn
-        +button({ text: 'reply', color: 'greenFill', size: 'big' })
+        +button({ text: 'reply', size: 'big' })

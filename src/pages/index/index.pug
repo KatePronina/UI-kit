@@ -24,29 +24,29 @@ body
     .buttons.wrapper__buttons
       h2.title.buttons__title Standard buttons
       .buttons__wrapper-row
-        +button({ text: 'button', color: 'greenFill', size: 'standart' })
-        +button({ text: 'button', color: 'greenFill', size: 'big' })
-        +button({ text: 'button', color: 'orangeFill', size: 'big' })
-        +button({ text: 'button', color: 'orangeFill', size: 'standart' })
+        +button({ text: 'button'})
+        +button({ text: 'button', size: 'big' })
+        +button({ text: 'button', color: 'orange', size: 'big' })
+        +button({ text: 'button', color: 'orange'})
       .buttons__wrapper-row
-        +button({ text: 'button', color: 'greenFill', size: 'standart' })
-        +button({ text: 'button', color: 'greenFill', size: 'big' })
-        +button({ text: 'button', color: 'orangeFill', size: 'big' })
-        +button({ text: 'button', color: 'orangeFill', size: 'standart' })
+        +button({ text: 'button'})
+        +button({ text: 'button', size: 'big' })
+        +button({ text: 'button', color: 'orange', size: 'big' })
+        +button({ text: 'button', color: 'orange'})
       .buttons__wrapper-row
-          +button({ text: 'button', color: 'green', size: 'standart' })
-          +button({ text: 'button', color: 'green', size: 'big' })
-          +button({ text: 'button', color: 'orange', size: 'big' })
-          +button({ text: 'button', color: 'orange', size: 'standart' })
+        +button({ text: 'button', fill: false})
+        +button({ text: 'button', fill: false, size: 'big' })
+        +button({ text: 'button', fill: false, color: 'orange', size: 'big' })
+        +button({ text: 'button', fill: false, color: 'orange'})
     .arrows.wrapper__arrows
       h2.title.arrows__title Arrow buttons
       .arrows__wrapper
-        +arrowBtn({active: true, direction: 'prev'})
-        +arrowBtn({active: true, direction: 'next'})
-        +arrowBtn({active: false, direction: 'prev'})
-        +arrowBtn({active: false, direction: 'next'})
-        +arrowBtn({active: true, direction: 'prev', fill: true})
-        +arrowBtn({active: true, direction: 'next', fill: true})
+        +arrowBtn()
+        +arrowBtn({direction: 'next'})
+        +arrowBtn({disable: true})
+        +arrowBtn({disable: true, direction: 'next'})
+        +arrowBtn({fill: true})
+        +arrowBtn({direction: 'next', fill: true})
     .percentage.wrapper__percentage
       h2.title.percentage__title Percentages / pie chart
       .percentage__wrapper
@@ -108,7 +108,7 @@ body
         +calendar
       .messages.wrapper__messages
         h2.title.container__title Messaging
-        +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm', large: false })
+        +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm' })
     .video-section.wrapper__video-section
       h2.title.video-section__title Video
       .video-section__wrapper

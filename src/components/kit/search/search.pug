@@ -1,4 +1,7 @@
-mixin search({ placeholder, error })
-  .search(class = error ? 'search_error' : '')
+mixin search({ placeholder, error = "" })
+  -
+    const defaultClass = "search"
+    const errorClass = error && `${defaultClass}_error`
+  div(class = `${defaultClass} ${errorClass}`)
     input.search__input(type="text", placeholder= placeholder)
     button.search__button

@@ -1,10 +1,7 @@
-mixin button({ text, color, size })
+mixin button({ text, color = "green", size = "standart", fill = true } = {})
   -
-    let buttonClass = "main-btn"
-    buttonClass += color === "orange" ? " main-btn_orange" : ""
-    buttonClass += color === "green" ? " main-btn_green" : ""
-    buttonClass += color === "greenFill" ? " main-btn_green_filled" : ""
-    buttonClass += color === "orangeFill" ? " main-btn_orange_filled" : ""
-    buttonClass += size === "big" ? " main-btn_big" : ""
-    buttonClass += size === "standart" ? " main-btn_standart" : ""
-  button(class = buttonClass)= text
+    const defaultClass = "main-btn"
+    const colorClass = color && `${defaultClass}_${color}`
+    const fillClass = fill && `${defaultClass}_${color}_filled`
+    const sizeClass = size && `${defaultClass}_${size}`
+  button(class = `${defaultClass} ${colorClass} ${fillClass} ${sizeClass}`)= text
