@@ -17,15 +17,15 @@ class Button {
     circle.classList.add('main-btn_ripple');
     this.buttonElement.appendChild(circle);
 
-    const d = Math.max(this.buttonElement.clientWidth, this.buttonElement.clientHeight);
+    const diameter = Math.max(this.buttonElement.clientWidth, this.buttonElement.clientHeight);
 
-    circle.style.width = `${d}px`;
-    circle.style.height = `${d}px`;
+    circle.style.width = `${diameter}px`;
+    circle.style.height = `${diameter}px`;
 
     const rect = this.buttonElement.getBoundingClientRect();
 
-    circle.style.left = `${event.clientX - rect.left - d / 2}px`;
-    circle.style.top = `${event.clientY - rect.top - d / 2}px`;
+    circle.style.left = `${event.clientX - rect.left - diameter / 2}px`;
+    circle.style.top = `${event.clientY - rect.top - diameter / 2}px`;
   }
 }
 
