@@ -17,19 +17,26 @@ class Calendar {
       altField: this.$calendarDay,
       altFormat: 'd',
       showOtherMonths: true,
-      onSelect: () => {
-        const currentDate = this.$calendarPick.datepicker('getDate');
-        this.$calendarDay.attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
-      },
+      onSelect: this.onDaySelect,
     });
 
+    this.setStartDate();
+    this.$calendarBtn.click(this.onCalendarBtnClick);
+  }
+
+  onCalendarBtnClick = () => {
+    this.$calendarDay.val($.datepicker.formatDate('d', this.currentDate))
+      .attr('value', $.datepicker.formatDate('dd-mm-yy', this.currentDate));
+  }
+
+  onDaySelect = () => {
     const currentDate = this.$calendarPick.datepicker('getDate');
     this.$calendarDay.attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
+  }
 
-    this.$calendarBtn.click(() => {
-      this.$calendarDay.val($.datepicker.formatDate('d', currentDate))
-        .attr('value', $.datepicker.formatDate('dd-mm-yy', currentDate));
-    });
+  setStartDate = () => {
+    this.currentDate = this.$calendarPick.datepicker('getDate');
+    this.$calendarDay.attr('value', $.datepicker.formatDate('dd-mm-yy', this.currentDate));
   }
 }
 
