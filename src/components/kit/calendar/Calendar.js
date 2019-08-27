@@ -12,8 +12,8 @@ class Calendar {
 
   init() {
     this.$calendarPick.datepicker({
-      firstDay: 0,
-      dayNamesMin: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'San'],
+      firstDay: 1,
+      dayNamesMin: ['San', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
       altField: this.$calendarDay,
       altFormat: 'd',
       showOtherMonths: true,
