@@ -1,6 +1,7 @@
 include ../base.pug
 include ../../components/site/section/section.pug
 include ../../components/site/header/header.pug
+include ../../components/site/info/info.pug
 include ../../components/kit/search/search.pug
 include ../../components/kit/map/map.pug
 include ../../components/kit/messaging/messaging.pug
@@ -10,12 +11,10 @@ include ../../components/kit/button/button.pug
 +base('Контакты')
 body
   .wrapper
-    +header
-    +section({ name: 'contacts', title: 'Контакты' })
-      +map({ lat: 59.9405947, lng: 30.3254693, address: 'Санкт-Петербург, Конюшенная площадь, дом 2' })
-    .info
-      .info__text
-        p.info__address Россия, Санкт-Петербург, Конюшенная площадь, дом 2 (помещение 40)
-        p.info__address Рядом с клубами "Циркус" и "Духлесс", метро "Канал Грибоедова", внутренний двор, либо вход под арку с канала Грибоедова д. 5
-        p.info__time Понедельник - пятница 17:00 - 22:00, суббота - воскресенье 15:00 - 20:00
-      +messaging({ name: 'Maria Ivanova', img: 'user2.jpg', text: 'Напишите нам, мы ответим в ближайшее время', large: false })
+    .wrapper__header
+      +header
+    .wrapper__section-container
+      +section({ title: 'Контакты' })
+        +map({ lat: 59.9405947, lng: 30.3254693, address: 'Санкт-Петербург, Конюшенная площадь, дом 2' })
+    .wrapper__section-container
+      +info

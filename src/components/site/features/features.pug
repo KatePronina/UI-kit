@@ -1,0 +1,7 @@
+mixin features({ featuresData })
+  ul.features 
+    each feature in featuresData
+      li.features__feature
+        .features__percent
+          +percent({ value: feature.percent })
+        span.feature__name= feature.label

@@ -33,6 +33,15 @@ body {
   margin: 0 auto;
   padding: 0 .625rem;
 
+  &__header {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &__section-container {
+    margin-bottom: 4rem;
+  }
+
   &_index {
     max-width: 38.125rem;
     margin: 0 auto;

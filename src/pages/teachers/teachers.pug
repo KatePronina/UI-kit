@@ -8,65 +8,67 @@ include ../../components/kit/diagram/diagram.pug
 +base('Наши преподаватели')
 body
   .wrapper
-    +header
-    +section({ name: 'teachers', title: 'Наши преподаватели' })
-      p.teachers__info Уроки танцев в нашей студии ведут опытные хореографы - молодые, творчески активные и креативные люди. Наши преподаватели - настоящие таланты, которые не только имеют специальное образование и мастерски танцуют, но и умеют научить своему искусству других. Постоянно шлифуя свое мастерство на мастер-классах и чемпионатах разного уровня, преподаватели "Dance City" в курсе всех танцевальных тенденций, поэтому программа тренировок постоянно обновляется. В нашей студии освоить любой танцевальный стиль - это ЛЕГКО! 
-      h2.teachers__skills Skills
-      .teachers__skills-list
-        span.teachers__skill.teachers__skill_lightgrey Растяжка
-        span.teachers__skill.teachers__skill_darkgrey Body control
-        span.teachers__skill.teachers__skill_orange Speed control
-        span.teachers__skill.teachers__skill_green Импровизация
-      .teachers__list
-        -
-          const teachersData = [
-            {
-              img: 'user1.jpg',
-              name: 'Александр Иванов',
-              profession: 'Break Dance',
-              values: [11, 26, 30],
-            },
-            {
-              img: 'user2.jpg',
-              name: 'Катя Казанцева',
-              profession: 'Современная хореография',
-              values: [5, 40, 50],
-              style: 'green',
-            },
-            {
-              img: 'user2.jpg',
-              name: 'Нина Вербицкая',
-              profession: 'Восточные танцы',
-              values: [30, 50, 10],
-            },
-            {
-              img: 'user1.jpg',
-              name: 'Паша Дягилев',
-              profession: 'Jazz funk',
-              values: [40, 20, 15],
-              style: 'green',
-            },
-            {
-              img: 'user1.jpg',
-              name: 'Александр Иванов',
-              profession: 'Break Dance',
-              values: [34, 28, 8],
-            },
-            {
-              img: 'user2.jpg',
-              name: 'Катя Казанцева',
-              profession: 'Современная хореография',
-              values: [55, 23, 12],
-              style: 'green',
-            },
-          ]
-        each teacher in teachersData
-          .teachers__item
-            +user({
-              img: teacher.img,
-              name: teacher.name,
-              profession: teacher.profession,
-              style: teacher.style,
-            })
-            .teachers__diagram
-              +diagram({ values: teacher.values })
+    .wrapper__header
+      +header
+    .wrapper__section-container.teachers
+      +section({ title: 'Наши преподаватели' })
+        p.teachers__info Уроки танцев в нашей студии ведут опытные хореографы - молодые, творчески активные и креативные люди. Наши преподаватели - настоящие таланты, которые не только имеют специальное образование и мастерски танцуют, но и умеют научить своему искусству других. Постоянно шлифуя свое мастерство на мастер-классах и чемпионатах разного уровня, преподаватели "Dance City" в курсе всех танцевальных тенденций, поэтому программа тренировок постоянно обновляется. В нашей студии освоить любой танцевальный стиль - это ЛЕГКО! 
+        h2.teachers__skills Skills
+        .teachers__skills-list
+          span.teachers__skill.teachers__skill_lightgrey Растяжка
+          span.teachers__skill.teachers__skill_darkgrey Body control
+          span.teachers__skill.teachers__skill_orange Speed control
+          span.teachers__skill.teachers__skill_green Импровизация
+        .teachers__list
+          -
+            const teachersData = [
+              {
+                img: 'user1.jpg',
+                name: 'Александр Иванов',
+                profession: 'Break Dance',
+                values: [11, 26, 30],
+              },
+              {
+                img: 'user2.jpg',
+                name: 'Катя Казанцева',
+                profession: 'Современная хореография',
+                values: [5, 40, 50],
+                style: 'green',
+              },
+              {
+                img: 'user2.jpg',
+                name: 'Нина Вербицкая',
+                profession: 'Восточные танцы',
+                values: [30, 50, 10],
+              },
+              {
+                img: 'user1.jpg',
+                name: 'Паша Дягилев',
+                profession: 'Jazz funk',
+                values: [40, 20, 15],
+                style: 'green',
+              },
+              {
+                img: 'user1.jpg',
+                name: 'Александр Иванов',
+                profession: 'Break Dance',
+                values: [34, 28, 8],
+              },
+              {
+                img: 'user2.jpg',
+                name: 'Катя Казанцева',
+                profession: 'Современная хореография',
+                values: [55, 23, 12],
+                style: 'green',
+              },
+            ]
+          each teacher in teachersData
+            .teachers__item
+              +user({
+                img: teacher.img,
+                name: teacher.name,
+                profession: teacher.profession,
+                style: teacher.style,
+              })
+              .teachers__diagram
+                +diagram({ values: teacher.values })
