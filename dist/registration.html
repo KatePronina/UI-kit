@@ -25,79 +25,83 @@
 </html>
 <body>
   <div class="wrapper">
-    <div class="header">
-      <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
-      <div class="search">
-        <input class="search__input" type="text" placeholder="Search here...">
-        <button class="search__button"></button>
+    <div class="wrapper__header">
+      <div class="header">
+        <nav class="header__navigation navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+        <div class="search ">
+          <input class="search__input" type="text" placeholder="Search here...">
+          <button class="search__button"></button>
+        </div>
       </div>
     </div>
-    <section class="registration section">
-      <h2 class="registration__title section__title">Запись на пробное занятие</h2>
-      <div class="registration__content">
-        <div class="calendar">
-          <input class="calendar__day" disabled>
-          <div class="calendar__pick"></div>
-          <button class="calendar__btn">Today</button>
+    <div class="wrapper__section-container">
+      <section class="section">
+        <h2 class="section__title">Запись на пробное занятие</h2>
+        <div class="registration__content">
+          <div class="calendar">
+            <input class="calendar__day" disabled>
+            <div class="calendar__pick"></div>
+            <button class="calendar__btn">Today</button>
+          </div>
+          <div class="registration__form">
+            <form class="form" action="#">
+              <div class="form__wrapper">
+                <input class="form__input js-form__input-name" type="text" placeholder="Your Name" require>
+                <div class="form__warning js-form__warning-name"></div>
+              </div>
+              <div class="form__wrapper">
+                <input class="form__input js-form__input-email" type="email" placeholder="Your Email" require>
+                <div class="form__warning js-form__warning-email"></div>
+              </div>
+              <textarea class="form__message" placeholder="Your Message" require></textarea>
+              <div class="registration__form-item">
+                <div class="dropdown">
+                  <select class="dropdown__select" name="type" id="type">
+                    <option class="dropdown__option" disabled selected hidden>Выберите направление</option>
+                    <option class="dropdown__option">Современные танцы</option>
+                    <option class="dropdown__option">Латиноамериканские танцы</option>
+                    <option class="dropdown__option">Аргентинское танго</option>
+                    <option class="dropdown__option">Классическая хореография</option>
+                    <option class="dropdown__option">Pole Dance</option>
+                  </select>
+                </div>
+              </div>
+              <div class="registration__form-item">
+                <div class="tick-box">
+                  <label class="tick-box__label">Я мужчина
+                    <input class="tick-box__input visually-hidden" type="radio" name="sex" value="Я мужчина">
+                    <div class="tick-box__element" tabindex="0"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="registration__form-item">
+                <div class="tick-box">
+                  <label class="tick-box__label">Я женщина
+                    <input class="tick-box__input visually-hidden" type="radio" name="sex" value="Я женщина">
+                    <div class="tick-box__element" tabindex="0"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="registration__form-item">
+                <div class="toggle">
+                  <label class="toggle__label">Подписаться на рассылку
+                    <input class="toggle__input visually-hidden" type="checkbox" name="mail" value="Подписаться на рассылку">
+                    <div class="toggle__elem" tabindex="0"></div>
+                  </label>
+                </div>
+              </div>
+              <label class="registration__slider-label">Оцените качество, полноту и доступность информации на нашем сайте:</label>
+              <div class="registration__form-item">
+                <div class="slider-range slider_flowing" data-value="90" data-step="1"><span class="slider-range__value" data-value="90"></span>
+                </div>
+              </div>
+              <div class="form__button">
+                <button class="main-btn main-btn_green main-btn_green_filled main-btn_big">Submit</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="registration__form">
-          <form class="form" action="#">
-            <div class="form__wrapper">
-              <input class="form__input" type="text" placeholder="Your Name" require>
-              <div class="form__warning"></div>
-            </div>
-            <div class="form__wrapper">
-              <input class="form__input" type="email" placeholder="Your Email" require>
-              <div class="form__warning"></div>
-            </div>
-            <textarea class="form__message" placeholder="Your Message" require></textarea>
-            <div class="registration__form-item">
-              <div class="dropdown">
-                <select class="dropdown__select" name="type" id="type">
-                  <option class="dropdown__option" disabled selected hidden>Выберите направление</option>
-                  <option class="dropdown__option">Современные танцы</option>
-                  <option class="dropdown__option">Латиноамериканские танцы</option>
-                  <option class="dropdown__option">Аргентинское танго</option>
-                  <option class="dropdown__option">Классическая хореография</option>
-                  <option class="dropdown__option">Pole Dance</option>
-                </select>
-              </div>
-            </div>
-            <div class="registration__form-item">
-              <div class="tick-box">
-                <label class="tick-box__label">Я мужчина
-                  <input class="tick-box__input visually-hidden" type="radio" name="sex" value="Я мужчина">
-                  <div class="tick-box__element" tabindex="0"></div>
-                </label>
-              </div>
-            </div>
-            <div class="registration__form-item">
-              <div class="tick-box">
-                <label class="tick-box__label">Я женщина
-                  <input class="tick-box__input visually-hidden" type="radio" name="sex" value="Я женщина">
-                  <div class="tick-box__element" tabindex="0"></div>
-                </label>
-              </div>
-            </div>
-            <div class="registration__form-item">
-              <div class="toggle">
-                <label class="toggle__label">Подписаться на рассылку
-                  <input class="toggle__input visually-hidden" type="checkbox" name="mail" value="Подписаться на рассылку">
-                  <div class="toggle__elem" tabindex="0"></div>
-                </label>
-              </div>
-            </div>
-            <label class="registration__slider-label">Оцените качество, полноту и доступность информации на нашем сайте:</label>
-            <div class="registration__form-item">
-              <div class="slider-range slider_flowing" data-value="90" data-step="1"><span class="slider-range__value" data-value="90"></span>
-              </div>
-            </div>
-            <div class="form__button">
-              <button class="main-btn main-btn_green_filled main-btn_big">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 <script type="text/javascript" src="registration.js"></script></body>

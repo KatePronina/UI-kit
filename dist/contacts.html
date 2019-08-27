@@ -25,43 +25,49 @@
 </html>
 <body>
   <div class="wrapper">
-    <div class="header">
-      <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
-      <div class="search">
-        <input class="search__input" type="text" placeholder="Search here...">
-        <button class="search__button"></button>
+    <div class="wrapper__header">
+      <div class="header">
+        <nav class="header__navigation navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+        <div class="search ">
+          <input class="search__input" type="text" placeholder="Search here...">
+          <button class="search__button"></button>
+        </div>
       </div>
     </div>
-    <section class="contacts section">
-      <h2 class="contacts__title section__title">Контакты</h2>
-      <div class="map">
-        <div class="map__container" id="map" data-lat="59.9405947" data-lng="30.3254693"></div>
-        <div class="map__footer"><span class="map__greeting">Meet us!</span>
-          <address class="map__address">Санкт-Петербург, Конюшенная площадь, дом 2</address>
-          <div class="map__icons"><span class="map__icon map__icon-target"></span><span class="map__icon map__icon-pin"></span></div>
-        </div>
-      </div>
-    </section>
-    <div class="info">
-      <div class="info__text">
-        <p class="info__address">Россия, Санкт-Петербург, Конюшенная площадь, дом 2 (помещение 40)</p>
-        <p class="info__address">Рядом с клубами "Циркус" и "Духлесс", метро "Канал Грибоедова", внутренний двор, либо вход под арку с канала Грибоедова д. 5</p>
-        <p class="info__time">Понедельник - пятница 17:00 - 22:00, суббота - воскресенье 15:00 - 20:00</p>
-      </div>
-      <div class="messaging">
-        <div class="messaging__title">Maria Ivanova</div>
-        <div class="messaging__user">
-          <button class="messaging__btn messaging__btn-message"></button>
-          <div class="messaging__img"><img class="messaging__image" src="images/user2.jpg" alt="Maria Ivanova"></div>
-          <button class="messaging__btn messaging__btn-camera"></button>
-        </div>
-        <p class="messaging__message">Напишите нам, мы ответим в ближайшее время</p>
-        <form class="messaging__reply" action="#">
-          <textarea class="messaging__text" name="message"></textarea>
-          <div class="messaging__reply-btn">
-            <button class="main-btn main-btn_green_filled main-btn_big">reply</button>
+    <div class="wrapper__section-container">
+      <section class="section">
+        <h2 class="section__title">Контакты</h2>
+        <div class="map">
+          <div class="map__container" id="map" data-lat="59.9405947" data-lng="30.3254693"></div>
+          <div class="map__footer"><span class="map__greeting">Meet us!</span>
+            <address class="map__address">Санкт-Петербург, Конюшенная площадь, дом 2</address>
+            <div class="map__icons"><span class="map__icon map__icon-target"></span><span class="map__icon map__icon-pin"></span></div>
           </div>
-        </form>
+        </div>
+      </section>
+    </div>
+    <div class="wrapper__section-container">
+      <div class="info">
+        <div class="info__text">
+          <p class="info__address">Россия, Санкт-Петербург, Конюшенная площадь, дом 2 (помещение 40)</p>
+          <p class="info__address">Рядом с клубами "Циркус" и "Духлесс", метро "Канал Грибоедова", внутренний двор, либо вход под арку с канала Грибоедова д. 5</p>
+          <p class="info__time">Понедельник - пятница 17:00 - 22:00, суббота - воскресенье 15:00 - 20:00</p>
+        </div>
+        <div class="messaging false">
+          <div class="messaging__title">Maria Ivanova</div>
+          <div class="messaging__user">
+            <button class="messaging__btn messaging__btn-message"></button>
+            <div class="messaging__image-container"><img class="messaging__image" src="images/user2.jpg" alt="Maria Ivanova"></div>
+            <button class="messaging__btn messaging__btn-camera"></button>
+          </div>
+          <p class="messaging__message">Напишите нам, мы ответим в ближайшее время</p>
+          <form class="messaging__reply" action="#">
+            <textarea class="messaging__text" name="message"></textarea>
+            <div class="messaging__reply-btn">
+              <button class="main-btn main-btn_green main-btn_green_filled main-btn_big">reply</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
