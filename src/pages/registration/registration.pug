@@ -1,5 +1,7 @@
 include ../base.pug
+include ../../components/site/navigation/navigation.pug
 include ../../components/site/header/header.pug
+include ../../components/site/registration-section/registration-section.pug
 include ../../components/site/section/section.pug
 include ../../components/kit/search/search.pug
 include ../../components/kit/form/form.pug
@@ -16,19 +18,4 @@ body
     .wrapper__header
       +header
     .wrapper__section-container
-      +section({ title: 'Запись на пробное занятие' })
-        .registration__content
-          +calendar
-          .registration__form
-            +form
-              .registration__form-item
-                +dropdown({ placeholder: 'Выберите направление', name: 'type', options: ['Современные танцы', 'Латиноамериканские танцы', 'Аргентинское танго', 'Классическая хореография', 'Pole Dance'] })
-              .registration__form-item
-                +tickBox({ text: 'Я мужчина', name: 'sex' })
-              .registration__form-item
-                +tickBox({ text: 'Я женщина', name: 'sex' })
-              .registration__form-item
-                +toggle({ text: 'Подписаться на рассылку', name: 'mail' })
-              label.registration__slider-label Оцените качество, полноту и доступность информации на нашем сайте:
-              .registration__form-item
-                +sliderRange({ name: 'flowing', step: 1, value: 90 }) 
+      +registration-section
