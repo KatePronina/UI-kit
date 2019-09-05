@@ -17,25 +17,17 @@ class Form {
 
   onEmailInput = (event) => {
     if (this.checkInputValue(event.target.value, this.emailRegExp)) {
-      this.$emailWarning.css('display', 'block');
-      this.$emailWarning.text('Thanks!');
-      this.$emailWarning.removeClass('form__warning_error');
+      this.$emailWarning.css('display', 'block').text('Thanks!').removeClass('form__warning_error');
     } else {
-      this.$emailWarning.css('display', 'block');
-      this.$emailWarning.text('Error');
-      this.$emailWarning.addClass('form__warning_error');
+      this.$emailWarning.css('display', 'block').text('Error').addClass('form__warning_error');
     }
   }
 
   onNameInput = (event) => {
     if (this.checkInputValue(event.target.value, this.nameRegExp)) {
-      this.$nameWarning.css('display', 'block');
-      this.$nameWarning.text('Thanks!');
-      this.$nameWarning.removeClass('form__warning_error');
+      this.$nameWarning.css('display', 'block').text('Thanks!').removeClass('form__warning_error');
     } else {
-      this.$nameWarning.css('display', 'block');
-      this.$nameWarning.text('Error');
-      this.$nameWarning.addClass('form__warning_error');
+      this.$nameWarning.css('display', 'block').text('Error').addClass('form__warning_error');
     }
   }
 
