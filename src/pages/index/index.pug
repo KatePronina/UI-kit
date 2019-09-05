@@ -21,95 +21,123 @@ include ../../components/kit/video/video.pug
 +base('Index')
 body
   .wrapper.wrapper_index
-    .buttons.wrapper__buttons
-      h2.title.buttons__title Standard buttons
-      .buttons__wrapper-row
-        +button({ text: 'button'})
-        +button({ text: 'button', size: 'big' })
-        +button({ text: 'button', color: 'orange', size: 'big' })
-        +button({ text: 'button', color: 'orange'})
-      .buttons__wrapper-row
-        +button({ text: 'button'})
-        +button({ text: 'button', size: 'big' })
-        +button({ text: 'button', color: 'orange', size: 'big' })
-        +button({ text: 'button', color: 'orange'})
-      .buttons__wrapper-row
-        +button({ text: 'button', fill: false})
-        +button({ text: 'button', fill: false, size: 'big' })
-        +button({ text: 'button', fill: false, color: 'orange', size: 'big' })
-        +button({ text: 'button', fill: false, color: 'orange'})
-    .arrows.wrapper__arrows
-      h2.title.arrows__title Arrow buttons
-      .arrows__wrapper
-        +arrowBtn()
-        +arrowBtn({direction: 'next'})
-        +arrowBtn({disable: true})
-        +arrowBtn({disable: true, direction: 'next'})
-        +arrowBtn({fill: true})
-        +arrowBtn({direction: 'next', fill: true})
-    .percentage.wrapper__percentage
-      h2.title.percentage__title Percentages / pie chart
-      .percentage__wrapper
-        +percent({ value: 0 })
-        +percent({ value: 38 })
-        +percent({ value: 62 })
-        +percent({ value: 89 })
-        +diagram({ values: [11, 26, 30] })
-    .sliders.wrapper__sliders
-      h2.title.sliders__title Sliders
-      .sliders__wrapper
-        +sliderRange({ name: 'flowing', step: 1, value: 40 })
-        +sliderRange({ name: 'steps', step: 25, value: 75 })
-    .stage.wrapper__stage
-      h2.title.stage__title Stages
-      .stage__wrapper
-        +stages({ currentStage: 3, stages: 5 })
-    .form-elements.wrapper__form-elements
-      h2.title.form-elements__title Form elements
-      .form-elements__wrapper
-        .form-elements__wrapper-left
-          +form
-        .form-elements__wrapper-right
-          h3.title.form-elements__wrapper-title Toggles
-          .form-elements__toggles
-            +toggle({ text: '', name: '' })
-            +toggle({ text: '', name: '', isChecked: true })
-          h3.title.form-elements__wrapper-title Tick boxes
-          .form-elements__ticks
-            +tickBox({ text: '', name: 'tick', isChecked: true })
-            +tickBox({ text: '', name: 'tick' })
+    .wrapper__buttons
+      .buttons
+        .buttons__title
+          h2.title Standard buttons
+        .buttons__wrapper-row
+          +button({ text: 'button'})
+          +button({ text: 'button', size: 'big' })
+          +button({ text: 'button', color: 'orange', size: 'big' })
+          +button({ text: 'button', color: 'orange'})
+        .buttons__wrapper-row
+          +button({ text: 'button'})
+          +button({ text: 'button', size: 'big' })
+          +button({ text: 'button', color: 'orange', size: 'big' })
+          +button({ text: 'button', color: 'orange'})
+        .buttons__wrapper-row
+          +button({ text: 'button', fill: false})
+          +button({ text: 'button', fill: false, size: 'big' })
+          +button({ text: 'button', fill: false, color: 'orange', size: 'big' })
+          +button({ text: 'button', fill: false, color: 'orange'})
+    .wrapper__arrows
+      .arrows
+        .arrows__title
+          h2.title Arrow buttons
+        .arrows__wrapper
+          +arrowBtn()
+          +arrowBtn({direction: 'next'})
+          +arrowBtn({disable: true})
+          +arrowBtn({disable: true, direction: 'next'})
+          +arrowBtn({fill: true})
+          +arrowBtn({direction: 'next', fill: true})
+    .wrapper__percentage
+      .percentage
+        .percentage__title
+          h2.title Percentages / pie chart
+        .percentage__wrapper
+          +percent({ value: 0 })
+          +percent({ value: 38 })
+          +percent({ value: 62 })
+          +percent({ value: 89 })
+          +diagram({ values: [11, 26, 30] })
+    .wrapper__sliders
+      .sliders
+        .sliders__title
+          h2.title Sliders
+        .sliders__wrapper
+          +sliderRange({ name: 'flowing', step: 1, value: 40 })
+          +sliderRange({ name: 'steps', step: 25, value: 75 })
+    .wrapper__stage
+      .stage
+        .stage__title
+          h2.title Stages
+        .stage__wrapper
+          +stages({ currentStage: 3, stages: 5 })
+    .wrapper__form-elements
+      .form-elements
+        .form-elements__title 
+          h2.titleForm elements
+        .form-elements__wrapper
+          .form-elements__wrapper-left
+            +form
+          .form-elements__wrapper-right
+            .form-elements__wrapper-title
+              h3.title Toggles
+            .form-elements__toggles
+              +toggle({ text: '', name: '' })
+              +toggle({ text: '', name: '', isChecked: true })
+            .form-elements__wrapper-title
+              h3.title Tick boxes
+            .form-elements__ticks
+              +tickBox({ text: '', name: 'tick', isChecked: true })
+              +tickBox({ text: '', name: 'tick' })
     .section-wrapper
-      .searches.wrapper__searches
-        h2.title.searches__title Search / Drop down
-        .searches__wrapper
-          +search({ placeholder: 'Search' })
-        .searches__wrapper
-          +search({ placeholder: 'I\'ve not found what I\'m looking for...', error: true })
-        .searches__wrapper
-          +dropdown({ placeholder: 'Choose An Option', name: 'select', options: ['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4'] })
-      .users.wrapper__users
-        h2.title.users__title User profile
-        .users__wrapper
-          +user({ img: 'user1.jpg', name: 'John Smith', profession: 'UX  DESIGNER' })
-        .users__wrapper
-          +user({ img: 'user2.jpg', name: 'Sarah Brown', profession: 'DEVELOPER', style: 'green' })
-    .news-section.wrapper__news-section
-      h2.title.news-section__title News & events
-      .news-section__wrapper
-        +news({ title: 'It’s all going downhill', img: 'news1.jpg', date: '24  AUGUST  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.' })
-        +event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', img: 'event1.jpg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' })
-    .location.wrapper__location
-      h2.title.location__title Location
-      .location__wrapper
-        +map({ lat: 37.796189, lng: -122.415034, address: '1259  CALIFORNIA ST San Francisco, CA' })
-    .container.wrapper__container
-      .calendar.wrapper__calendar
-        h2.title.container__title Calendar
-        +calendar
-      .messages.wrapper__messages
-        h2.title.container__title Messaging
-        +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm' })
-    .video-section.wrapper__video-section
-      h2.title.video-section__title Video
-      .video-section__wrapper
-        +video({ url: 'winter.mp4', title: 'New Zealand Landscapes Timelapse', author: 'from Bevan Percival' })
+      .wrapper__searches
+        .searches
+          .searches__title
+            h2.title Search / Drop down
+          .searches__wrapper
+            +search({ placeholder: 'Search' })
+          .searches__wrapper
+            +search({ placeholder: 'I\'ve not found what I\'m looking for...', error: true })
+          .searches__wrapper
+            +dropdown({ placeholder: 'Choose An Option', name: 'select', options: ['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4'] })
+      .wrapper__users
+        .users
+          .users__title
+            h2.title User profile
+          .users__wrapper
+            +user({ img: 'user1.jpg', name: 'John Smith', profession: 'UX  DESIGNER' })
+          .users__wrapper
+            +user({ img: 'user2.jpg', name: 'Sarah Brown', profession: 'DEVELOPER', style: 'green' })
+    .wrapper__news-section
+      .news-section
+        .news-section__title
+          h2.title News & events
+        .news-section__wrapper
+          +news({ title: 'It’s all going downhill', img: 'news1.jpg', date: '24  AUGUST  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.' })
+          +event({ day: '24', month: 'Aug', title: 'THIS IS THE TITLE', img: 'event1.jpg', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' })
+    .wrapper__location
+      .location
+        h2.title.location__title Location
+        .location__wrapper
+          +map({ lat: 37.796189, lng: -122.415034, address: '1259  CALIFORNIA ST San Francisco, CA' })
+    .wrapper__container
+      .container
+        .wrapper__calendar
+          .calendar
+            .container__title
+              h2.title Calendar
+            +calendar
+        .wrapper__messages
+          .messages
+            .container__title
+              h2.title Messaging
+            +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Hey! So are we cool to meet at the art gallery? Say 8pm' })
+    .wrapper__video-section
+      .video-section
+        .video-section__title
+          h2.title Video
+        .video-section__wrapper
+          +video({ url: 'winter.mp4', title: 'New Zealand Landscapes Timelapse', author: 'from Bevan Percival' })
