@@ -27,7 +27,8 @@
   <div class="wrapper">
     <div class="wrapper__header">
       <div class="header">
-        <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a></nav>
+        <nav class="navigation"><a class="navigation__link" href="main.html">Главная</a><a class="navigation__link" href="registration.html">Запись</a><a class="navigation__link" href="contacts.html">Контакты</a><a class="navigation__link" href="teachers.html">Преподаватели</a>
+        </nav>
         <div class="search ">
           <input class="search__input" type="text" placeholder="Search here...">
           <button class="search__button"></button>
@@ -38,10 +39,10 @@
       <section class="section">
         <h2 class="section__title">Контакты</h2>
         <div class="map">
-          <div class="map__container" id="map" data-lat="59.9405947" data-lng="30.3254693"></div>
+          <div class="map__container" data-lat="59.9405947" data-lng="30.3254693"></div>
           <div class="map__footer"><span class="map__greeting">Meet us!</span>
             <address class="map__address">Санкт-Петербург, Конюшенная площадь, дом 2</address>
-            <div class="map__icons"><span class="map__icon map__icon-target"></span><span class="map__icon map__icon-pin"></span></div>
+            <div class="map__icons"><span class="map__icons-item map__icons-item-target"></span><span class="map__icons-item map__icons-item-pin"></span></div>
           </div>
         </div>
       </section>
@@ -61,10 +62,10 @@
             <button class="messaging__btn messaging__btn-camera"></button>
           </div>
           <p class="messaging__message">Напишите нам, мы ответим в ближайшее время</p>
-          <form class="messaging__reply" action="#">
+          <form class="messaging__response" action="#">
             <textarea class="messaging__text" name="message"></textarea>
-            <div class="messaging__reply-btn">
-              <button class="main-btn main-btn_green main-btn_green_filled main-btn_big">reply</button>
+            <div class="messaging__response-btn">
+              <button class="main-btn main-btn_theme_green main-btn_size_big">reply</button>
             </div>
           </form>
         </div>
