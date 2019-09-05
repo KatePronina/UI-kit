@@ -1,106 +1,112 @@
 @import '../../style-config/variables.scss';
 
-.ui-datepicker {
-  &-header {
-    position: relative;
-    background-color: $coral;
-    color: $white;
-    text-align: center;
-  }
-
-  &-title {
-    font-size: 1.5rem;
-    font-weight: 300;
-    padding-top: .5rem;
-    padding-bottom: .4rem;
-    letter-spacing: -.8px;
-  }
-
-  &-prev {
-    position: absolute;
-    font-size: 0;
-    width: .625rem;
-    height: .625rem;
-    border: 2px solid $white;
-    border-bottom: none;
-    border-right: none;
-    transform: rotate(-45deg);
-    top: 1.05rem;
-    left: 1.05rem;
-    cursor: pointer;
-  }
-
-  &-next {
-    @extend .ui-datepicker-prev;
-    right: 1.25rem;
-    left: auto;
-    transform: rotate(135deg);
-  }
-
-  &-year {
-    display: none;
-  }
-
-  &-calendar {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-
-    thead {
-      background-color: $orange;
+.ui {
+  &-datepicker {
+    &-header {
+      position: relative;
+      background-color: $coral;
       color: $white;
-      text-transform: uppercase;
-      font-weight: 900;
-      font-size: .5625rem;
+      text-align: center;
+    }
 
-      tr {
-        height: 1.6875rem;
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 300;
+      padding-top: .5rem;
+      padding-bottom: .4rem;
+      letter-spacing: -.8px;
+    }
 
-        th {
-          padding-top: .4rem;
-          letter-spacing: 1px;
+    &-prev {
+      position: absolute;
+      font-size: 0;
+      width: .625rem;
+      height: .625rem;
+      border: 2px solid $white;
+      border-bottom: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      top: 1.05rem;
+      left: 1.05rem;
+      cursor: pointer;
+    }
+
+    &-next {
+      @extend .ui-datepicker-prev;
+      right: 1.25rem;
+      left: auto;
+      transform: rotate(135deg);
+    }
+
+    &-year {
+      display: none;
+    }
+
+    &-calendar {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+
+      thead {
+        background-color: $orange;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: .5625rem;
+
+        tr {
+          height: 1.6875rem;
+
+          th {
+            padding-top: .4rem;
+            letter-spacing: 1px;
+          }
         }
       }
-    }
 
-    tbody {
-      background-color: $whitestone;
-    }
-
-    td {
-      border: 1px solid $white;
-      text-align: center;
-      width: 2.4775rem;
-      height: 2.4775rem;
-      box-sizing: border-box;
-
-      &:last-child {
-        border-right: none;
+      tbody {
+        background-color: $whitestone;
       }
 
-      &:first-child {
-        border-left: none;
+      td {
+        border: 1px solid $white;
+        text-align: center;
+        width: 2.4775rem;
+        height: 2.4775rem;
+        box-sizing: border-box;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        &:first-child {
+          border-left: none;
+        }
       }
+
+      .ui-state-default {
+        color: $anthracite;
+        text-decoration: none;
+        font-family: 'SourceSansPro', sans-serif;
+        font-size: 1.25rem;
+      }
+      
     }
 
-    .ui-state-default {
-      color: $anthracite;
-      text-decoration: none;
-      font-family: 'SourceSansPro', sans-serif;
-      font-size: 1.25rem;
-    }
-    
-  }
-
-  &-other-month .ui-state-default {
-    color: $white;
-  }
-  
-  &-current-day {
-    background-color: $orange;
-
-    .ui-state-default {
+    &-other-month .ui-state-default {
       color: $white;
     }
+    
+    &-current-day {
+      background-color: $orange;
+
+      .ui-state-default {
+        color: $white;
+      }
+    }
+  }
+
+  &-widget.ui-widget-content {
+    border: none;
   }
 }
