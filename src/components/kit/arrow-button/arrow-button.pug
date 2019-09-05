@@ -1,10 +1,10 @@
-mixin arrowBtn({ disable = "", direction = "prev", fill = "" } = {})
+mixin arrowBtn({ disable = "", direction = "left", theme = "white" } = {})
   -
     const defaultClass = "arrow-btn"
-    const directionClass = direction && `${defaultClass}_${direction}`
-    const fillClass = fill && `${defaultClass}_fill`
+    const directionClass = direction && `${defaultClass}_direction_${direction}`
+    const themeClass = theme && `${defaultClass}_theme_${theme}`
     const disabledClass = disable && `${defaultClass}_disabled`
-    const ariaLabel = direction === "prev" ? "Предыдущий" : "Следующий"
-  button(class = `${defaultClass} ${directionClass} ${disabledClass} ${fillClass}`,
+    const ariaLabel = direction === "left" ? "Предыдущий" : "Следующий"
+  button(class = `${defaultClass} ${directionClass} ${disabledClass} ${themeClass}`,
          disabled = disable===true,
          aria-label = ariaLabel)

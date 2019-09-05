@@ -1,0 +1,36 @@
+@import '../../style-config/variables.scss'; 
+
+.ui {
+  &-slider {
+    &-line {
+      display: none;
+    }
+
+    &-range {
+      background-color: $green;
+    }
+
+    &-horizontal.ui-slider-pips {
+      margin: 0;
+    }
+
+    &-pips [class*=ui-slider-pip-selected],
+    &-pips [class*=ui-slider-pip-initial],
+    &-pips .ui-slider-pip,
+    &-pip .ui-slider-label,
+    &-pips:not(.ui-slider-disabled) .ui-slider-pip:hover .ui-slider-label {
+      font-weight: 900;
+      color: $lightgrey;
+      font-size: .6875rem;
+      top: .525rem;
+      
+      &:hover {
+        color: $lightgrey;
+      }
+    }
+  }
+
+  &-widget.ui-widget-content {
+    border: none;
+  }
+}

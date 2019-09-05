@@ -31,11 +31,13 @@
     }
   }
 
-  &_prev {
-    &::before {
-      transform: rotate(-135deg);
-      right: 0;
-      left: 1rem;
+  &_direction {
+    &_left {
+      &::before {
+        transform: rotate(-135deg);
+        right: 0;
+        left: 1rem;
+      }
     }
   }
 
@@ -57,12 +59,14 @@
     }
   }
 
-  &_fill {
-    background-color: $green;
+  &_theme {
+    &_green {
+      background-color: $green;
 
-    &::before {
-      border-top-color: $white;
-      border-right-color: $white;
+      &::before {
+        border-top-color: $white;
+        border-right-color: $white;
+      }
     }
   }
 }

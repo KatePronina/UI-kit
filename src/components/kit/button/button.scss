@@ -16,52 +16,56 @@
     color: $white;
   }
 
-  &_standart {
-    font-size: .625rem;
-    padding-top: .3rem;
-    padding-bottom: .2rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  &_big {
-    font-size: .75rem;
-    padding-top: .56rem;
-    padding-bottom: .45rem;
-    padding-left: 1.98rem;
-    padding-right: 1.98rem;
-  }
-
-  &_green {
-    color: $green;
-    border-color: $green;
-    border-bottom: .22em solid $darkgreen;
-
-    &:hover {
-      background-color: $green;
-      border-bottom-color: $darkgreen;
+  &_size {
+    &_standart {
+      font-size: .625rem;
+      padding-top: .3rem;
+      padding-bottom: .2rem;
+      padding-right: 1rem;
+      padding-left: 1rem;
     }
 
-    &_filled {
+    &_big {
+      font-size: .75rem;
+      padding-top: .56rem;
+      padding-bottom: .45rem;
+      padding-left: 1.98rem;
+      padding-right: 1.98rem;
+    }
+  }
+
+  &_theme {
+    &_white-green {
+      color: $green;
+      border-color: $green;
+      border-bottom: .22em solid $darkgreen;
+
+      &:hover {
+        background-color: $green;
+        border-bottom-color: $darkgreen;
+      }
+    }
+
+    &_green {
       background-color: $green;
       color: $white;
       border: 1px solid $green;
       border-bottom: .22em solid $darkgreen;
       box-sizing: border-box;
     }
-  }
 
-  &_orange {
-    color: $orange;
-    border-color: $orange;
-    border-bottom: .22em solid $orange;
+    &_white-orange {
+      color: $orange;
+      border-color: $orange;
+      border-bottom: .22em solid $orange;
 
-    &:hover {
-      background-color: $orange;
-      border-bottom-color: $darkorange;
+      &:hover {
+        background-color: $orange;
+        border-bottom-color: $darkorange;
+      }
     }
 
-    &_filled {
+    &_orange {
       background-color: $orange;
       color: $white;
       border: 1px solid $orange;
