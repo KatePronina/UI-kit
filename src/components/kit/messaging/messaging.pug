@@ -10,7 +10,7 @@ mixin messaging({ name, img, text, large = "" })
         img.messaging__image(src=require(`../../components/kit/messaging/img/${img}`), alt=name)
       button.messaging__btn.messaging__btn-camera
     p.messaging__message= text
-    form.messaging__reply(action="#")
+    form.messaging__response(action="#")
       textarea.messaging__text(name="message")
-      .messaging__reply-btn
+      .messaging__response-btn
         +button({ text: 'reply', size: 'big', theme: 'green' })

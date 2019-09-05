@@ -98,14 +98,14 @@
     }
   }
 
-  &__filled {
+  &__progress-bar {
     width: 0;
     background-color: $orange;
     height: 100%;
     border-radius: .1875rem;
   }
 
-  &__full {
+  &__btn-fullscreen {
     width: 3rem;
     height: 100%;
     background-color: $orange;

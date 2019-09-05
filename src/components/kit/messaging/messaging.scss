@@ -13,15 +13,6 @@
     max-width: 100%;
   }
 
-  &__reply-btn {
-    margin-bottom: 1.625rem;
-    display: flex;
-
-    .main-btn {
-      width: 100%;
-    }
-  }
-
   &__title {
     font-family: 'SourceSansPro';
     font-weight: 300;
@@ -101,10 +92,19 @@
     }
   }
 
-  &__reply {
+  &__response {
     margin: 0 1.3875rem;
     display: flex;
     flex-direction: column;
+
+    &-btn {
+      margin-bottom: 1.625rem;
+      display: flex;
+  
+      .main-btn {
+        width: 100%;
+      }
+    }
   }
 
   &__text {

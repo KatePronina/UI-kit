@@ -6,9 +6,9 @@ class Video {
     this.$playerElement = playerElement;
     this.$video = playerElement.find('.player__video');
     this.$progress = playerElement.find('.player__progress');
-    this.$progressFill = playerElement.find('.player__filled');
+    this.$progressFill = playerElement.find('.player__progress-bar');
     this.$playBtn = playerElement.find('.player__button');
-    this.$fullBtn = playerElement.find('.player__full');
+    this.$fullBtn = playerElement.find('.player__btn-fullscreen');
     this.$info = playerElement.find('.player__info');
 
     this.init();
