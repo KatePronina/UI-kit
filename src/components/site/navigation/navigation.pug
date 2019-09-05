@@ -1,6 +1,4 @@
-mixin navigation
+mixin navigation({ links })
   nav.navigation
-    a.navigation__link(href="main.html") Главная
-    a.navigation__link(href="registration.html") Запись
-    a.navigation__link(href="contacts.html") Контакты
-    a.navigation__link(href="teachers.html") Преподаватели
+    each link in links
+      a.navigation__link(href=link.href)= link.text

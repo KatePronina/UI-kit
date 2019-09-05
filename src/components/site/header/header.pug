@@ -1,4 +1,21 @@
 mixin header()
   .header
-    +navigation
+    +navigation({links: [
+      {
+        href: 'main.html',
+        text: 'Главная',
+      },
+      {
+        href: 'registration.html',
+        text: 'Запись',
+      },
+      {
+        href: 'contacts.html',
+        text: 'Контакты',
+      },
+      {
+        href: 'teachers.html',
+        text: 'Преподаватели',
+      },
+    ]})
     +search({ placeholder: 'Search here...' })

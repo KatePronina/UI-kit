@@ -1,8 +1,8 @@
-mixin main-news
-  .main-news 
-    .main-news__item
-      +news({ title: 'Скидка 20%', img: 'news1.jpg', date: '18  March  2019', text: 'При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе' })
-    .main-news__item
-      +event({ day: '24', month: 'Feb', title: 'Танцевальный марафон', img: 'event1.jpg', text: 'Танцуем весь день!' })
-    .main-news__item
-      +news({ title: 'Новый педагог', img: 'news1.jpg', date: '18  March  2019', text: 'РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свою музыкальность' })
+mixin main-news({ news })
+  .main-news
+    each item in news
+      .main-news__item
+        if item.type === 'news'
+          +news(item)
+        else
+          +event(item)
