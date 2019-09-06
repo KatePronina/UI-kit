@@ -1,7 +1,7 @@
 import Map from './Map';
 
 $(document).ready(() => {
-  const $maps = $('.map');
+  const $maps = $('.js-map');
 
   $maps.each((index, item) => {
     new Map($(item));

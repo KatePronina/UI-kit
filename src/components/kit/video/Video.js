@@ -4,12 +4,12 @@ import '../../../images/play.svg';
 class Video {
   constructor(playerElement) {
     this.$playerElement = playerElement;
-    this.$video = playerElement.find('.player__video');
-    this.$progress = playerElement.find('.player__progress');
-    this.$progressFill = playerElement.find('.player__progress-bar');
-    this.$playBtn = playerElement.find('.player__button');
-    this.$fullBtn = playerElement.find('.player__btn-fullscreen');
-    this.$info = playerElement.find('.player__info');
+    this.$video = playerElement.find('.js-player__video');
+    this.$progress = playerElement.find('.js-player__progress');
+    this.$progressFill = playerElement.find('.js-player__progress-bar');
+    this.$playBtn = playerElement.find('.js-player__button');
+    this.$fullBtn = playerElement.find('.js-player__btn-fullscreen');
+    this.$info = playerElement.find('.js-player__info');
 
     this.init();
   }

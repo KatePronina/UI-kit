@@ -3,7 +3,7 @@ import '../../../images/pin.png';
 
 class Map {
   constructor(mapElement) {
-    this.$mapElement = mapElement.find('.map__container');
+    this.$mapElement = mapElement.find('.js-map__container');
     this.lat = this.$mapElement.data('lat');
     this.lng = this.$mapElement.data('lng');
 

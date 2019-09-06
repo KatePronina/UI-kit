@@ -1,11 +1,11 @@
 mixin video({ url, title, author })
-  .player
-    .player__info
+  .player.js-player
+    .player__info.js-player__info
       span.player__title= title
       span.player__author= author
-    video.player__video(src=require(`../../videos/${url}`))
+    video(class="player__video js-player__video", src=require(`../../videos/${url}`))
     .player__controls
-      button.player__button
-      .player__progress
-        .player__progress-bar
-      button.player__btn-fullscreen
+      button.player__button.js-player__button
+      .player__progress.js-player__progress
+        .player__progress-bar.js-player__progress-bar
+      button.player__btn-fullscreen.js-player__btn-fullscreen

@@ -13,7 +13,7 @@ class Slider {
   }
 
   initFlowing() {
-    this.$hint = this.$sliderElement.find('.slider-range__value');
+    this.$hint = this.$sliderElement.find('.js-slider-range__value');
     this.$sliderElement
       .slider({
         min: 0,

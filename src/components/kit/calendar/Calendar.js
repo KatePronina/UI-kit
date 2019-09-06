@@ -3,9 +3,9 @@ import 'jquery-ui/ui/widgets/datepicker';
 class Calendar {
   constructor(calendarElement) {
     this.$calendarElement = calendarElement;
-    this.$calendarPick = calendarElement.find('.calendar__pick');
-    this.$calendarDay = calendarElement.find('.calendar__day');
-    this.$calendarBtn = calendarElement.find('.calendar__btn');
+    this.$calendarPick = calendarElement.find('.js-calendar__pick');
+    this.$calendarDay = calendarElement.find('.js-calendar__day');
+    this.$calendarBtn = calendarElement.find('.js-calendar__btn');
 
     this.init();
   }

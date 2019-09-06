@@ -3,7 +3,7 @@ import 'jquery-ui/ui/widgets/selectmenu';
 class Dropdown {
   constructor(dropdownWrapper) {
     this.$dropdownWrapper = dropdownWrapper;
-    this.$select = dropdownWrapper.find('.dropdown__select');
+    this.$select = dropdownWrapper.find('.js-dropdown__select');
     this.init();
   }
 
