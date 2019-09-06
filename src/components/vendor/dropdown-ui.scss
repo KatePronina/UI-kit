@@ -65,21 +65,30 @@
   &-menu {
     margin: 0;
     padding: 0;
-    padding-left: .81rem;
-    padding-top: .8rem;
     list-style: none;
     background-color: $green;
     border-radius: 3px;
     color: $white;
 
     &-item {
-      padding-bottom: .8rem;
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-left: .81rem;
+      border-bottom: 1px solid $white;
       font-size: .875rem;
       font-family: 'SourceSansPro', sans-serif;
       cursor: pointer;
 
+      &:hover {
+        background-color: $darkgreen;
+      }
+
       &:first-child {
         display: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
