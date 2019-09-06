@@ -10,13 +10,28 @@ mixin user({ img, name, profession, style = "" })
       span.user__name= name
       span.user__profession= profession
         .user__social-icons.social-icons
-          a.social-icons__link(href="/change-me", target="_blank", rel="noopener noreferrer")
-            svg.social-icons__icon
-              use(xlink:href="#facebook-letter-logo")
-          a.social-icons__link(href="/change-me", target="_blank", rel="noopener noreferrer")
-            svg.social-icons__icon.social-icons__icon_tw
-              use(xlink:href="#twitter-logo-silhouette")
-          a.social-icons__link(href="/change-me", target="_blank", rel="noopener noreferrer")
-            svg.social-icons__icon
-              use(xlink:href="#dribbble-logo")
+          -
+            const linksData = [
+              {
+                href: '/change-me',
+                name: 'facebook',
+                imageId: 'facebook-letter-logo'
+              },
+              {
+                href: '/change-me',
+                name: 'twitter',
+                imageId: 'twitter-logo-silhouette'
+              },
+              {
+                href: '/change-me',
+                name: 'dribbble',
+                imageId: 'dribbble-logo'
+              },
+            ]
+          each link in linksData
+            -
+              const twitterClass = link.name === 'twitter' ? 'social-icons__icon_tw' : ''
+            a.social-icons__link(href=`${link.href}`, target="_blank", rel="noopener noreferrer")
+              svg(class=`social-icons__icon ${twitterClass}`)
+                use(xlink:href=`#${link.imageId}`)
                 

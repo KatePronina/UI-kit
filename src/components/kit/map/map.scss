@@ -70,16 +70,18 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    &-target {
-      width: 1.4875rem;
-      height: 1.525rem;
-      background-image: url('../../../images/target.svg');
-    }
+    &_type {
+      &_target {
+        width: 1.4875rem;
+        height: 1.525rem;
+        background-image: url('../../../images/target.svg');
+      }
 
-    &-pin {
-      width: 1.46rem;
-      height: 1.575rem;
-      background-image: url('../../../images/map-pin.svg');
+      &_pin {
+        width: 1.46rem;
+        height: 1.575rem;
+        background-image: url('../../../images/map-pin.svg');
+      }
     }
   }
 }
