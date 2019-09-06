@@ -5,7 +5,7 @@ mixin diagram({ values })
     circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke="#e5e5e5")
     -let offset = 0;
     - values.forEach((element, i) => {
-        -let length = (244.92 * element) / 100;
+        -const length = (244.92 * element) / 100;
         circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke=`${colors[i]}`, stroke-dasharray=`${length} 244.92`, stroke-dashoffset=`${offset}`)
         -offset -= length; 
     - })

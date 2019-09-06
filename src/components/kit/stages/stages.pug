@@ -2,12 +2,12 @@ mixin stages({ currentStage, stages })
   ul.stages
     - for(let i = 1; i <= stages; i++) {
       -
-        let itemClass = "stages__item"
-        itemClass +=  i <= currentStage ? " stages__item_active" : ""
-      li(class = itemClass)= i
+        const itemClass = "stages__item"
+        const activeItemClass = i <= currentStage ? "stages__item_active" : ""
+      li(class=`${itemClass} ${activeItemClass}`)= i
       if i !== stages 
         -
-          let lineClass = "stages__line"
-          lineClass += i < currentStage ? " stages__line_active" : ""
-        div(class= lineClass)
+          const lineClass = "stages__line"
+          const lineActiveClass = i < currentStage ? "stages__line_active" : "" 
+        div(class=`${lineClass} ${lineActiveClass}`)
     - }
