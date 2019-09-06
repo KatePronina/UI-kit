@@ -31,22 +31,22 @@
           <h2 class="title">Standard buttons</h2>
         </div>
         <div class="buttons__wrapper-row">
-          <button class="main-btn main-btn_theme_green main-btn_size_standart">button</button>
-          <button class="main-btn main-btn_theme_green main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_orange main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_orange main-btn_size_standart">button</button>
+          <button class="main-btn main-btn_theme_green main-btn_size_standart js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_green main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_orange main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_orange main-btn_size_standart js-main-btn">button</button>
         </div>
         <div class="buttons__wrapper-row">
-          <button class="main-btn main-btn_theme_green main-btn_size_standart">button</button>
-          <button class="main-btn main-btn_theme_green main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_orange main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_orange main-btn_size_standart">button</button>
+          <button class="main-btn main-btn_theme_green main-btn_size_standart js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_green main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_orange main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_orange main-btn_size_standart js-main-btn">button</button>
         </div>
         <div class="buttons__wrapper-row">
-          <button class="main-btn main-btn_theme_white-green main-btn_size_standart">button</button>
-          <button class="main-btn main-btn_theme_white-green main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_white-orange main-btn_size_big">button</button>
-          <button class="main-btn main-btn_theme_white-orange main-btn_size_standart">button</button>
+          <button class="main-btn main-btn_theme_white-green main-btn_size_standart js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_white-green main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_white-orange main-btn_size_big js-main-btn">button</button>
+          <button class="main-btn main-btn_theme_white-orange main-btn_size_standart js-main-btn">button</button>
         </div>
       </div>
     </div>
@@ -102,9 +102,9 @@
           <h2 class="title">Sliders</h2>
         </div>
         <div class="sliders__wrapper">
-          <div class="slider-range slider_flowing" data-value="40" data-step="1"><span class="slider-range__value" data-value="40"></span>
+          <div class="slider-range slider_flowing js-slider-range" data-value="40" data-step="1"><span class="slider-range__value js-slider-range__value" data-value="40"></span>
           </div>
-          <div class="slider-range slider_steps" data-value="75" data-step="25">
+          <div class="slider-range slider_steps js-slider-range" data-value="75" data-step="25">
           </div>
         </div>
       </div>
@@ -121,10 +121,10 @@
             <li class="stages__item stages__item_active">2</li>
             <div class="stages__line stages__line_active"></div>
             <li class="stages__item stages__item_active">3</li>
-            <div class="stages__line"></div>
-            <li class="stages__item">4</li>
-            <div class="stages__line"></div>
-            <li class="stages__item">5</li>
+            <div class="stages__line "></div>
+            <li class="stages__item ">4</li>
+            <div class="stages__line "></div>
+            <li class="stages__item ">5</li>
           </ul>
         </div>
       </div>
@@ -136,7 +136,7 @@
         </div>
         <div class="form-elements__wrapper">
           <div class="form-elements__wrapper-left">
-            <form class="form" action="#">
+            <form class="form js-form" action="#">
               <div class="form__wrapper">
                 <input class="form__input js-form__input-name" type="text" placeholder="Your Name" require>
                 <div class="form__warning js-form__warning-name"></div>
@@ -147,7 +147,7 @@
               </div>
               <textarea class="form__message" placeholder="Your Message" require></textarea>
               <div class="form__button">
-                <button class="main-btn main-btn_theme_green main-btn_size_big">Submit</button>
+                <button class="main-btn main-btn_theme_green main-btn_size_big js-main-btn">Submit</button>
               </div>
             </form>
           </div>
@@ -209,8 +209,8 @@
             </div>
           </div>
           <div class="searches__wrapper">
-            <div class="dropdown">
-              <select class="dropdown__select" name="select" id="select">
+            <div class="dropdown js-dropdown">
+              <select class="dropdown__select js-dropdown__select" name="select" id="select">
                 <option class="dropdown__option" disabled selected hidden>Choose An Option</option>
                 <option class="dropdown__option">This is option 1</option>
                 <option class="dropdown__option">This is option 2</option>
@@ -241,15 +241,16 @@
               <div class="user__pic"><img class="user__img" src="images/user1.jpg" alt="John Smith"></div>
               <div class="user__info"><span class="user__name">John Smith</span><span class="user__profession">UX  DESIGNER
                   <div class="user__social-icons social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon">
+                      <svg class="social-icons__icon ">
                         <use xlink:href="#facebook-letter-logo"></use>
                       </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
                       <svg class="social-icons__icon social-icons__icon_tw">
                         <use xlink:href="#twitter-logo-silhouette"></use>
                       </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon">
+                      <svg class="social-icons__icon ">
                         <use xlink:href="#dribbble-logo"></use>
-                      </svg></a></div></span></div>
+                      </svg></a>
+                  </div></span></div>
             </div>
           </div>
           <div class="users__wrapper">
@@ -267,15 +268,16 @@
               <div class="user__pic"><img class="user__img" src="images/user2.jpg" alt="Sarah Brown"></div>
               <div class="user__info"><span class="user__name">Sarah Brown</span><span class="user__profession">DEVELOPER
                   <div class="user__social-icons social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon">
+                      <svg class="social-icons__icon ">
                         <use xlink:href="#facebook-letter-logo"></use>
                       </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
                       <svg class="social-icons__icon social-icons__icon_tw">
                         <use xlink:href="#twitter-logo-silhouette"></use>
                       </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon">
+                      <svg class="social-icons__icon ">
                         <use xlink:href="#dribbble-logo"></use>
-                      </svg></a></div></span></div>
+                      </svg></a>
+                  </div></span></div>
             </div>
           </div>
         </div>
@@ -299,7 +301,7 @@
             <div class="event__content"><span class="event__date"><span class="event__day">24</span> Aug</span><span class="event__title">THIS IS THE TITLE</span>
               <p class="event__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               <div class="event__button">
-                <button class="main-btn main-btn_theme_white-green main-btn_size_standart">ADD  TO  CALENDAR</button>
+                <button class="main-btn main-btn_theme_white-green main-btn_size_standart js-main-btn">ADD  TO  CALENDAR</button>
               </div>
             </div>
           </article>
@@ -310,11 +312,11 @@
       <div class="location">
         <h2 class="title location__title">Location</h2>
         <div class="location__wrapper">
-          <div class="map">
-            <div class="map__container" data-lat="37.796189" data-lng="-122.415034"></div>
+          <div class="map js-map">
+            <div class="map__container map__container js-map__container" data-lat="37.796189" data-lng="-122.415034"></div>
             <div class="map__footer"><span class="map__greeting">Meet us!</span>
               <address class="map__address">1259  CALIFORNIA ST San Francisco, CA</address>
-              <div class="map__icons"><span class="map__icons-item map__icons-item-target"></span><span class="map__icons-item map__icons-item-pin"></span></div>
+              <div class="map__icons"><span class="map__icons-item map__icons-item_type_target"></span><span class="map__icons-item map__icons-item_type_pin"></span></div>
             </div>
           </div>
         </div>
@@ -327,10 +329,10 @@
             <div class="container__title">
               <h2 class="title">Calendar</h2>
             </div>
-            <div class="calendar">
-              <input class="calendar__day" disabled>
-              <div class="calendar__pick"></div>
-              <button class="calendar__btn">Today</button>
+            <div class="calendar js-calendar">
+              <input class="calendar__day js-calendar__day" disabled>
+              <div class="calendar__pick js-calendar__pick"></div>
+              <button class="calendar__btn js-calendar__btn">Today</button>
             </div>
           </div>
         </div>
@@ -350,7 +352,7 @@
               <form class="messaging__response" action="#">
                 <textarea class="messaging__text" name="message"></textarea>
                 <div class="messaging__response-btn">
-                  <button class="main-btn main-btn_theme_green main-btn_size_big">reply</button>
+                  <button class="main-btn main-btn_theme_green main-btn_size_big js-main-btn">reply</button>
                 </div>
               </form>
             </div>
@@ -364,15 +366,15 @@
           <h2 class="title">Video</h2>
         </div>
         <div class="video-section__wrapper">
-          <div class="player">
-            <div class="player__info"><span class="player__title">New Zealand Landscapes Timelapse</span><span class="player__author">from Bevan Percival</span></div>
-            <video class="player__video" src="video/winter.mp4"></video>
+          <div class="player js-player">
+            <div class="player__info js-player__info"><span class="player__title">New Zealand Landscapes Timelapse</span><span class="player__author">from Bevan Percival</span></div>
+            <video class="player__video js-player__video" src="src/videos/winter.mp4"></video>
             <div class="player__controls">
-              <button class="player__button"></button>
-              <div class="player__progress">
-                <div class="player__progress-bar"></div>
+              <button class="player__button js-player__button"></button>
+              <div class="player__progress js-player__progress">
+                <div class="player__progress-bar js-player__progress-bar"></div>
               </div>
-              <button class="player__btn-fullscreen"></button>
+              <button class="player__btn-fullscreen js-player__btn-fullscreen"></button>
             </div>
           </div>
         </div>
