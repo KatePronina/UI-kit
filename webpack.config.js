@@ -19,6 +19,11 @@ const conf = {
   devServer: {
     overlay: true,
   },
+  resolve: {
+    alias: {
+      src: path.resolve('./src'),
+    },
+  },
   module: {
     rules: [
       {
@@ -32,11 +37,11 @@ const conf = {
           fallback: 'style-loader',
           use: [
             {
-              loader: 'css-loader',
+              loader: 'css-loader?',
               options: { sourceMap: true },
             },
             {
-              loader: 'sass-loader',
+              loader: 'sass-loader?',
               options: { sourceMap: true },
             },
           ],
@@ -44,14 +49,14 @@ const conf = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
+        loader: 'pug-loader?',
         options: {
           pretty: true,
         },
       },
       {
         test: /\.(jpg|png|svg)$/,
-        loader: 'file-loader',
+        loader: 'file-loader?',
         options: {
           name: 'images/[name].[ext]',
         },
@@ -65,7 +70,7 @@ const conf = {
       },
       {
         test: /\.mp4$/,
-        loader: 'file-loader',
+        loader: 'file-loader?',
         options: {
           name: 'video/[name].[ext]',
         },

@@ -1,4 +1,4 @@
-import requireAll from '../requireAll';
-import '../../components/kit/video/video-init';
+import requireAll from 'src/pages/requireAll';
+import 'src/components/kit/video/video-init';
 
-requireAll(require.context('../../', true, /\.scss$/));
+requireAll(require.context('src', true, /\.scss$/));

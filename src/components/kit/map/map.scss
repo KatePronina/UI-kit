@@ -1,4 +1,4 @@
-@import '../../../style-config/variables.scss';
+@import 'src/style-config/variables.scss';
 
 .map {
   display: flex;
@@ -12,7 +12,7 @@
 
   &__container {
     height: 12.7rem;
-    background-image: url('../../../images/fallback.jpg');
+    background-image: url('~src/images/fallback.jpg');
     background-size: cover;
     border-radius: 3px 3px 0 0;
   }
@@ -74,13 +74,13 @@
       &_target {
         width: 1.4875rem;
         height: 1.525rem;
-        background-image: url('../../../images/target.svg');
+        background-image: url('~src/images/target.svg');
       }
 
       &_pin {
         width: 1.46rem;
         height: 1.575rem;
-        background-image: url('../../../images/map-pin.svg');
+        background-image: url('~src/images/map-pin.svg');
       }
     }
   }

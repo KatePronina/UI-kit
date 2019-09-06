@@ -1,6 +1,6 @@
-@import '../../../style-config/variables.scss';
-@import '../../vendor/jquery-ui.css';
-@import '../../vendor/jquery-ui-slider-pips.css';
+@import 'src/style-config/variables.scss';
+@import '~src/components/vendor/jquery-ui.css';
+@import '~src/components/vendor/jquery-ui-slider-pips.css';
 
 .slider {
   &-range {

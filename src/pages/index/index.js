@@ -1,3 +1,3 @@
-import requireAll from '../requireAll';
+import requireAll from 'src/pages/requireAll';
 
-requireAll(require.context('../../', true, /\.scss|js$/));
+requireAll(require.context('src', true, /\.scss|js$/));

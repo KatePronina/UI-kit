@@ -9,6 +9,16 @@
     "$": true
   },
   "rules": {
-    "no-new": 0,
+    "no-new": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["src", "./src"]
+        ],
+        "extensions": [".js"]
+      }
+    }
   }
 }

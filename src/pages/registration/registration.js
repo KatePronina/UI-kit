@@ -1,8 +1,8 @@
-import requireAll from '../requireAll';
+import requireAll from 'src/pages/requireAll';
 
-import '../../components/kit/form/form-init';
-import '../../components/kit/dropdown/dropdown-init';
-import '../../components/kit/slider-range/slider-range-init';
-import '../../components/kit/calendar/calendar-init';
+import 'src/components/kit/form/form-init';
+import 'src/components/kit/dropdown/dropdown-init';
+import 'src/components/kit/slider-range/slider-range-init';
+import 'src/components/kit/calendar/calendar-init';
 
-requireAll(require.context('../../', true, /\.scss$/));
+requireAll(require.context('src', true, /\.scss$/));

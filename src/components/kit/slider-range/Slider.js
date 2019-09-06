@@ -1,5 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
-import '../../vendor/jquery-ui-slider-pips';
+import 'src/components/vendor/jquery-ui-slider-pips';
 
 class Slider {
   constructor(sliderElement) {

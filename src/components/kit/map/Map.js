@@ -1,5 +1,5 @@
 import GoogleMapsLoader from 'google-maps';
-import '../../../images/pin.png';
+import 'src/images/pin.png';
 
 class Map {
   constructor(mapElement) {

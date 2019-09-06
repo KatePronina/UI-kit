@@ -1,5 +1,5 @@
-import '../../../images/pause.svg';
-import '../../../images/play.svg';
+import 'src/images/pause.svg';
+import 'src/images/play.svg';
 
 class Video {
   constructor(playerElement) {
