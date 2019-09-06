@@ -5,7 +5,7 @@ class Calendar {
     this.$calendarElement = calendarElement;
     this.$calendarPick = calendarElement.find('.js-calendar__pick');
     this.$calendarDay = calendarElement.find('.js-calendar__day');
-    this.$calendarBtn = calendarElement.find('.js-calendar__btn');
+    this.$calendarBtnSelectToday = calendarElement.find('.js-calendar__btn');
 
     this.init();
   }
@@ -21,10 +21,11 @@ class Calendar {
     });
 
     this.setStartDate();
-    this.$calendarBtn.click(this.onCalendarBtnClick);
+    this.$calendarBtnSelectToday.click(this.onCalendarBtnSelectTodayClick);
   }
 
-  onCalendarBtnClick = () => {
+  onCalendarBtnSelectTodayClick = () => {
+    this.$calendarPick.datepicker('setDate', new Date());
     this.$calendarDay.val($.datepicker.formatDate('d', this.currentDate))
       .attr('value', $.datepicker.formatDate('dd-mm-yy', this.currentDate));
   }
