@@ -102,9 +102,9 @@
           <h2 class="title">Sliders</h2>
         </div>
         <div class="sliders__wrapper">
-          <div class="slider-range slider_flowing js-slider-range" data-value="40" data-step="1"><span class="slider-range__value js-slider-range__value" data-value="40"></span>
+          <div class="slider-range js-slider-range slider_type_flowing" data-value="40" data-step="1"><span class="slider-range__value js-slider-range__value" data-value="40"></span>
           </div>
-          <div class="slider-range slider_steps js-slider-range" data-value="75" data-step="25">
+          <div class="slider-range js-slider-range slider_type_steps" data-value="75" data-step="25">
           </div>
         </div>
       </div>
@@ -116,11 +116,11 @@
         </div>
         <div class="stage__wrapper">
           <ul class="stages">
-            <li class="stages__item stages__item_active">1</li>
-            <div class="stages__line stages__line_active"></div>
-            <li class="stages__item stages__item_active">2</li>
-            <div class="stages__line stages__line_active"></div>
-            <li class="stages__item stages__item_active">3</li>
+            <li class="stages__item stages__item_actived">1</li>
+            <div class="stages__line stages__line_actived"></div>
+            <li class="stages__item stages__item_actived">2</li>
+            <div class="stages__line stages__line_actived"></div>
+            <li class="stages__item stages__item_actived">3</li>
             <div class="stages__line "></div>
             <li class="stages__item ">4</li>
             <div class="stages__line "></div>
@@ -158,13 +158,13 @@
             <div class="form-elements__toggles">
               <div class="toggle">
                 <label class="toggle__label">
-                  <input class="toggle__input visually-hidden" type="checkbox" name="" value="">
+                  <input class="toggle__input" type="checkbox" name="" value="">
                   <div class="toggle__elem" tabindex="0"></div>
                 </label>
               </div>
               <div class="toggle">
                 <label class="toggle__label">
-                  <input class="toggle__input visually-hidden" type="checkbox" name="" value="" checked>
+                  <input class="toggle__input" type="checkbox" name="" value="" checked>
                   <div class="toggle__elem" tabindex="0"></div>
                 </label>
               </div>
@@ -175,13 +175,13 @@
             <div class="form-elements__ticks">
               <div class="tick-box">
                 <label class="tick-box__label">
-                  <input class="tick-box__input visually-hidden" type="radio" name="tick" value="" checked>
+                  <input class="tick-box__input" type="radio" name="tick" value="" checked>
                   <div class="tick-box__element" tabindex="0"></div>
                 </label>
               </div>
               <div class="tick-box">
                 <label class="tick-box__label">
-                  <input class="tick-box__input visually-hidden" type="radio" name="tick" value="">
+                  <input class="tick-box__input" type="radio" name="tick" value="">
                   <div class="tick-box__element" tabindex="0"></div>
                 </label>
               </div>
@@ -203,7 +203,7 @@
             </div>
           </div>
           <div class="searches__wrapper">
-            <div class="search search_error">
+            <div class="search search_theme_error">
               <input class="search__input" type="text" placeholder="I've not found what I'm looking for...">
               <button class="search__button"></button>
             </div>
@@ -240,16 +240,18 @@
 </svg>
               <div class="user__pic"><img class="user__img" src="images/user1.jpg" alt="John Smith"></div>
               <div class="user__info"><span class="user__name">John Smith</span><span class="user__profession">UX  DESIGNER
-                  <div class="user__social-icons social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon ">
-                        <use xlink:href="#facebook-letter-logo"></use>
-                      </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon social-icons__icon_tw">
-                        <use xlink:href="#twitter-logo-silhouette"></use>
-                      </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon ">
-                        <use xlink:href="#dribbble-logo"></use>
-                      </svg></a>
+                  <div class="user__social-icons">
+                    <div class="social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon">
+                          <use xlink:href="#facebook-letter-logo"></use>
+                        </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon social-icons__icon_type_tw">
+                          <use xlink:href="#twitter-logo-silhouette"></use>
+                        </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon">
+                          <use xlink:href="#dribbble-logo"></use>
+                        </svg></a>
+                    </div>
                   </div></span></div>
             </div>
           </div>
@@ -267,16 +269,18 @@
 </svg>
               <div class="user__pic"><img class="user__img" src="images/user2.jpg" alt="Sarah Brown"></div>
               <div class="user__info"><span class="user__name">Sarah Brown</span><span class="user__profession">DEVELOPER
-                  <div class="user__social-icons social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon ">
-                        <use xlink:href="#facebook-letter-logo"></use>
-                      </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon social-icons__icon_tw">
-                        <use xlink:href="#twitter-logo-silhouette"></use>
-                      </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
-                      <svg class="social-icons__icon ">
-                        <use xlink:href="#dribbble-logo"></use>
-                      </svg></a>
+                  <div class="user__social-icons">
+                    <div class="social-icons"><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon">
+                          <use xlink:href="#facebook-letter-logo"></use>
+                        </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon social-icons__icon_type_tw">
+                          <use xlink:href="#twitter-logo-silhouette"></use>
+                        </svg></a><a class="social-icons__link" href="/change-me" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icons__icon">
+                          <use xlink:href="#dribbble-logo"></use>
+                        </svg></a>
+                    </div>
                   </div></span></div>
             </div>
           </div>
