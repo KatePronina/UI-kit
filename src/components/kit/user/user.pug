@@ -9,29 +9,30 @@ mixin user({ img, name, profession, style = "" })
     .user__info
       span.user__name= name
       span.user__profession= profession
-        .user__social-icons.social-icons
-          -
-            const linksData = [
-              {
-                href: '/change-me',
-                name: 'facebook',
-                imageId: 'facebook-letter-logo'
-              },
-              {
-                href: '/change-me',
-                name: 'twitter',
-                imageId: 'twitter-logo-silhouette'
-              },
-              {
-                href: '/change-me',
-                name: 'dribbble',
-                imageId: 'dribbble-logo'
-              },
-            ]
-          each link in linksData
+        .user__social-icons
+          .social-icons
             -
-              const twitterClass = link.name === 'twitter' ? 'social-icons__icon_tw' : ''
-            a.social-icons__link(href=`${link.href}`, target="_blank", rel="noopener noreferrer")
-              svg(class=`social-icons__icon ${twitterClass}`)
-                use(xlink:href=`#${link.imageId}`)
+              const linksData = [
+                {
+                  href: '/change-me',
+                  name: 'facebook',
+                  imageId: 'facebook-letter-logo'
+                },
+                {
+                  href: '/change-me',
+                  name: 'twitter',
+                  imageId: 'twitter-logo-silhouette'
+                },
+                {
+                  href: '/change-me',
+                  name: 'dribbble',
+                  imageId: 'dribbble-logo'
+                },
+              ]
+            each link in linksData
+              -
+                const twitterClass = link.name === 'twitter' ? 'social-icons__icon_tw' : ''
+              a.social-icons__link(href=`${link.href}`, target="_blank", rel="noopener noreferrer")
+                svg(class=`social-icons__icon ${twitterClass}`)
+                  use(xlink:href=`#${link.imageId}`)
                 
