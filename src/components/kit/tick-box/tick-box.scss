@@ -1,54 +1,56 @@
 @import 'src/style-config/variables.scss';
+@import 'src/style-config/mixins.scss';
 
-.tick-box__element {
-  position: relative; 
-  width: 1.43rem;
-  height: 1.43rem;
-  margin-left: .4rem;
-  cursor: pointer;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 1.43rem;
-    height: 1.43rem;   
-    background-color: $lightgrey;
-    border-radius: 50%;
+.tick-box {
+  &__input {
+    @include visually-hidden;
   }
 
-  &::after {
-    position: absolute;
-    content: '';
-    width: .5625rem;
-    height: .25rem;
-    top: .4rem;
-    left: .4rem;
-    border: 2px solid $grey;
-    border-right: none;
-    border-top: none;
-    transform: rotate(-45deg);
+  &__element {
+    position: relative; 
+    width: 1.43rem;
+    height: 1.43rem;
+    margin-left: .4rem;
+    cursor: pointer;
 
-    @media (max-width: 768px) {
-      top: .45rem;
-      left: .35rem;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 1.43rem;
+      height: 1.43rem;   
+      background-color: $lightgrey;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: .5625rem;
+      height: .25rem;
+      top: .4rem;
+      left: .4rem;
+      border: 2px solid $grey;
+      border-right: none;
+      border-top: none;
+      transform: rotate(-45deg);
+
+      @media (max-width: 768px) {
+        top: .45rem;
+        left: .35rem;
+      }
     }
   }
-}
-.tick-box__input:checked + .tick-box__element::before {
-  background-color: $green;
-}
-.tick-box__input:checked + .tick-box__element::after {
-  border-color: $white;
-}
-.tick-box__label {
-  display: flex;
-  align-items: center;
-}
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+
+  &__input:checked + &__element::before {
+    background-color: $green;
+  }
+
+  &__input:checked + &__element::after {
+    border-color: $white;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
 }

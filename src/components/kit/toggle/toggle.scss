@@ -1,69 +1,72 @@
 @import 'src/style-config/variables.scss';
+@import 'src/style-config/mixins.scss';
 
-.toggle__elem {
-  position: relative;
-  height: 1.5rem;
-  width: 3.68rem;
-  background-color: $lightgrey;
-  border-radius: .7rem;
-  transition: .2s;
-  margin-left: .4rem;
-  line-height: 1.4;
-  cursor: pointer;
+.toggle {
+  &__elem {
+    position: relative;
+    height: 1.5rem;
+    width: 3.68rem;
+    background-color: $lightgrey;
+    border-radius: .7rem;
+    transition: .2s;
+    margin-left: .4rem;
+    line-height: 1.4;
+    cursor: pointer;
 
-  &::before {
-    position: absolute;
-    content: '';
-    top: .185rem;
-    left: .15rem;
-    width: 1.125rem;
-    height: 1.125rem;
-    background-color: $white;
-    border-radius: 50%;
+    &::before {
+      position: absolute;
+      content: '';
+      top: .185rem;
+      left: .15rem;
+      width: 1.125rem;
+      height: 1.125rem;
+      background-color: $white;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        top: .13rem;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: 'Off';
+      top: .3rem;
+      left: 1.6rem;
+      color: $white;
+      font-size: .75rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    &:checked {
+      background-color: $green;
+    }
 
     @media (max-width: 768px) {
-      top: .13rem;
+      height: 1.4rem;
     }
   }
 
-  &::after {
-    position: absolute;
-    content: 'Off';
-    top: .3rem;
-    left: 1.6rem;
-    color: $white;
-    font-size: .75rem;
-    font-weight: 900;
-    text-transform: uppercase;
+  &__input {
+    @include visually-hidden;
   }
 
-  &:checked {
+  &__input:checked + &__elem {
     background-color: $green;
   }
 
-  @media (max-width: 768px) {
-    height: 1.4rem;
+  &__input:checked + &__elem::before {
+    left: 2.35rem;
   }
-}
-.toggle__input:checked + .toggle__elem {
-  background-color: $green;
-}
-.toggle__input:checked + .toggle__elem::before {
-  left: 2.35rem;
-}
-.toggle__input:checked + .toggle__elem::after {
-  content: 'On';
-  left: .7rem;
-}
-.toggle__label {
-  display: flex;
-  align-items: center;
-}
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
+
+  &__input:checked + &__elem::after {
+    content: 'On';
+    left: .7rem;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+  }
 }

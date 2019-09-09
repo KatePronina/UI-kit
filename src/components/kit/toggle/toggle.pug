@@ -1,5 +1,5 @@
 mixin toggle({ text, name, isChecked= false })
   .toggle
     label.toggle__label= text
-      input.toggle__input.visually-hidden(type="checkbox", name= name, value= text, checked= isChecked)
+      input.toggle__input(type="checkbox", name= name, value= text, checked= isChecked)
       .toggle__elem(tabindex="0")
