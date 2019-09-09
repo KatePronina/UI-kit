@@ -1,7 +1,7 @@
 mixin messaging({ name, img, text, large = "" })
   -
     const defaultClass = "messaging" 
-    const sizeClass = large && `${defaultClass}_large`
+    const sizeClass = large && `${defaultClass}_size_large`
   div(class= `${defaultClass} ${sizeClass}`)
     .messaging__title= name
     .messaging__user

@@ -25,7 +25,7 @@
     }
   }
 
-  &_flowing {
+  &_type_flowing {
     .slider-range__value {
       display: block;
       position: absolute;
@@ -55,7 +55,7 @@
     }
   }
 
-  &_steps {
+  &_type_steps {
     .ui-slider-handle {
       background-color: $green;
       border: none;

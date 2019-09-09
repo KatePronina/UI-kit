@@ -3,11 +3,11 @@ mixin stages({ currentStage, stages })
     - for(let i = 1; i <= stages; i++) {
       -
         const itemClass = "stages__item"
-        const activeItemClass = i <= currentStage ? "stages__item_active" : ""
+        const activeItemClass = i <= currentStage ? "stages__item_actived" : ""
       li(class=`${itemClass} ${activeItemClass}`)= i
       if i !== stages 
         -
           const lineClass = "stages__line"
-          const lineActiveClass = i < currentStage ? "stages__line_active" : "" 
+          const lineActiveClass = i < currentStage ? "stages__line_actived" : "" 
         div(class=`${lineClass} ${lineActiveClass}`)
     - }
