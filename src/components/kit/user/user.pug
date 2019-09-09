@@ -33,6 +33,6 @@ mixin user({ img, name, profession, style = "" })
               -
                 const twitterClass = link.name === 'twitter' ? 'social-icons__icon_tw' : ''
               a.social-icons__link(href=`${link.href}`, target="_blank", rel="noopener noreferrer")
-                svg(class=`social-icons__icon ${twitterClass}`)
+                svg.social-icons__icon(class=`${twitterClass}`)
                   use(xlink:href=`#${link.imageId}`)
                 

@@ -3,7 +3,7 @@ mixin video({ url, title, author })
     .player__info.js-player__info
       span.player__title= title
       span.player__author= author
-    video(class="player__video js-player__video", src=require(`src/videos/${url}`))
+    video.player__video.js-player__video(src=require(`src/videos/${url}`))
     .player__controls
       button.player__button.js-player__button
       .player__progress.js-player__progress

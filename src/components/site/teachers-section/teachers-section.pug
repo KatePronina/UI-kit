@@ -24,7 +24,7 @@ mixin teachers-section
             },
           ]
         each skill in skills
-          span(class= `teachers__skill teachers__skill_${skill.color}`)= skill.title
+          span.teachers__skill(class= `teachers__skill_${skill.color}`)= skill.title
       .teachers__list
         -
           const teachersData = [

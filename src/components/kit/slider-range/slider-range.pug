@@ -1,4 +1,4 @@
 mixin sliderRange({ name, step, value })
-  .slider-range(class=`slider_${name} js-slider-range` data-value= value data-step=step)
+  .slider-range.js-slider-range(class=`slider_${name}` data-value= value data-step=step)
     if name === 'flowing'
-      span(class="slider-range__value js-slider-range__value" data-value= value)
+      span.slider-range__value.js-slider-range__value(data-value= value)

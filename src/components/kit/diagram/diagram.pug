@@ -1,11 +1,10 @@
 mixin diagram({ values })
   -const colors = ['#4f4f4f', '#e75735', '#28a290'];
-  svg(class="diagram",
-    viewBox="0 0 95 95")
-    circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke="#e5e5e5")
+  svg.diagram(viewBox="0 0 95 95")
+    circle.diagram__circle(r="39", cx="50%", cy="50%", stroke="#e5e5e5")
     -let offset = 0;
     - values.forEach((element, i) => {
         -const length = (244.92 * element) / 100;
-        circle(r="39", cx="50%", cy="50%", class="diagram__circle", stroke=`${colors[i]}`, stroke-dasharray=`${length} 244.92`, stroke-dashoffset=`${offset}`)
+        circle.diagram__circle(r="39", cx="50%", cy="50%", stroke=`${colors[i]}`, stroke-dasharray=`${length} 244.92`, stroke-dashoffset=`${offset}`)
         -offset -= length; 
     - })
