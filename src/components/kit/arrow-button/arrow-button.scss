@@ -9,6 +9,7 @@
   border-radius: 50%;
   padding: .6rem .7rem;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -44,6 +45,7 @@
   &_disabled {
     background-color: $lightgrey;
     border-color: $lightgrey;
+    cursor: auto;
 
     &::before {
       border-color: $white;
