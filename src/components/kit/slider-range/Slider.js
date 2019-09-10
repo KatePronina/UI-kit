@@ -4,10 +4,10 @@ import 'src/components/vendor/jquery-ui-slider-pips';
 class Slider {
   constructor(sliderElement) {
     this.$sliderElement = sliderElement;
-    if (sliderElement.hasClass('slider_type_flowing')) {
+    if (sliderElement.hasClass('slider-range_type_flowing')) {
       this.initFlowing();
     }
-    if (sliderElement.hasClass('slider_type_steps')) {
+    if (sliderElement.hasClass('slider-range_type_steps')) {
       this.initSteps();
     }
   }

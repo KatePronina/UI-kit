@@ -1,7 +1,7 @@
 mixin user({ img, name, profession, style = "" })
   -
     const defaultClass = "user"
-    const colorClass = style && `${defaultClass}_${style}`
+    const colorClass = style && `${defaultClass}_color_${style}`
   div(class = `${defaultClass} ${colorClass}`)
     include ~src/images/sprite.svg
     .user__pic
@@ -21,7 +21,8 @@ mixin user({ img, name, profession, style = "" })
                 {
                   href: '/change-me',
                   name: 'twitter',
-                  imageId: 'twitter-logo-silhouette'
+                  imageId: 'twitter-logo-silhouette',
+                  size: 'big'
                 },
                 {
                   href: '/change-me',
@@ -31,8 +32,8 @@ mixin user({ img, name, profession, style = "" })
               ]
             each link in linksData
               -
-                const twitterClass = link.name === 'twitter' ? 'social-icons__icon_type_tw' : ''
+                const sizeClass = link.size === 'big' ? 'social-icons__icon_size_big' : ''
               a.social-icons__link(href=`${link.href}`, target="_blank", rel="noopener noreferrer")
-                svg.social-icons__icon(class=`${twitterClass}`)
+                svg.social-icons__icon(class=`${sizeClass}`)
                   use(xlink:href=`#${link.imageId}`)
                 

@@ -4,7 +4,7 @@
   display: flex;
   align-items: flex-start;
 
-  &_green {
+  &_color_green {
     .user__info {
       background-color: $green;
 
@@ -93,7 +93,7 @@
     height: 1.3125rem;
     fill: $darkgrey;
 
-    &_type_tw {
+    &_size_big {
       width: 1.5625rem;
       height: 1.5625rem;
     }
