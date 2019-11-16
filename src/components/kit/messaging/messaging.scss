@@ -47,14 +47,14 @@
     &-message {
       height: 1.312rem;
       width: 1.25rem;
-      background-image: url('~src/images/chat-icon.png');
+      background-image: url('./img/chat-icon.png');
       margin-bottom: .5rem;
     }
 
     &-camera {
       height: 1.25rem;
       width: 1.5rem;
-      background-image: url('~src/images/camera-icon.png');
+      background-image: url('./img/camera-icon.png');
       margin-bottom: .6rem;
     }
   }

@@ -3,9 +3,9 @@ mixin user({ img, name, profession, style = "" })
     const defaultClass = "user"
     const colorClass = style && `${defaultClass}_color_${style}`
   div(class = `${defaultClass} ${colorClass}`)
-    include ~src/images/sprite.svg
+    include ./img/sprite.svg
     .user__pic
-      img.user__img(src=require(`src/images/${img}`), alt= name)
+      img.user__img(src=require(`../images/${img}`), alt= name)
     .user__info
       span.user__name= name
       span.user__profession= profession

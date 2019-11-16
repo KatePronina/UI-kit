@@ -76,7 +76,7 @@
     border: none;
     width: .625rem;
     height: .875rem;
-    background-image: url('~src/images/play.svg');
+    background-image: url('./img/play.svg');
     background-repeat: no-repeat;
     margin-right: 1.125rem;
     background-size: contain;
@@ -113,7 +113,7 @@
     background-color: $orange;
     border: none;
     margin-left: auto;
-    background-image: url('~src/images/full.svg');
+    background-image: url('./img/full-btn.svg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0 0 .25rem;

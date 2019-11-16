@@ -1,5 +1,5 @@
 import GoogleMapsLoader from 'google-maps';
-import 'src/images/pin.png';
+import * as pin from './img/pin.png';
 
 class Map {
   constructor(mapElement) {
@@ -25,7 +25,7 @@ class Map {
       new google.maps.Marker({
         position,
         map,
-        icon: './images/pin.png',
+        icon: pin,
       });
     });
   }

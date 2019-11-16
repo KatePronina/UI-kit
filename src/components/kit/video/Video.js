@@ -1,5 +1,5 @@
-import 'src/images/pause.svg';
-import 'src/images/play.svg';
+import * as pauseImage from './img/pause.svg';
+import * as playImage from './img/play.svg';
 
 class Video {
   constructor(playerElement) {
@@ -42,8 +42,9 @@ class Video {
   }
 
   changeButton = () => {
-    const image = this.$video.prop('paused') ? 'play' : 'pause';
-    this.$playBtn.css('backgroundImage', `url(images/${image}.svg)`);
+    this.$video.prop('paused') ?
+      this.$playBtn.css('backgroundImage', `url(${playImage})`)
+      : this.$playBtn.css('backgroundImage', `url(${pauseImage})`)
   }
 
   videoUpdate = () => {
