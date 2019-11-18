@@ -1,0 +1,10 @@
+mixin searches({ title })
+  .searches
+    .searches__title
+      +title(title)
+    .searches__wrapper
+      +search({ placeholder: 'Search' })
+    .searches__wrapper
+      +search({ placeholder: 'I\'ve not found what I\'m looking for...', error: true })
+    .searches__wrapper
+      +dropdown({ placeholder: 'Choose An Option', name: 'select', options: ['This is option 1', 'This is option 2', 'This is option 3', 'This is option 4'] })

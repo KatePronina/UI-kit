@@ -1,0 +1,5 @@
+mixin wrapper(type)
+  -
+    const wrapperClass = type ? `wrapper wrapper_type_${type}` : 'wrapper'
+  div(class= wrapperClass)
+    block

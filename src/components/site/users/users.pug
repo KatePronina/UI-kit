@@ -1,0 +1,8 @@
+mixin users({ title })
+  .users
+    .users__title
+      +title(title)
+    .users__wrapper
+      +user({ img: 'user1.jpg', name: 'John Smith', profession: 'UX  DESIGNER' })
+    .users__wrapper
+      +user({ img: 'user2.jpg', name: 'Sarah Brown', profession: 'DEVELOPER', style: 'green' })

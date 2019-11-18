@@ -11,14 +11,18 @@ include ~src/components/kit/messaging/messaging.pug
 include ~src/components/kit/button/button.pug
 include ~src/components/kit/news/news.pug
 include ~src/components/kit/event/event.pug
+include ~src/components/site/title/title.pug
+include ~src/components/site/main-info/main-info.pug
 
 +base('Главная')
 body
   .wrapper
     .wrapper__header
       +header
-    h1.main-title Школа танцев "MOVEMENT"
-    p.main-description Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!
+    +main-info({ 
+      title: 'Школа танцев "MOVEMENT"',
+      description: 'Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!'
+     }) 
     .wrapper__section-container
       +section({ title: 'Что такое "MOVEMENT" в процентах?' })
       +features({ featuresData: [

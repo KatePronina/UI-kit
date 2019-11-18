@@ -1,0 +1,18 @@
+mixin form-elements({ title })
+  .form-elements
+    .form-elements__title 
+      +title(title)
+    .form-elements__wrapper
+      .form-elements__wrapper-left
+        +form
+      .form-elements__wrapper-right
+        .form-elements__wrapper-title
+          +title('Toggles')
+        .form-elements__toggles
+          +toggle({ text: '', name: '' })
+          +toggle({ text: '', name: '', isChecked: true })
+        .form-elements__wrapper-title
+          +title('Tick boxes')
+        .form-elements__ticks
+          +tickBox({ text: '', name: 'tick', isChecked: true })
+          +tickBox({ text: '', name: 'tick' })

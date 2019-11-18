@@ -1,4 +1,5 @@
 mixin section({ title })
   section.section
-    h2.section__title= title
+    .section__title
+      +title(title)
     block
