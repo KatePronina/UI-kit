@@ -7,11 +7,8 @@ include ~src/components/kit/search/search.pug
 include ~src/components/kit/user/user.pug
 include ~src/components/kit/diagram/diagram.pug
 include ~src/components/site/title/title.pug
+include ~src/components/site/teachers-wrapper/teachers-wrapper.pug
 
 +base('Наши преподаватели')
 body
-  .wrapper
-    .wrapper__header
-      +header
-    .wrapper__section-container
-      +teachers-section
+  +teachers-wrapper

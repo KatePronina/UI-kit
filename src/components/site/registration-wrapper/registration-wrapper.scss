@@ -1,0 +1,14 @@
+.registration-wrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 .625rem;
+
+  &__header {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  &__section-container {
+    margin-bottom: 4rem;
+  }
+}

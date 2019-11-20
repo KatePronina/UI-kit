@@ -13,46 +13,8 @@ include ~src/components/kit/news/news.pug
 include ~src/components/kit/event/event.pug
 include ~src/components/site/title/title.pug
 include ~src/components/site/main-info/main-info.pug
+include ~src/components/site/main-wrapper/main-wrapper.pug
 
 +base('Главная')
 body
-  .wrapper
-    .wrapper__header
-      +header
-    +main-info({ 
-      title: 'Школа танцев "MOVEMENT"',
-      description: 'Научим танцевать уже после первого урока! Опытнейшие педагоги ждут Вас на занятиях!'
-     }) 
-    .wrapper__section-container
-      +section({ title: 'Что такое "MOVEMENT" в процентах?' })
-      +features({ featuresData: [
-          {
-            label: 'довольных учеников',
-            percent: 98,
-          },
-          {
-            label: 'преподавателей из стран Латинской Америки',
-            percent: 34,
-          },
-          {
-            label: 'полностью оборудованные залы',
-            percent: 100,
-          },
-          {
-            label: 'учеников остаются с нами после первого занятия',
-            percent: 83,
-          },
-        ]
-      })
-      +section({ title: 'Посмотрите, в каком прекрасном городе мы работаем' })
-        +video({ url: 'winter.mp4', title: 'Санкт-Петербург', author: 'by Time Lab' })
-      +section({ title: 'Возможно, Вы в одном клике от мечты...' })
-        +messaging({ name: 'Sarah Brown', img: 'user2.jpg', text: 'Не знаете, с чего начать знакомство с танцами? Танцевальная База и Техника Танца позволят вам лучше почувствовать свое тело и подготовиться к занятиям более сложных направлений', large: true })
-      +section({ title: 'Последние новости нашей школы' })
-        +main-news({news: [
-          { title: 'Скидка 20%', img: 'news1.jpg', date: '18  March  2019', text: 'При покупке абонемента с бОльшим количеством занятий, чем в предыдущем абонементе', type: 'news' },
-          { day: '24', month: 'Feb', title: 'Танцевальный марафон', img: 'event1.jpg', text: 'Танцуем весь день!', type: 'event' },
-          { title: 'Новый педагог', img: 'news1.jpg', date: '18  March  2019', text: 'РЕГГЕТОН с нашим новым преподавателем Дэнисом Кабрера поможет вам почувствовать свою музыкальность', type: 'news' },
-        ]})
-
-
+  +main-wrapper

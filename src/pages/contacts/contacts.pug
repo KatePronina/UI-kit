@@ -8,15 +8,9 @@ include ~src/components/kit/map/map.pug
 include ~src/components/kit/messaging/messaging.pug
 include ~src/components/kit/button/button.pug
 include ~src/components/site/title/title.pug
+include ~src/components/site/contacts-wrapper/contacts-wrapper.pug
 
 
 +base('Контакты')
 body
-  .wrapper
-    .wrapper__header
-      +header
-    .wrapper__section-container
-      +section({ title: 'Контакты' })
-        +map({ lat: 59.9405947, lng: 30.3254693, address: 'Санкт-Петербург, Конюшенная площадь, дом 2' })
-    .wrapper__section-container
-      +info
+  +contacts-wrapper

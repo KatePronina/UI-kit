@@ -1,0 +1,9 @@
+mixin contacts-wrapper
+  .contacts-wrapper
+    .contacts-wrapper__header
+      +header
+    .contacts-wrapper__section-container
+      +section({ title: 'Контакты' })
+        +map({ lat: 59.9405947, lng: 30.3254693, address: 'Санкт-Петербург, Конюшенная площадь, дом 2' })
+    .contacts-wrapper__section-container
+      +info
