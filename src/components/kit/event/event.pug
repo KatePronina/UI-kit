@@ -3,7 +3,7 @@ include ~src/components/kit/button/button.pug
 mixin event({ day, month, title, img, text })
   article.event
     -
-      const image = require(`../images/${img}`)
+      const image = `images/${img}`;
     .event__image(style=`background-image: url(${image})`)
     .event__content
       span.event__date
