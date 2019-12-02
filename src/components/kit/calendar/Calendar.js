@@ -2,12 +2,15 @@ import 'jquery-ui/ui/widgets/datepicker';
 
 class Calendar {
   constructor(calendarElement) {
+    this.findDOMElements(calendarElement);
+    this.init();
+  }
+
+  findDOMElements(calendarElement) {
     this.$calendarElement = calendarElement;
     this.$calendarPick = calendarElement.find('.js-calendar__pick');
     this.$calendarDay = calendarElement.find('.js-calendar__day');
     this.$calendarButtonSelectToday = calendarElement.find('.js-calendar__button');
-
-    this.init();
   }
 
   init() {

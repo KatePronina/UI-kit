@@ -3,6 +3,11 @@ import * as playImage from './img/play.svg';
 
 class Video {
   constructor(playerElement) {
+    this.findDOMElements(playerElement);
+    this.addEvents();
+  }
+
+  findDOMElements(playerElement) {
     this.$playerElement = playerElement;
     this.$video = playerElement.find('.js-player__video');
     this.$progress = playerElement.find('.js-player__progress');
@@ -10,11 +15,9 @@ class Video {
     this.$playButton = playerElement.find('.js-player__button');
     this.$fullButton = playerElement.find('.js-player__button-fullscreen');
     this.$info = playerElement.find('.js-player__info');
-
-    this.init();
   }
 
-  init() {
+  addEvents() {
     this.$video.on('click', this.handleVideoClick);
     this.$playButton.on('click', this.handlePlayButtonClick);
     this.$video.on('pause', this.handleVideoPause);

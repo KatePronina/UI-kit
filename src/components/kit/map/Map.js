@@ -3,11 +3,14 @@ import * as pin from './img/pin.png';
 
 class Map {
   constructor(mapElement) {
+    this.findDOMElements(mapElement);
+    this.init();
+  }
+
+  findDOMElements(mapElement) {
     this.$mapElement = mapElement.find('.js-map__container');
     this.lat = this.$mapElement.data('lat');
     this.lng = this.$mapElement.data('lng');
-
-    this.init();
   }
 
   init() {

@@ -1,13 +1,19 @@
 class Form {
   constructor(formElement) {
+    this.findDOMElements(formElement);
+    this.init();
+  }
+
+  emailRegExp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+  nameRegExp = /[^0-9_.+]/;
+
+  findDOMElements(formElement) {
     this.$formElement = formElement;
     this.$emailInput = formElement.find('.js-form__input-email');
     this.$nameInput = formElement.find('.js-form__input-name');
     this.$emailWarning = formElement.find('.js-form__warning-email');
     this.$nameWarning = formElement.find('.js-form__warning-name');
-    this.emailRegExp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    this.nameRegExp = /[^0-9_.+]/;
-    this.init();
   }
 
   init() {
