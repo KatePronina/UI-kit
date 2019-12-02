@@ -9,12 +9,12 @@ class Button {
   }
 
   onButtonClick = (event) => {
-    if (this.buttonElement.getElementsByClassName('main-btn_ripple').length > 0) {
+    if (this.buttonElement.getElementsByClassName('main-button_ripple').length > 0) {
       this.buttonElement.removeChild(this.buttonElement.childNodes[1]);
     }
 
     const circle = document.createElement('div');
-    circle.classList.add('main-btn_ripple');
+    circle.classList.add('main-button_ripple');
     this.buttonElement.appendChild(circle);
 
     const diameter = Math.max(this.buttonElement.clientWidth, this.buttonElement.clientHeight);

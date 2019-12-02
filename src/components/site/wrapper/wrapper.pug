@@ -41,12 +41,12 @@ mixin wrapper(type)
       .wrapper__arrows-title
         +title('Arrow buttons')
       .wrapper__arrows-row
-        +arrowBtn()
-        +arrowBtn({ direction: 'right' })
-        +arrowBtn({ disable: true })
-        +arrowBtn({ disable: true, direction: 'right' })
-        +arrowBtn({ theme: 'green' })
-        +arrowBtn({ direction: 'right', theme: 'green' })
+        +arrow-button()
+        +arrow-button({ direction: 'right' })
+        +arrow-button({ disable: true })
+        +arrow-button({ disable: true, direction: 'right' })
+        +arrow-button({ theme: 'green' })
+        +arrow-button({ direction: 'right', theme: 'green' })
     .wrapper__percentage
       .wrapper__percentage-title
         +title('Percentages / pie chart')

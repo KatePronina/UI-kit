@@ -107,13 +107,13 @@
     border-radius: .1875rem;
   }
 
-  &__btn-fullscreen {
+  &__button-fullscreen {
     width: 3rem;
     height: 100%;
     background-color: $orange;
     border: none;
     margin-left: auto;
-    background-image: url('./img/full-btn.svg');
+    background-image: url('./img/full-button.svg');
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 0 0 .25rem;

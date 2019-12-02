@@ -5,7 +5,7 @@ mixin user({ img, name, profession, style = "" })
   div(class = `${defaultClass} ${colorClass}`)
     include ./img/sprite.svg
     .user__pic
-      img.user__img(src=require(`../images/${img}`), alt= name)
+      img.user__image(src=require(`../images/${img}`), alt= name)
     .user__info
       span.user__name= name
       span.user__profession= profession

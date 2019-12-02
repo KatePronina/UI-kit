@@ -7,12 +7,12 @@ mixin messaging({ name, img, text, large = "" })
   div(class= `${defaultClass} ${sizeClass}`)
     .messaging__title= name
     .messaging__user
-      button.messaging__btn.messaging__btn-message
+      button.messaging__button.messaging__button-message
       .messaging__image-container
         img.messaging__image(src=require(`../images/${img}`), alt=name)
-      button.messaging__btn.messaging__btn-camera
+      button.messaging__button.messaging__button-camera
     p.messaging__message= text
     form.messaging__response(action="#")
       textarea.messaging__text(name="message")
-      .messaging__response-btn
+      .messaging__response-button
         +button({ text: 'reply', size: 'big', theme: 'green' })

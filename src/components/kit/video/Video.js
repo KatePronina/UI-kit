@@ -7,8 +7,8 @@ class Video {
     this.$video = playerElement.find('.js-player__video');
     this.$progress = playerElement.find('.js-player__progress');
     this.$progressFill = playerElement.find('.js-player__progress-bar');
-    this.$playBtn = playerElement.find('.js-player__button');
-    this.$fullBtn = playerElement.find('.js-player__btn-fullscreen');
+    this.$playButton = playerElement.find('.js-player__button');
+    this.$fullButton = playerElement.find('.js-player__button-fullscreen');
     this.$info = playerElement.find('.js-player__info');
 
     this.init();
@@ -16,7 +16,7 @@ class Video {
 
   init() {
     this.$video.on('click', this.togglePlay);
-    this.$playBtn.on('click', this.togglePlay);
+    this.$playButton.on('click', this.togglePlay);
     this.$video.on('pause', this.changeButton);
     this.$video.on('play', this.changeButton);
     this.$video.on('timeupdate', this.videoUpdate);
@@ -31,7 +31,7 @@ class Video {
       this.isMouseDown = false;
     });
 
-    this.$fullBtn.on('click', this.onFullscreen);
+    this.$fullButton.on('click', this.onFullscreen);
   }
 
   togglePlay = () => {
@@ -42,9 +42,11 @@ class Video {
   }
 
   changeButton = () => {
-    this.$video.prop('paused') ?
-      this.$playBtn.css('backgroundImage', `url(${playImage})`)
-      : this.$playBtn.css('backgroundImage', `url(${pauseImage})`)
+    if (this.$video.prop('paused')) {
+      this.$playButton.css('backgroundImage', `url(${playImage})`);
+    } else {
+      this.$playButton.css('backgroundImage', `url(${pauseImage})`);
+    }
   }
 
   videoUpdate = () => {
