@@ -5,10 +5,10 @@ class Button {
   }
 
   init() {
-    this.buttonElement.addEventListener('click', this.onButtonClick);
+    this.buttonElement.addEventListener('click', this.handleButtonClick);
   }
 
-  onButtonClick = (event) => {
+  handleButtonClick = (event) => {
     if (this.buttonElement.getElementsByClassName('main-button_ripple').length > 0) {
       this.buttonElement.removeChild(this.buttonElement.childNodes[1]);
     }

@@ -15,23 +15,43 @@ class Video {
   }
 
   init() {
-    this.$video.on('click', this.togglePlay);
-    this.$playButton.on('click', this.togglePlay);
-    this.$video.on('pause', this.changeButton);
-    this.$video.on('play', this.changeButton);
-    this.$video.on('timeupdate', this.videoUpdate);
+    this.$video.on('click', this.handleVideoClick);
+    this.$playButton.on('click', this.handlePlayButtonClick);
+    this.$video.on('pause', this.handleVideoPause);
+    this.$video.on('play', this.handleVideoPlay);
+    this.$video.on('timeupdate', this.handleVideoTimeUpdate);
 
-    this.$progress.on('click', this.handleProgress);
+    this.$progress.on('click', this.handleProgressClick);
     this.isMouseDown = false;
-    this.$progress.on('mousemove', event => this.isMouseDown && this.handleProgress(event));
-    this.$progress.on('mousedown', () => {
-      this.isMouseDown = true;
-    });
-    this.$progress.on('mouseup', () => {
-      this.isMouseDown = false;
-    });
+    this.$progress.on('mousemove', event => this.isMouseDown && this.handleProgressClick(event));
+    this.$progress.on('mousedown', this.handleProgressMouseDown);
+    this.$progress.on('mouseup', this.handleProgressMouseUp);
 
-    this.$fullButton.on('click', this.onFullscreen);
+    this.$fullButton.on('click', this.handleFullButtonClick);
+  }
+
+  handleProgressMouseDown = () => {
+    this.isMouseDown = true;
+  }
+
+  handleProgressMouseUp = () => {
+    this.isMouseDown = false;
+  }
+
+  handleVideoClick = () => {
+    this.togglePlay();
+  }
+
+  handlePlayButtonClick = () => {
+    this.togglePlay();
+  }
+
+  handleVideoPause = () => {
+    this.changeButtonImage();
+  }
+
+  handleVideoPlay = () => {
+    this.changeButtonImage();
   }
 
   togglePlay = () => {
@@ -41,7 +61,7 @@ class Video {
     this.$info.css('opacity', `${opacity}`);
   }
 
-  changeButton = () => {
+  changeButtonImage = () => {
     if (this.$video.prop('paused')) {
       this.$playButton.css('backgroundImage', `url(${playImage})`);
     } else {
@@ -49,17 +69,17 @@ class Video {
     }
   }
 
-  videoUpdate = () => {
+  handleVideoTimeUpdate = () => {
     const currentTime = (this.$video.prop('currentTime') / this.$video.prop('duration')) * 100;
     this.$progressFill.css('width', `${currentTime}%`);
   }
 
-  handleProgress = (event) => {
+  handleProgressClick = (event) => {
     const time = (event.offsetX / this.$progress.outerWidth()) * this.$video.prop('duration');
     this.$video.prop('currentTime', time);
   }
 
-  onFullscreen = () => {
+  handleFullButtonClick = () => {
     (this.$playerElement)[0].webkitRequestFullScreen();
   }
 }

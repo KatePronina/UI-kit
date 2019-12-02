@@ -11,11 +11,11 @@ class Form {
   }
 
   init() {
-    this.$emailInput.on('input', this.debounce(this.onEmailInput, 1000));
-    this.$nameInput.on('input', this.debounce(this.onNameInput, 1000));
+    this.$emailInput.on('input', this.debounce(this.handleEmailInput, 1000));
+    this.$nameInput.on('input', this.debounce(this.handleNameInput, 1000));
   }
 
-  onEmailInput = (event) => {
+  handleEmailInput = (event) => {
     if (this.checkInputValue(event.target.value, this.emailRegExp)) {
       this.$emailWarning.css('display', 'block').text('Thanks!').removeClass('form__warning_error');
     } else {
@@ -23,7 +23,7 @@ class Form {
     }
   }
 
-  onNameInput = (event) => {
+  handleNameInput = (event) => {
     if (this.checkInputValue(event.target.value, this.nameRegExp)) {
       this.$nameWarning.css('display', 'block').text('Thanks!').removeClass('form__warning_error');
     } else {

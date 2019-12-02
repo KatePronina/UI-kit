@@ -21,10 +21,10 @@ class Calendar {
     });
 
     this.setStartDate();
-    this.$calendarButtonSelectToday.click(this.onCalendarButtonSelectTodayClick);
+    this.$calendarButtonSelectToday.click(this.handleCalendarButtonSelectTodayClick);
   }
 
-  onCalendarButtonSelectTodayClick = () => {
+  handleCalendarButtonSelectTodayClick = () => {
     this.$calendarPick.datepicker('setDate', new Date());
     this.$calendarDay.val($.datepicker.formatDate('d', this.currentDate))
       .attr('value', $.datepicker.formatDate('dd-mm-yy', this.currentDate));
